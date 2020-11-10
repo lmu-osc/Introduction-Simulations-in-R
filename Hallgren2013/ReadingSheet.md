@@ -5,15 +5,14 @@
 
 ***
 
-Hallgren describes the benefits of using simulations and provides examples of application (Hallgren 2014).
+Hallgren (2014) describes the benefits of using simulations and provides examples of applications.
 
-*	*Please list all the words that you do not know/concepts you do not understand in this paper (except mediation, branching, zero-inflation, ceiling effect, structural equation models, social network exponential random graph).*
--  
-- 
-- 
+1)	Please list all the words that you do not know/concepts you do not understand in this paper (except mediation, branching, zero-inflation, ceiling effect, structural equation models, social network exponential random graph).  
+    *  
+    *  
+    *  
 
-
-* *In your own words, describe which steps are common to all sorts of simulations. Illustrate with simple examples rather than, or in addition to, using terms such as assumptions and parameters.*  
+2) In your own words, describe which steps are common to all sorts of simulations. Illustrate with simple examples rather than, or in addition to, using terms such as assumptions and parameters.    
 **1)**   
 **2)**  
 **3)**  
