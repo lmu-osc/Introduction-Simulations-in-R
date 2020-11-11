@@ -9,11 +9,11 @@ The function
 ***
 **YOUR TURN:**  
 Sample 100 values between 3 and 103 with replacement.    
-For this, open the file `./exercice_script.R` from the root of your local repository (i.e. after having forked and clone my GitHub repository), review the examples if needed, complete the exercice, and check out the proposed answer.
+For this, open the file `./exercice_script.R` from the root of your local repository (i.e. after having forked and clone this GitHub repository), review the examples if needed, complete the exercice, and check out the proposed answer.
 
 ***
 
-The following functions draw `n` values from distributions with specified parameters  
+The following functions draw `n` values from distributions with the specified parameters  
 * `runif(n, min, max)` draws `n` values from a *uniform* distribution with the specified `min` and `max`  
 * `rpois(n, lambda)` draws `n` values from a *poisson* distribution with the specified `lambda`  
 * `rnorm(n, mean, sd)` draws `n` values from a *normal* distribution with the specified `mean` and `standard deviation`  
