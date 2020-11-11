@@ -1,0 +1,16 @@
+# Repetition
+
+The function  
+* `replicate(nrep, expression)` repeat the `expression` provided `nrep` times.
+
+  * e.g. `replicate(10, mean(rnorm(100)))` reads: 'draw 100 values from a normal distribution a mean 0 and sd 1, caclulate their mean, do that 10 times.'
+  
+***
+
+**YOUR TURN:**  
+In your local exercice script:  
+Replicate 1000 times the mean of 10 values drawn from a unifrom distribution between 0 and 10.  
+Replicate 100 times the mean of 50 values drawn from a normal distribution of mean 10 and stndard deviation 5.  
+Make a histogram of each of your results, is the distribution looking as expected?  
+
+***

@@ -94,9 +94,23 @@ replicate(10, mean(rnorm(100)))
 hist(replicate(10, mean(rnorm(100))))
 
 # YOUR TURN: generate random numbers, repeat, and plot
+## Replicate 1000 times the mean of 10 values drawn from a unifrom distribution between 0 and 10  
 
 
 
+
+
+    ### replicate (1000, mean(runif(10, 0, 10)))
+    ### hist(replicate (1000, mean(runif(10, 0, 10))))
+
+
+## Replicate 100 times the mean of 50 values drawn from a normal distribution of mean 10 and stndard deviation 5  
+
+
+
+
+    ### replicate (100, mean(rnorm(50, 10, 5)))
+    ### hist(replicate (100, mean(rnorm(50, 10, 5))))
 
 
 
@@ -114,9 +128,15 @@ hist(replicate(100, mean(rnorm(10))))
 
 # defining sample size within a replication
 ## single random sample of normal distribution N(0,1) with n=10
+set.seed(10)
 x <- rnorm(10, mean=0, sd=1)
 hist(x, breaks=10, col="grey", xlim=c(-4,4))
 abline(v=0, col="red", lty=2, lwd=2)
+abline(v=mean(x), col="blue", lwd=2)
+par(xpd=TRUE) # turn off clipping of legend
+legend(0.9,1.5, c("mean(x)", "0"), 
+       lty=c(1, 2), 
+       col=c("blue","red"))
 
 ## 24 sims of same distribution N(0,1) with n=10
 set.seed(10)
