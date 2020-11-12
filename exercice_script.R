@@ -35,8 +35,12 @@ sample(x, size = 6, replace = TRUE)
 
 
 
-    ### x <- 3:103
-    ### sample(x, 100, replace=TRUE)
+
+
+
+    ### possible solutions
+    x <- 3:103
+    sample(x, 100, replace=TRUE)
 
 
 
@@ -52,35 +56,58 @@ sample(x, size = 6, replace = TRUE)
 ## Draw 100 values from a normal distribution with a mean of 0 and a sd of 1
 
 
+    
+    
+    
+    
+    
+    
 
-
-    ### rnorm(n=100, mean=0, sd=1)
-    ### rnorm(100,0,1) # you do not need to label the arguments if you provide them in their default order
-    ### rnorm(100) # if you sample from a normal distribution with a mean of 0 and a sd of 1, you do not need to provide them, they are the defaults
+    ### possible solutions
+    rnorm(n=100, mean=0, sd=1)
+    rnorm(100,0,1) # you do not need to label the arguments if you provide them in their default order
+    rnorm(100) # if you sample from a normal distribution with a mean of 0 and a sd of 1, you do not need to provide them, they are the defaults
 
 ## Draw 50 values from a normal distribution with a mean of 10 and sd of 5
 
 
+    
+    
+    
+    
+    
+    
 
-
-    ### rnorm(50, 10, 5) 
-    ### rnorm(sd=5, mean=10, n=50) # if you do not know what order is the default, label your arguments and input them in the order you want!
+    ### possible solutions
+    rnorm(50, 10, 5) 
+    rnorm(sd=5, mean=10, n=50) # if you do not know what order is the default, label your arguments and input them in the order you want!
 
 ## Draw 1000 values from a poisson distribution with a lambda of 50
 
 
+    
+    
+    
+    
+    
+    
 
-
-    ### rpois(n=1000, lambda=50)
-    ### rpois(1000, 50)
+    ### possible solutions
+    rpois(n=1000, lambda=50)
+    rpois(1000, 50)
 
 ## Draw 30 values from a uniform distribution between 0 and 10
 
 
+    
+    
+    
+    
 
 
-    ### runif(n=30, min=0, max=10)
-    ### runif(30, 0, 10)
+    ### possible solutions
+    runif(n=30, min=0, max=10)
+    runif(30, 0, 10)
 
 
 
@@ -100,17 +127,29 @@ hist(replicate(10, mean(rnorm(100))))
 
 
 
-    ### replicate (1000, mean(runif(10, 0, 10)))
-    ### hist(replicate (1000, mean(runif(10, 0, 10))))
-
-
-## Replicate 100 times the mean of 50 values drawn from a normal distribution of mean 10 and stndard deviation 5  
 
 
 
 
-    ### replicate (100, mean(rnorm(50, 10, 5)))
-    ### hist(replicate (100, mean(rnorm(50, 10, 5))))
+    ### possible solutions
+    replicate (1000, mean(runif(10, 0, 10)))
+    hist(replicate (1000, mean(runif(10, 0, 10))))
+
+
+## Replicate 100 times the mean of 50 values drawn from a normal distribution of mean 10 and standard deviation 5  
+
+
+
+
+    
+    
+    
+    
+    
+    
+    ### possible solutions
+    replicate (100, mean(rnorm(50, 10, 5)))
+    hist(replicate (100, mean(rnorm(50, 10, 5))))
 
 
 
@@ -207,21 +246,21 @@ abline(v=1, col="red", lty=2, lwd=2)
 
 
 
-
-    ## step 1: the action
+    ### possible solutions
+    #### step 1: the action
     mean(rnorm(100))
-    ## step 2: replicate the action 1000 times
+    #### step 2: replicate the action 1000 times
     replicate(1000, mean(rnorm(100)))
-    ## step 3: plot the outcome of those simulations
+    #### step 3: plot the outcome of those simulations
     hist(replicate(1000, mean(rnorm(100))))
-    ## step 4: replicate the action nrep time, with nrep defined outside the function
+    #### step 4: replicate the action nrep time, with nrep defined outside the function
     nrep <- 1000
     replicate(nrep, mean(rnorm(100)))
-    ## step 5: wrap it in a function:
+    #### step 5: wrap it in a function:
     histrnorm100 <- function (nrep){
       hist(replicate(nrep, mean(rnorm(100))))
     }
-    ## step 6: check that the function works
+    #### step 6: check that the function works
     histrnorm100(9)
 
     
@@ -243,16 +282,16 @@ abline(v=1, col="red", lty=2, lwd=2)
 
     
     
-
-    ## step 4: define parameters outside the function
+    ### possible solutions
+    #### step 4: define parameters outside the function
     nrep <- 100
     n <- 10
     replicate(nrep, mean(rnorm(n)))
-    ## step 5: wrap the action in a function:
+    #### step 5: wrap the action in a function:
     histrnorm_n <- function (nrep, n){
       hist(replicate(n, mean(rnorm(n))))
     }
-    ## step 6: check that the function works
+    #### step 6: check that the function works
     histrnorm_n(9,3)
     
     
@@ -263,7 +302,12 @@ abline(v=1, col="red", lty=2, lwd=2)
 # YOUR TURN: draw from the same distribution twice 
 ## and see if the sample differ from each other
 ## will they differ significantly in 5% of the nrep?
-    
+### Figure out how to do a t.test in R  
+### Generate two vectors of 10 values drawn from N(0,1) and compare them with a t test  
+### Figure out how to extract the p-value from that object (use `str` and your subsetting skills)
+### Write a function simT that generates two vectors of n random normals, compare them with a t test and return the p-value  
+### Repeat with nrep=20 and draw a histogram for n=10
+### Repeat with nrep=100 and draw a histogram for n=10    
     
     
     
@@ -280,27 +324,27 @@ abline(v=1, col="red", lty=2, lwd=2)
     
 
     
-    
-    ## Figure out how to do a t.test in R
+    ### possible solutions
+    #### Figure out how to do a t.test in R
     ?t.test
-    ## Generate two vectors of 50  N(0,1) 
+    #### Generate two vectors of 50  N(0,1) 
     x1 <- rnorm(50,0,1)
     x2 <- rnorm(50,0,1)
-    ## Compare them with a t test
+    #### Compare them with a t test
     t.test(x1,x2)
-    ## extract p value
+    #### extract p value
     str(t.test(x1,x2))
     t.test(x1,x2)$p.value
-    ## write function 
+    #### write function 
     simT <- function(n){
     x1 <- rnorm(n,0,1)
     x2 <- rnorm(n,0,1)
     t.test(x1, x2)$p.value 
     }
-    ## test function
+    #### test function
     simT(50)
     
-    ## repeat function for n = 10 and for different nrep and plot
+    #### repeat function for n = 10 and for different nrep and plot
     par(mfrow=c(1,2))
     simTRep <- replicate(20, simT(10))
     hist(simTRep, col="grey", breaks=21, main = "nrep=20, n=10", xlab="pvalue")
@@ -310,7 +354,7 @@ abline(v=1, col="red", lty=2, lwd=2)
     hist(simTRep2, col="grey", breaks=21, main = "nrep=100, n=10", xlab="pvalue")
     abline(v=0.05, lwd=2, lty=2, col="red")
     
-    ## repeat function for nrep = 1000 and various n
+    #### repeat function for nrep = 1000 and various n
     par(mfrow=c(1,2))
     simTRep <- replicate(1000, simT(10))
     hist(simTRep, col="grey", breaks=21, main = "nrep=1000, n=10", xlab="pvalue")
@@ -340,35 +384,29 @@ hist(rpois(100,3))
 
 
 
-
-    ## write new function
+    ### possible solutions
+    #### write new function
     simTpoiss <- function(n){
       x1 <- rpois(n,3)
       x2 <- rpois(n,3)
       t.test(x1, x2)$p.value 
     }
     
-    ## repeat function for n = 10 and for different nrep and plot
+    #### repeat function for n = 10 and for different nrep and plot
     par(mfrow=c(1,2))
-    hist(replicate(20, simTpoiss(10)), breaks =21,main="n=10, nrep = 20", xlab ='pvalue', col="grey")
+    hist(replicate(20, simTpoiss(10)), breaks =21,main="nrep = 20, n=10", xlab ='pvalue', col="grey")
     abline(v=0.05, lwd=2, lty=2, col="red")
-    hist(replicate(100, simTpoiss(10)), breaks =21,main="n=10, nrep =100", xlab ='pvalue', col="grey")
-    abline(v=0.05, lwd=2, lty=2, col="red")
-    
-    
-    ## repeat function for nrep = 1000 and various n
-    par(mfrow=c(1,2))
-    hist(replicate(1000, simTpoiss(10)), breaks =21, main="nrep = 1000, n=10", xlab ='pvalue', col="grey")
-    abline(v=0.05, lwd=2, lty=2, col="red")
-    hist(replicate(1000, simTpoiss(100)), breaks =21,main="nrep = 1000, n=100", xlab ='pvalue', col="grey")
+    hist(replicate(100, simTpoiss(10)), breaks =21,main="nrep =100, n=10", xlab ='pvalue', col="grey")
     abline(v=0.05, lwd=2, lty=2, col="red")
     
-    ## repeat function for nrep = 1000 and various n
+    #### repeat function for nrep = 1000 and various n
     par(mfrow=c(1,2))
     hist(replicate(1000, simTpoiss(10)), breaks =21, main="nrep = 1000, n=10", xlab ='pvalue', col="grey")
     abline(v=0.05, lwd=2, lty=2, col="red")
     hist(replicate(1000, simTpoiss(100)), breaks =21,main="nrep = 1000, n=100", xlab ='pvalue', col="grey")
     abline(v=0.05, lwd=2, lty=2, col="red")
+    
+
     
     
    

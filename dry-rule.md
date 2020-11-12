@@ -20,7 +20,7 @@ To build up a function, start by writing the `do stuff` to test that it works ou
 ***
 
 **YOUR TURN:**  
-Create a function that draws a histogram of `nrep` draws of mean(rnorm(100))
+Create a function that draws a histogram of `nrep` draws of mean(rnorm(100))  
 Modify your function to draw a histogram of `nrep` draws of mean(rnorm(`n`))
 
 
