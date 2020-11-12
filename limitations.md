@@ -1,4 +1,4 @@
-# Limitations a simulations
+# Limitations to simulations
 <br/>
 
 1. **assumptions** made regarding variables might not be true, e.g. the distribution of supposedly normally distributed data may not be quite normal (have back-up plan)  
