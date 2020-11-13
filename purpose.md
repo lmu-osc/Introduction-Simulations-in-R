@@ -16,3 +16,7 @@ You can use computer simulations to:
 
 * **Perform bootstrapping to get a confidence interval around a parameter estimate** 
   * *i.e. bootstrapping means to sample with replacement in an observed dataset. Doing this generates new 'simulated' datasets. With each of them, one can run the statistical analysis made on the observed dataset,saving each time the parameter estimate of interest. After doing this multiple time, you will obtain a confidence interval for the parameter of interest*   
+ 
+ ***
+
+[Previous](./definition.md) | [Next](./basic-principles.md)  
