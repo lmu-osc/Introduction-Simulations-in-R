@@ -14,5 +14,6 @@ This is useful for sharing code and reproduce simulations, as well as for debugg
 In your local exercice script:  
 Play around with the function `set.seed()` by running and modifying the examples provided (e.g. compare outputs with and without seeds, change the seed number)
  
-
 ***
+
+[Previous](./repeat.md) | [Next](./sample-size-n.md)  
