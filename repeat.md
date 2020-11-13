@@ -14,3 +14,5 @@ Replicate 100 times the mean of 50 values drawn from a normal distribution of me
 Make a histogram of each of your results, is the distribution looking as expected?  
 
 ***
+
+[Previous](./random-numbers-generators.md) | [Next](./seed.md)  
