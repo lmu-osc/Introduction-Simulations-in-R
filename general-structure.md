@@ -12,3 +12,7 @@
 5. try out different parameter sets (**explore the parameter space** for which results are similar)  
 
 6. **analyze and interpret the combine results of many simulations** within each set of parameters  
+
+***
+
+[Previous](./simulate.md) | [Next](./limitations.md)
