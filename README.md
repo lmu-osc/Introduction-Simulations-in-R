@@ -28,4 +28,9 @@ It is necessary that you work through the sections in order. Please read the blu
 * [Simulate](./simulate.md) - write your first simulation!
 * [General structure](./general-structure.md) - what is the general structure of a simulation?
 * [Limitations](./limitations.md) - what are the limitations to simulations?
-* [More advanced simulations](./advanced-simulations.md) - what are real life examples of simulations?
+* [Real-life example](./real-life-example.md) - what are real life examples of simulations?
+* [Additional resources](./resources.md) - what resource can help you write your own simulation?
+
+## During the session: personal project
+In your local repository, write your own simulation in R to help you prepare the data analyses of your current or next study. When you require help, first push your current work on your GitHub remote (for a reminder on how to do this, see [here](https://github.com/MalikaIhle/Introduction-RStudio-Git-GitHub)) for us to be able to access it easily and possibly review and edit your code!  
+

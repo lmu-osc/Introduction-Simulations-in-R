@@ -11,4 +11,4 @@
 
 ***
 
-[Previous](./general-structure.md) | [Next](./advanced-simulations.md)
+[Previous](./general-structure.md) | [Next](./real-life example.md)
