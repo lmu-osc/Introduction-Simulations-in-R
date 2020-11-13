@@ -45,5 +45,7 @@ The sample size within a simulation affects the **precision** with which the par
 What should determine the sample size within a simulation?  
 --> a sample size that is relevant to the context of the simulation, e.g. the sample size you will be able to reach in your study.
  
+***
 
+[Previous](./seed.md) | [Next](./sample-size-nrep.md) 
 
