@@ -7,4 +7,6 @@
 **“A computer simulation is the generation of random data to build up an understanding of the real data and the statistical models we use to analyze them”**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Malika*
 
+***
+
 [Previous](./README.md) | [Next](./purpose.md)  
