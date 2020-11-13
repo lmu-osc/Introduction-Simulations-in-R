@@ -25,3 +25,5 @@ Feel free to play around with these graphes by running and modifying the example
  
 
 ***
+
+[Previous](./sample-size-n.md) | [Next](./dry-rule.md)
