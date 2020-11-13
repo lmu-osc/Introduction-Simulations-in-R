@@ -10,4 +10,4 @@ Once you know how to do this, the questions we will explore are:
 
  ***
 
-[Previous](./purpose.md) | [Next](./random-numbers-generators..md)  
+[Previous](./purpose.md) | [Next](./random-numbers-generators.md)  
