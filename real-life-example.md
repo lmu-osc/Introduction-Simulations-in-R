@@ -14,36 +14,45 @@ The R code screenshoted below can be found in the folder [Ihle2020](./Ihle2020/g
 This walk through will use the steps as defined in the page '[general structure](./general-structure.md)'
 
 
-1. **define sample sizes** (within a dataset, and number of replicates) and what will need to vary (e.g. the strength of the effect expected)  
+1. **define sample sizes** (within a dataset, and number of replicates), **experimental design** (fixed dataset structure, e.g. treatment groups, factors) and **parameters** that will need to vary (here, the strength of the effect)  
 
-<img src="assets/define.png" width="750">  
+<img src="assets/define.png" width="1000">  
 <br/>
 
-2. **generate data**, random data or data including an effect. Variables are generated from their expected distribution or their class (e.g. factor vs numerical value)
+2. **generate data** (here, using `sample()` and the probabilities defined in step 1 and format it in two different ways to accomodate the two statistical tests to be compared. 
 
-<img src="assets/generate.png" width="750">  
+<img src="assets/generate.png" width="1000">  
+<br/>
+
+3. **run the statistical test save the parameter estimate of interest for that iteration**. Here, this is done for both statistical tests to be compared.    
+
+<img src="assets/test.png" width="1000">  
 <br/>
 
 
-3. **run the statistical test** you think is most ideal, check that the results are random (significant in only 5% of the case) or picking up the effect imposed/simulated in 80% of the cases (power), and **save the parameter estimate of interest for that iteration**  
+4. **replicate** step 2 (data simulation) and 3 (data analyses) to get the distribution of the parameter estimates by wrapping these steps in a function  
 
-<img src="assets/test.png" width="750">  
+definition of the function at the beginning: 
+<br/>
+<img src="assets/replicate1.png" width="800">    
+<br/>
+output returned from the function at the end:  
+<br/>
+<img src="assets/replicate2.png" width="1000">  
+<br/>
+replicate the function `nrep` number of times. Here `pbreplicate` is used to provide an error bar of progress for R to run this command.    
+<br/>
+<img src="assets/replicate3.png" width="1000">  
 <br/>
 
+5. **explore the parameter space** 
 
-4. **replicate** step 2 and 3 to get the distribution of the parameter estimates  
-
-<img src="assets/replicate.png" width="750">  
+<img src="assets/explore.png" width="1000">  
 <br/>
 
-5. try out different parameter sets (**explore the parameter space** for which results are similar)  
+6. **analyze and interpret the combine results of many simulations** 
 
-<img src="assets/explore.png" width="750">  
-<br/>
-
-6. **analyze and interpret the combine results of many simulations** within each set of parameters  
-
-<img src="assets/conclude.png" width="750">  
+<img src="assets/conclude.png" width="1000">  
 <br/>
 
 
@@ -51,3 +60,4 @@ This walk through will use the steps as defined in the page '[general structure]
 ***
 
 [Previous](./limitations.md) | [Next](./resources.md)
+

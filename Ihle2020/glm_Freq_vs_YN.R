@@ -40,7 +40,6 @@ TermiteEatenColor <- c('Beige','Green','Green','Beige','Beige','Green','Green','
 # if the termite has the bitter compound, prob of attack is = probs defined in parameters
 
 
-
 ## Function to check number of significant result by chance 
 Simulate_and_analyse <-function(){  # DO NOT RUN IF WANT TO CREATE ONE EXAMPLE TABLE
   
@@ -63,8 +62,7 @@ Simulate_and_analyse <-function(){  # DO NOT RUN IF WANT TO CREATE ONE EXAMPLE T
   FreqTable <- as.data.frame.table(contingencytable)
   
   
-  
-  
+
   ## create a table with one line per termite group (i.e. two line per test: the DB termites, and the water termite, of opposite colors)
  
   ### use the same simulated data but reformat them
@@ -132,14 +130,15 @@ Simulate_and_analyse <-function(){  # DO NOT RUN IF WANT TO CREATE ONE EXAMPLE T
 
 
 
-
+# 4. replicate
 OutputSimulation <- do.call(rbind, pbreplicate(pbrep,Simulate_and_analyse())) # collect all p values for both factors in the models
+
 OutputSimulation <- OutputSimulation<0.05 # determine whether or not their are significant
 
 OutputSimulationFreq <- OutputSimulation[rownames(OutputSimulation) == "modFreq1p",]
 OutputSimulationBinom <- OutputSimulation[rownames(OutputSimulation) == "modBinomp",]
 
-# analyse and interpret the results of simulations
+# 6. analyse and interpret the results of simulations
 ## factors where no effect was simulated should have a percentage of false positive effect under 5%
 ## factors with simulated effect should detect an effect in at least more than 5% of the cases
 data.frame(colSums(OutputSimulationFreq)/pbrep) # count the number of significant p values out of the number of simulation replicate. 
