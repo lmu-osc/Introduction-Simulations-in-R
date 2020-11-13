@@ -16,7 +16,7 @@
 rm(list = ls(all = TRUE))
 
 # packages
-library(pbapply) # to replicate a function / a simulation multiple time with a bar of progress (pbreplicate instead of replicate)
+library(pbapply) # to replicate a function / a simulation multiple time with a bar of progress (function pbreplicate instead of replicate)
 
 
 
@@ -24,7 +24,7 @@ library(pbapply) # to replicate a function / a simulation multiple time with a b
 nF <- 100 # number of females to be tested
 pbrep <- 1000 # number of simulation replicates
 probsnaive <- 0.5 # probability of attacking the bitter prey when never exposed to the bitter compound - needs to be 0.25 to always detect the effect
-probswhenexposed <- 0.5 # probability of attacking the bitter prey when trained on the bitter compound - needs to be 0.05 to always detect the interaciton (if previous is 0.25)
+probswhenexposed <- 0.5 # probability of attacking the bitter prey when trained on the bitter compound - needs to be 0.05 to always detect the interaction (if previous is 0.25)
 
 
 # two-by-two factorial design - 'fixed' data structure
