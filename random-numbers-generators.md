@@ -30,6 +30,9 @@ Draw 30 values from a uniform distribution between 0 and 10.
 Try it out in your local exercice script.
 
 ***
+
+[Previous](./basic-principles.md) | [Next](./repeat.md)  
+
  
 
 
