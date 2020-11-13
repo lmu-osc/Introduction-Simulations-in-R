@@ -74,6 +74,8 @@ To generalize such observation, and assert that using t test for Poisson distrib
 
 Please note that I do not suggest you use t test to compare Poisson distributed data (such as counts). There may be other problems than creating false positive results that need consideration (and that perhaps other simulations could help us examinate).
 
+***
 
+[Previous](./dry-rule.md) | [Next](./general-structure.md)
 
 
