@@ -25,3 +25,5 @@ Modify your function to draw a histogram of `nrep` draws of mean(rnorm(`n`))
 
 
 ***
+
+[Previous](./sample-size-nrep.md) | [Next](./simulate.md)
