@@ -2,7 +2,7 @@
 
 * `set.seed()`
 
-Computers in general and R specifically, can, in fact, only provide *pseudo* random number generators.  
+Computers in general, and R specifically, can, in fact, only provide *pseudo* random number generators.  
 
 They generate numbers according to an algorithm, and, given the same 'seed', it will output the same numbers, i.e. repeat exactly the same simulation.  
 
