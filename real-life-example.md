@@ -1,13 +1,13 @@
-# Real life example of simulation
+# Real life example
 
 This is a walk through one relatively simple simulation written to check whether a  
 generalized linear model on a contingency table of counts (poisson distribution) would provide the same results as a  
-generalized linear model with one line per observation, and with the occurence of the variable of interest coded as Yes/No (binomial distribution).  
+generalized linear model with one line per observation and  the occurence of the variable of interest coded as Yes/No (binomial distribution).  
 
 I created this code while preparing my preregistration for a simple behavioral ecology experiment:  
 Methods for independently manipulating palatability and color in small insect prey ([article](https://doi.org/10.1371/journal.pone.0231205), [OSF preregistration](https://osf.io/f8uk9?view_only=3943e7bb9c5f4effbf119ca5b062fe80))  
 
-The R code screenshoted below can be found in the folder [Ihle2020](./Ihle2020/glm_Freq_vs_YN.R).  
+The R screen screenshoted below can be found in the folder [Ihle2020](./Ihle2020/glm_Freq_vs_YN.R).  
 
 <br/>
 
@@ -24,7 +24,7 @@ This walk through will use the steps as defined in the page '[general structure]
 <img src="assets/generate.png" width="1000">  
 <br/>
 
-3. **run the statistical test save the parameter estimate of interest for that iteration**. Here, this is done for both statistical tests to be compared.    
+3. **run the statistical test and save the parameter estimate of interest for that iteration**. Here, this is done for both statistical tests to be compared.    
 
 <img src="assets/test.png" width="1000">  
 <br/>
@@ -40,17 +40,17 @@ output returned from the function at the end:
 <br/>
 <img src="assets/replicate2.png" width="1000">  
 <br/>
-replicate the function `nrep` number of times. Here `pbreplicate` is used to provide an error bar of progress for R to run this command.    
+replicate the function `nrep` number of times. Here `pbreplicate` is used to provide a bar of progress for R to run this command.    
 <br/>
 <img src="assets/replicate3.png" width="1000">  
 <br/>
 
-5. **explore the parameter space** 
+5. **explore the parameter space**. Here, vary the probabilities of sampling 0 or 1 depending on the treatment group category.
 
 <img src="assets/explore.png" width="1000">  
 <br/>
 
-6. **analyze and interpret the combine results of many simulations** 
+6. **analyze and interpret the combine results of many simulations**. In this case, the results of the two models were qualitatively the same (comparison of results for a few simulations), and both models gave the same expected 5% false positive results when no effect were simulated. Varying the effect (the probability of sampling 0 or 1 depending on the experimental treatment) allowed to find the minimum effect size for which the number of positive results is over 80% of the tests. 
 
 <img src="assets/conclude.png" width="1000">  
 <br/>
