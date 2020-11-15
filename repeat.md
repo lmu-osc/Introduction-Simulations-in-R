@@ -11,7 +11,7 @@ The function
 In your local exercice script:  
 Replicate 1000 times the mean of 10 values drawn from a unifrom distribution between 0 and 10.  
 Replicate 100 times the mean of 50 values drawn from a normal distribution of mean 10 and stndard deviation 5.  
-Make a histogram of each of your results, are the distribution looking as expected?  
+Make a histogram of each of your results, are the distributions looking as expected?  
 
 ***
 
