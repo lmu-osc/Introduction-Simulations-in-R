@@ -21,7 +21,7 @@ The number of simulations needs to be a big enough number to obtain a good repre
 ***
 
 **YOUR TURN:**  
-You can play with these graphs by running and modifying the examples provided in your local exercice script (e.g. changing parameters in turns)
+You can play with these graphs by running and modifying the examples provided in your local exercice script (e.g. changing parameters in turn)
  
 
 ***
