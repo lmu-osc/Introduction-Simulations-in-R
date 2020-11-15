@@ -19,7 +19,7 @@ and if I replicate this simulation 24 times, here are the distributions of the 1
 Note that because we are drawing from N(0,1), we expect the mean of the values drawn (mean(x), blue lines) to be very closed to 0, the mean of the normal distribution we sample from (red dashed lines).  
 <br/>
 
-Let's see how distributed are the means and standards deviations of the 24 simulations of 10 sampled values from N(0,1) are:  
+How distributed are the means and standards deviations of the 24 simulations of 10 sampled values from N(0,1)?  
 
 **mu and sd from 24 sims N(0,1) with n=10**  
 <br/>
