@@ -228,11 +228,11 @@ abline(v=1, col="red", lty=2, lwd=2)
 # writing a function
     ## function syntax:
     ## AwesomeFunctionName <- function(argument1, argument2,…){
-    ## do stuff here
-    ## }
+    ##                                                         do stuff here
+    ##                                                        }
 
 # YOUR TURN: write a function 
-## that draws a histogram of nrep draws of mean(rnorm(100))
+## that draws a histogram of nrep mean(rnorm(100))
 
 
 
@@ -262,10 +262,11 @@ abline(v=1, col="red", lty=2, lwd=2)
     }
     #### step 6: check that the function works
     histrnorm100(9)
+    histrnorm100(1000)
 
     
 # YOUR TURN: modify your function
-## to draw a histogram of n draws of mean(rnorm(n))
+## to draw a histogram of nrep mean(rnorm(n))
 
 
 
@@ -289,17 +290,19 @@ abline(v=1, col="red", lty=2, lwd=2)
     replicate(nrep, mean(rnorm(n)))
     #### step 5: wrap the action in a function:
     histrnorm_n <- function (nrep, n){
-      hist(replicate(n, mean(rnorm(n))))
+      hist(replicate(nrep, mean(rnorm(n))))
     }
     #### step 6: check that the function works
-    histrnorm_n(9,3)
+    histrnorm_n(10,10)
+    histrnorm_n(10,100)
+    histrnorm_n(100,100)
+    histrnorm_n(1000,100)
     
-    
 
 
-#~~~~~~~~~ Real (useful) simulation
+#~~~~~~~~~ First simulation
 
-# YOUR TURN: draw from the same distribution twice 
+# YOUR TURN: draw from the same normal distribution twice 
 ## and see if the sample differ from each other
 ## will they differ significantly in 5% of the nrep?
 ### Figure out how to do a t.test in R  

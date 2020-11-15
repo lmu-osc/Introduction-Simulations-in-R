@@ -133,7 +133,7 @@ Simulate_and_analyse <-function(){  # DO NOT RUN IF WANT TO CREATE ONE EXAMPLE T
 # 4. replicate
 OutputSimulation <- do.call(rbind, pbreplicate(pbrep,Simulate_and_analyse())) # collect all p values for both factors in the models
 
-OutputSimulation <- OutputSimulation<0.05 # determine whether or not their are significant
+OutputSimulation <- OutputSimulation<0.05 # determine whether or not there are significant
 
 OutputSimulationFreq <- OutputSimulation[rownames(OutputSimulation) == "modFreq1p",]
 OutputSimulationBinom <- OutputSimulation[rownames(OutputSimulation) == "modBinomp",]
