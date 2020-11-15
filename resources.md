@@ -2,7 +2,7 @@
 
 ## Hallgren 2013
 
-The article you read prior to the session contains accompanying R script and CSV data files which you can peruse in the [Hallgren2013](./Hallgren2013) folder of this repository. It contains:  
+The article you read prior to the session contains accompanying R scripts and CSV data files which you can peruse in the [Hallgren2013](./Hallgren2013) folder of this repository. It contains:  
 
 Annotated R syntax file for Example 1: "novel question.R"  
 Annotated R syntax file for Example 2: "power analysis.R"  
