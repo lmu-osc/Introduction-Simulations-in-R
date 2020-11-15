@@ -9,7 +9,6 @@ Following the WET rule will:
 * Decrease clarity  
 * Leads to opportunities for inconsistency  
 <br/>
-<br/>
 To prevent duplication and follow the DRY rule, we can write custom functions.
 
 * `AwesomeFunctionName <- function(argument1, argument2,…){  
