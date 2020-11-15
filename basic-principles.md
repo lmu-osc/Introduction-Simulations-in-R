@@ -1,4 +1,4 @@
-# Basic principles of Simulations
+# Basic principles
 
 Basically, a simulation consist in  
 **1) Generating `n` random numbers from a known distribution**    
