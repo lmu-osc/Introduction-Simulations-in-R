@@ -1,7 +1,7 @@
 # Random number generators
 
 R contains several functions to generate random numbers.  
-Type *`?function`* in your consol to get information on the function's arguments.  
+Type *`?function`* in your consol to get information on the function's arguments (i.e. the values that must be provided to obtain the function's result).  
 
 The function  
 * `sample(x, n, replace=FALSE)` draws `n` values from a given vector `x` without replacement (by default)  
@@ -21,7 +21,6 @@ The following functions draw `n` values from distributions with the specified pa
 
 ***
 **YOUR TURN:**    
-Sample 100 values from a normal distribution of mean 0 and sd 1.  
 Draw 100 values from a normal distribution with a mean of 0 and a sd of 1.  
 Draw 50 values from a normal distribution with a mean of 10 and sd of 5.  
 Draw 1000 values from a poisson distribution with a lambda of 50.  
