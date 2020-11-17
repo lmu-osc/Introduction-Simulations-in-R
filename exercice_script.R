@@ -231,9 +231,8 @@ abline(v=1, col="red", lty=2, lwd=2)
     ##                                                         do stuff here
     ##                                                        }
 
-# YOUR TURN: write a function 
-## that draws a histogram of nrep mean(rnorm(100))
-
+# YOUR TURN: write a function that takes input "nrep", replicates (mean(rnorm(100))) nrep
+# times, and draws a histogram of the results
 
 
 
@@ -266,7 +265,7 @@ abline(v=1, col="red", lty=2, lwd=2)
 
     
 # YOUR TURN: modify your function
-## to draw a histogram of nrep mean(rnorm(n))
+## to draw a histogram of nrep mean(rnorm(n)), where n is another input
 
 
 
@@ -414,9 +413,10 @@ hist(rpois(100,3))
 #~~~~~~~~~ Simulating an effect 
 
 # we can calculate the power of a t.test for a given sample size using:
-power.t.test(n = 40, delta = 0.5, sd = 1)
+power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
+# the required sample size is 64 per arm.
 
-# YOUR TURN: Use your simulation skills to work out the power empirically:
+# YOUR TURN: Use your simulation skills to work out the power of a t-test for a given sample size through simulation.
 ## Write a function which:
 ### 1. Draws from two random normal distributions with different means and a given sample size
 ### 2. Compares the means with a t.test and extracts the p.value
@@ -446,11 +446,11 @@ power.t.test(n = 40, delta = 0.5, sd = 1)
     ##### note that we are using a difference of 0.5 between means to match the "delta" 
     ##### used in the power calcution 
     set.seed(100)
-    p <- replicate(1000, simT2(n = 40, m1 = 0, m2 = 0.5))
+    p <- replicate(1000, simT2(n = 64, m1 = 0, m2 = 0.5))
     
     #### plot the results
     par(mfrow=c(1,1))
-    hist(p, breaks =21,main="nrep = 1000, n=40, delta = 0.5", xlab ='pvalue', col="grey")
+    hist(p, breaks =21,main="nrep = 1000, n=64, delta = 0.5", xlab ='pvalue', col="grey")
     abline(v=0.05, lwd=2, lty=2, col="red")
     
     #### calculate the proportion "significant" 
@@ -461,7 +461,13 @@ power.t.test(n = 40, delta = 0.5, sd = 1)
     #### is therefore the proportion of p.values <0.05
     
     # compare that to the calculation, they give similar results:
-    power.t.test(n = 40, delta = 0.5, sd = 1)
+    power.t.test(delta = 0.5, sd = 1, power = 0.8)
+
+    
+# png(filename = "assets/hist-power.png", width = 500, height = 300)
+# hist(p, breaks =21,main="nrep = 1000, n=64, delta = 0.5", xlab ='pvalue', col="grey")
+# abline(v=0.05, lwd=2, lty=2, col="red")
+# dev.off()
 
 
 

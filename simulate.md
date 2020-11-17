@@ -1,8 +1,10 @@
-# First real simulation: testing probability assumption
+# First real simulation: testing probability assumptions
 
-In most quantitative sciences we work with the statistical assumption "alpha = 0.05", which means that 5% of statistical tests should give a false positive result.  
+In most quantitative sciences we accept a type 1 error rate of "0.05", which often called the `alpha` or significance level. This value tells us the probability of rejecting the null hypothesis given that it is true. 
 
-If you draw from the same distribution twice, will the mean of the two samples differ significantly in 5% of the cases?  
+In other words, if there is no true effect (e.g. no difference between two groups), we would expect our null hypothesis of no effect to be rejected (incorrectly), `alpha`% of the time.
+
+If you draw from the same distribution twice, will the mean of the two samples differ significantly in 5% of the cases? 
 
 
 ***
@@ -50,6 +52,11 @@ These proportions are not signicantly different from 5%.
 data:  59 out of 1000, null probability 0.05  
 X-squared = 1.5211, df = 1, p-value = 0.2175  
 
+*** 
+
+It is important to note that, although `alpha = 0.05` is commonly used, this is an arbitrary choice and you should consider what is an appropriate type 1 error rate for your particular investigation.
+
+
 ***
 
 **YOUR TURN:**  
@@ -76,18 +83,36 @@ Please note that I do not suggest you use t tests to compare Poisson distributed
 
 ***
 
-## Checking power empirically
-The power tells us the probability that the test correctly rejects the null hypothesis. We can calculate the power of a t.test for a given sample size using:
-`power.t.test(n = 40, delta = 0.5, sd = 1)`
+## Checking power through simulations
+The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power tells us the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to `0.8`, though, as with `alpha = 0.05`, this is an arbitrary choice. 
 
-The power is `0.6`
+Generally, we want to do power analysis before collecting data, to work out the sample size we need to detect some effect. If we are calculating a required sample size, the power analysis can also be called a sample size calculation. 
 
-Just as we can check the alpha of our test by sampling from the same distribution, we can check the power by sampling from different distributions. 
+Taking the example of a t-test, we need to understand a few parameters:
+
+* `n`, the sample size
+* `delta`, the difference in means that you want to be able to detect. Deciding what this value * should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), Or you can use a 'minimally important difference': you specify the threshold below which you do not think a difference is interesting enough to be worth detecting. In a clinical trial, this might be the smallest difference that a patient would care about, for example. 
+* `sd`, the standard deviation. Usually this needs to be estimated from the literature or from pilot studies. 
+* `sig.level`, the alpha, as discussd above. 
+* `power`, the power as defined above
+
+You can calculate any one of these parameters, given all of the others. We usually want to specify, `delta`, `sd`, `sig.level` and `power` and calculate the required sample size.
+
+We can calculate the required sample size for a t.test using:
+`power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)`
+
+Notice that `n = NULL`, so this parameter is calculated. 
+
+The sample size we need, per group, is `64`.
+
+***
+
+Just as we can check the alpha of our test by sampling from the same distribution (i.e. simulating data without an effect), we can check the power by sampling from different distributions (i.e. simulating data with an effect).
 
 ***
 
 **YOUR TURN:**  
-Use your simulation skills to work out the power empirically.
+Use your simulation skills to work out the power through simulation.
 Write a function which:
 
 1. Draws from two random normal distributions with different means and a given sample size
@@ -100,13 +125,19 @@ Calculate the proportion of p-values that are <0.05
 
 ***
 
-**p-values of t tests comparing means from 1000 sims N(0,1) and N(0.5, 1) with n=40**  
+**p-values of t tests comparing means from 1000 sims N(0,1) and N(0.5, 1) with n=64**  
 
 <br/>
 <img src="./assets/hist-power.png" width="500">  
 <br/>
 
-The proportion of correctly rejected null hypotheses in the simulation is close to the calculated power.
+The proportion of correctly rejected null hypotheses in the simulation is close to `0.8`, which is what we would expect. 
+
+***
+
+Using simulations for power analysis is not really necessary for simple examples like a t-test, though it is useful to check your understanding. 
+
+When analyses become complex and it is hard or impossible to determine a sample size analytically (i.e. you can't calculate it, or there's no suitable function to use), then simulations are an indespensible tool.
 
 ***
 
