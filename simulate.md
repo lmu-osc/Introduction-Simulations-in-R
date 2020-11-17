@@ -53,8 +53,8 @@ X-squared = 1.5211, df = 1, p-value = 0.2175
 ***
 
 **YOUR TURN:**  
-What happen if you use non-normally distributed data? e.g. Poisson distributed data?
-What happen if you vary lambda?  
+What happens if you use non-normally distributed data? e.g. Poisson distributed data?
+What happens if you vary lambda?  
 
 ***
 
@@ -72,7 +72,41 @@ The proportion of false-positive results are all close to 5% of the tests perfor
 
 To generalize such observation, and assert that using t test for Poisson distributed data does not lead to more false positive than expected by chance, one would need to explore the entirety of the parameter space (i.e. test this for all possible lambda).  
 
-Please note that I do not suggest you use t tests to compare Poisson distributed data (such as counts). There may be other problems than creating false positive results that need consideration (and that perhaps other simulations could help us examinate).
+Please note that I do not suggest you use t tests to compare Poisson distributed data (such as counts). There may be other problems than creating false positive results that need consideration (and that perhaps other simulations could help us examine).
+
+***
+
+## Checking power empirically
+The power tells us the probability that the test correctly rejects the null hypothesis. We can calculate the power of a t.test for a given sample size using:
+`power.t.test(n = 40, delta = 0.5, sd = 1)`
+
+The power is `0.6`
+
+Just as we can check the alpha of our test by sampling from the same distribution, we can check the power by sampling from different distributions. 
+
+***
+
+**YOUR TURN:**  
+Use your simulation skills to work out the power empirically.
+Write a function which:
+
+1. Draws from two random normal distributions with different means and a given sample size
+
+2. Compares the means with a t.test and extracts the p.value
+
+Replicate the function 1000 times using the parameters used in the power calculation.
+
+Calculate the proportion of p-values that are <0.05
+
+***
+
+**p-values of t tests comparing means from 1000 sims N(0,1) and N(0.5, 1) with n=40**  
+
+<br/>
+<img src="./assets/hist-power.png" width="500">  
+<br/>
+
+The proportion of correctly rejected null hypotheses in the simulation is close to the calculated power.
 
 ***
 

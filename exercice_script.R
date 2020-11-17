@@ -420,7 +420,7 @@ power.t.test(n = 40, delta = 0.5, sd = 1)
 ## Write a function which:
 ### 1. Draws from two random normal distributions with different means and a given sample size
 ### 2. Compares the means with a t.test and extracts the p.value
-## Then, use that function to replicate the function 1000 times. 
+## Then, use that function to replicate the function 1000 times using the parameters used in the power calculation.
 ## Calculate the proportion of p-values that are <0.05
 
 
@@ -435,10 +435,10 @@ power.t.test(n = 40, delta = 0.5, sd = 1)
 
     ### possible solution
     #### write new function 
-    simT2 <- function(N, m1, m2) {
-      # N is sample size per group, m1 is mean of group 1, m2 is mean of group 2
-      x1 <- rnorm(N, m1)
-      x2 <- rnorm(N, m2)
+    simT2 <- function(n, m1, m2) {
+      # n is sample size per group, m1 is mean of group 1, m2 is mean of group 2
+      x1 <- rnorm(n, m1)
+      x2 <- rnorm(n, m2)
       t.test(x1, x2)$p.value
     }
     
@@ -446,7 +446,7 @@ power.t.test(n = 40, delta = 0.5, sd = 1)
     ##### note that we are using a difference of 0.5 between means to match the "delta" 
     ##### used in the power calcution 
     set.seed(100)
-    p <- replicate(1000, simT2(N = 40, m1 = 0, m2 = 0.5))
+    p <- replicate(1000, simT2(n = 40, m1 = 0, m2 = 0.5))
     
     #### plot the results
     par(mfrow=c(1,1))
@@ -462,4 +462,6 @@ power.t.test(n = 40, delta = 0.5, sd = 1)
     
     # compare that to the calculation, they give similar results:
     power.t.test(n = 40, delta = 0.5, sd = 1)
+
+
 
