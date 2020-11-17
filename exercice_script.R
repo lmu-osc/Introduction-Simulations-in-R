@@ -464,10 +464,6 @@ power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
     power.t.test(delta = 0.5, sd = 1, power = 0.8)
 
     
-# png(filename = "assets/hist-power.png", width = 500, height = 300)
-# hist(p, breaks =21,main="nrep = 1000, n=64, delta = 0.5", xlab ='pvalue', col="grey")
-# abline(v=0.05, lwd=2, lty=2, col="red")
-# dev.off()
 
 
 
