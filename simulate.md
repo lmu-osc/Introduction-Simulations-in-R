@@ -1,4 +1,4 @@
-# First real simulation: testing probability assumptions
+# First real simulation: checking alpha and power
 
 In most quantitative sciences we accept a type 1 error rate of "0.05", which often called the `alpha` or significance level. This value tells us the probability of rejecting the null hypothesis given that it is true. 
 
@@ -84,16 +84,16 @@ Please note that I do not suggest you use t tests to compare Poisson distributed
 ***
 
 ## Checking power through simulations
-The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power tells us the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to `0.8`, though, as with `alpha = 0.05`, this is an arbitrary choice. 
+The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to `0.8`, though, as with `alpha = 0.05`, this is an arbitrary choice. 
 
 Generally, we want to do power analysis before collecting data, to work out the sample size we need to detect some effect. If we are calculating a required sample size, the power analysis can also be called a sample size calculation. 
 
 Taking the example of a t-test, we need to understand a few parameters:
 
 * `n`, the sample size
-* `delta`, the difference in means that you want to be able to detect. Deciding what this value * should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), Or you can use a 'minimally important difference': you specify the threshold below which you do not think a difference is interesting enough to be worth detecting. In a clinical trial, this might be the smallest difference that a patient would care about, for example. 
+* `delta`, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), Or you can use a 'minimally important difference': you specify the threshold below which you do not think a difference is interesting enough to be worth detecting. In a clinical trial, this might be the smallest difference that a patient would care about, for example. 
 * `sd`, the standard deviation. Usually this needs to be estimated from the literature or from pilot studies. 
-* `sig.level`, the alpha, as discussd above. 
+* `sig.level`, the alpha, as discussed above. 
 * `power`, the power as defined above
 
 You can calculate any one of these parameters, given all of the others. We usually want to specify, `delta`, `sd`, `sig.level` and `power` and calculate the required sample size.
