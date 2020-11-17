@@ -460,8 +460,8 @@ power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
     #### that there really is a difference, and the null should be rejected. The power
     #### is therefore the proportion of p.values <0.05
     
-    # compare that to the calculation, they give similar results:
-    power.t.test(delta = 0.5, sd = 1, power = 0.8)
+    # compare that to calculating the value, and the results are similar:
+    power.t.test(n = 64, delta = 0.5, sd = 1)
 
     
 
