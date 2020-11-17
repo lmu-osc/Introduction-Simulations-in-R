@@ -411,7 +411,55 @@ hist(rpois(100,3))
     
 
     
+#~~~~~~~~~ Simulating an effect 
+
+# we can calculate the power of a t.test for a given sample size using:
+power.t.test(n = 40, delta = 0.5, sd = 1)
+
+# YOUR TURN: Use your simulation skills to work out the power empirically:
+## Write a function which:
+### 1. Draws from two random normal distributions with different means and a given sample size
+### 2. Compares the means with a t.test and extracts the p.value
+## Then, use that function to replicate the function 1000 times. 
+## Calculate the proportion of p-values that are <0.05
+
+
+
+
+
+
+
+
+
+
+
+    ### possible solution
+    #### write new function 
+    simT2 <- function(N, m1, m2) {
+      # N is sample size per group, m1 is mean of group 1, m2 is mean of group 2
+      x1 <- rnorm(N, m1)
+      x2 <- rnorm(N, m2)
+      t.test(x1, x2)$p.value
+    }
     
-   
+    ##### repeat the function 1000 times 
+    ##### note that we are using a difference of 0.5 between means to match the "delta" 
+    ##### used in the power calcution 
+    set.seed(100)
+    p <- replicate(1000, simT2(N = 40, m1 = 0, m2 = 0.5))
     
+    #### plot the results
+    par(mfrow=c(1,1))
+    hist(p, breaks =21,main="nrep = 1000, n=40, delta = 0.5", xlab ='pvalue', col="grey")
+    abline(v=0.05, lwd=2, lty=2, col="red")
+    
+    #### calculate the proportion "significant" 
+    prop.table(table(p<0.05))
+    #### power is the probability that the test correctly rejects the null. Since we
+    #### know the population paramaters (as we set them in our simulation), we know
+    #### that there really is a difference, and the null should be rejected. The power
+    #### is therefore the proportion of p.values <0.05
+    
+    # compare that to the calculation, they give similar results:
+    power.t.test(n = 40, delta = 0.5, sd = 1)
 
