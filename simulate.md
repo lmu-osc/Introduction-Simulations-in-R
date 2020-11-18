@@ -91,7 +91,7 @@ Generally, we want to do power analysis before collecting data, to work out the 
 Taking the example of a t-test, we need to understand a few parameters:
 
 * `n`, the sample size
-* `delta`, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), Or you can use a 'minimally important difference': you specify the threshold below which you do not think a difference is interesting enough to be worth detecting. In a clinical trial, this might be the smallest difference that a patient would care about, for example. 
+* `delta`, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), or you can use a 'minimally important difference': you specify the threshold below which you do not think a difference is interesting enough to be worth detecting. In a clinical trial, this might be the smallest difference that a patient would care about, for example. 
 * `sd`, the standard deviation. Usually this needs to be estimated from the literature or from pilot studies. 
 * `sig.level`, the alpha, as discussed above. 
 * `power`, the power as defined above
@@ -103,9 +103,8 @@ We can calculate the required sample size for a t.test using:
 
 Notice that `n = NULL`, so this parameter is calculated. 
 
-The sample size we need, per group, is `64`.
+The sample size `n` we need given this set of parameters, is `64` per group.
 
-***
 
 Just as we can check the alpha of our test by sampling from the same distribution (i.e. simulating data without an effect), we can check the power by sampling from different distributions (i.e. simulating data with an effect).
 
@@ -133,11 +132,9 @@ Calculate the proportion of p-values that are <0.05
 
 The proportion of correctly rejected null hypotheses in the simulation is close to `0.8`, which is what we would expect. 
 
-***
-
 Using simulations for power analysis is not really necessary for simple examples like a t-test, though it is useful to check your understanding. 
 
-When analyses become complex and it is hard or impossible to determine a sample size analytically (i.e. you can't calculate it, or there's no suitable function to use), then simulations are an indespensible tool.
+When analyses become complex and it is hard or impossible to determine a sample size analytically (i.e. you can't calculate it, or there's no suitable function to use), then simulations are an indispensible tool.
 
 ***
 
