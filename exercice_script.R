@@ -414,7 +414,7 @@ hist(rpois(100,3))
 
 # we can calculate the power of a t.test for a given sample size using:
 power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
-# the required sample size is 64 per arm.
+# the required sample size is 64 per group.
 
 # YOUR TURN: Use your simulation skills to work out the power of a t-test for a given sample size through simulation.
 ## Write a function which:
@@ -436,7 +436,7 @@ power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
     ### possible solution
     #### write new function 
     simT2 <- function(n, m1, m2) {
-      # n is sample size per group, m1 is mean of group 1, m2 is mean of group 2
+      ##### n is sample size per group, m1 is mean of group 1, m2 is mean of group 2
       x1 <- rnorm(n, m1)
       x2 <- rnorm(n, m2)
       t.test(x1, x2)$p.value
