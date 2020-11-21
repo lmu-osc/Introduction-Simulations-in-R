@@ -8,11 +8,9 @@
 
 4. **replicate** step 2 and 3 to get the distribution of the statistic of interest  
 
-5. **check you get the results** you expect after many iterations: e.g. you only get a significant result with no effect in 5% of simulation (if `alpha = 0.05`) and you detect the simulated effect according to the power you want (e.g. 80%)
+5. try out different parameter sets (**explore the parameter space** for which results are similar)  
 
-6. try out different parameter sets (**explore the parameter space** for which results are similar)  
-
-7. **analyze and interpret the combined results of many simulations** within each set of parameters  
+6. **analyze and interpret the combined results of many simulations** within each set of parameters. For instance, check that you only get a significant result in 5% of the simulations (if `alpha = 0.05`) when you simulated no effect; and that you get at a significant result in 80% of the simulations (if `power = 80%`) when you simulated an effect  
 
 ***
 
