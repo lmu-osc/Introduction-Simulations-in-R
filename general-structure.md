@@ -10,7 +10,7 @@
 
 5. try out different parameter sets (**explore the parameter space** for which results are similar)  
 
-6. **analyze and interpret the combined results of many simulations** within each set of parameters. For instance, check that you only get a significant result in 5% of the simulations (if `alpha = 0.05`) when you simulated no effect; and that you get at a significant result in 80% of the simulations (if `power = 80%`) when you simulated an effect  
+6. **analyze and interpret the combined results of many simulations** within each set of parameters. For instance, check that you only get a significant result in 5% of the simulations (if `alpha = 0.05`) when you simulated no effect; and that you get at a significant result in 80% of the simulations (if you targeted a `power` of 80%) when you simulated an effect  
 
 ***
 
