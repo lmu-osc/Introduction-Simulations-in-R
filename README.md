@@ -5,7 +5,7 @@ This work was originally created by [Malika Ihle](https://ox.ukrn.org/people/#Ma
 It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## Prior to the session
-1) Fork and clone this repository ([here](https://github.com/MalikaIhle/Collaborative-RStudio-GitHub) is a reminder on how to fork and clone and what it means). If you have never been introduced to version control system, follow [these instructions](./download-rep.md) instead.  
+1) Fork and clone this repository ([here](https://github.com/MalikaIhle/Collaborative-RStudio-GitHub) is a reminder on how to fork and clone and what it means). If you have never been introduced to version control system, follow [these instructions](./download-repo.md) instead.  
 
 2) Read [Hallgren A. K. 2013. Conducting simulation studies in the R programming environment. Tutor Quant Methods Psychol. ; 9(2): 43–60.](https://doi.org/10.20982/tqmp.09.2.p043) and answer the following 3 questions in your local copy of the [reading sheet](./Hallgren2013/ReadingSheet.md):  
   * describe 6 steps common to all simulations  
