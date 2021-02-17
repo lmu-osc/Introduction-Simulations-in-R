@@ -9,8 +9,8 @@ Taking the example of a t-test, we need to understand a few parameters:
 * `n`, the sample size
 * `delta`, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), or you can use a 'minimally important difference': you specify the threshold below which you do not think a difference is interesting enough to be worth detecting. In a clinical trial, this might be the smallest difference that a patient would care about, for example. 
 * `sd`, the standard deviation. Usually this needs to be estimated from the literature or from pilot studies. 
-* `sig.level`, the alpha, as discussed above. 
-* `power`, the power as defined above
+* `sig.level`, the alpha, as discussed previously. 
+* `power`, the power as defined above.
 
 You can calculate any one of these parameters, given all of the others. We usually want to specify, `delta`, `sd`, `sig.level` and `power` and calculate the required sample size.
 
@@ -32,7 +32,7 @@ Write a function which:
 
 1. Draws from two random normal distributions with different means and a given sample size
 
-2. Compares the means with a t.test and extracts the p.value
+2. Compares the means with a t-test and extracts the p.value
 
 Replicate the function 1000 times using the parameters used in the power calculation.
 
