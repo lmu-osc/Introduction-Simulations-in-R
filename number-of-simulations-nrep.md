@@ -7,7 +7,7 @@ Sampling theory applies to the number of simulations `nrep` just as much as the 
 <img src="./assets/musd-24-10-N01.png" width="500">  
 <br/>
 
-Now, let's do the same with a sample size `nrep` of 1000.  
+Now, let's do the same with a number of repeats `nrep` of 1000.  
 
 **mu and sd from 1000 sims N(0,1) with n=10**   
 <br/>
