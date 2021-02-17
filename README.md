@@ -25,7 +25,9 @@ It is necessary that you work through the sections in order. Please read the blu
 * [Sample size `n`](./sample-size-n.md) - how many values should you generate within a simulation?
 * [Number of simulations `nrep`](./number-of-simulations-nrep.md) - how many repeats of a simulation should you run?
 * [Dry rule](./dry-rule.md) - how to write your own functions?
-* [Simulate](./simulate.md) - write your first simulation!
+* [Simulate to check alpha](./check-alpha.md) - write your first simulation and check the rate of false-positive findings.  
+* [Simulate to check power](./check-power.md) - simulate data to perform a power analysis.  
+* [Simulate to prepare a preregistration](./simulate.md) - simulate data to test statistical analyses before preregistering them.  
 * [General structure](./general-structure.md) - what is the general structure of a simulation?
 * [Limitations](./limitations.md) - what are the limitations to simulations?
 * [Real-life example](./real-life-example.md) - what are real life examples of simulations?
