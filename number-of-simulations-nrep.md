@@ -1,4 +1,4 @@
-# Sample size `nrep`
+# Number of simulations `nrep`
 
 Sampling theory applies to the number of simulations `nrep` just as much as the sample size `n` within a simulation.
 
