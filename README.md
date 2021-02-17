@@ -23,7 +23,7 @@ It is necessary that you work through the sections in order. Please read the blu
 * [Repeat](./repeat.md) - how to repeat the generation of random numbers multiple times?
 * [Setting the seed](./seed.md) - how can you generate the same random numbers?
 * [Sample size `n`](./sample-size-n.md) - how many values should you generate within a simulation?
-* [Sample size `nrep`](./sample-size-nrep.md) - how many repeats of simulations should you run?
+* [Number of simulations `nrep`](./number-of-simulations-nrep.md) - how many repeats of a simulation should you run?
 * [Dry rule](./dry-rule.md) - how to write your own functions?
 * [Simulate](./simulate.md) - write your first simulation!
 * [General structure](./general-structure.md) - what is the general structure of a simulation?
