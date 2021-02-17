@@ -13,7 +13,7 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
   * describe 4 limitations of simulations
 
 ## During the session: self-paced workshop
-The workshop will alternate presentation of concepts and simple exercices for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the [exercice script](./exercice_script.R), review the examples if needed, complete the exercice, and check out the proposed answer (which often contain additional tips).  
+The workshop will alternate presentation of concepts and simple exercices for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the [exercice script](./exercice_script.R), review the examples if needed, complete the exercice, and check out the proposed answer (which often contains additional tips).  
 It is necessary that you work through the sections in order. Please read the blurbs of each sections below to get an overview of what is coming before starting.    
 
 * [Definition](./definition.md) - what are simulations?
