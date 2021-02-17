@@ -10,16 +10,16 @@ If you draw from the same distribution twice, will the mean of the two samples d
 ***
 
 **YOUR TURN:**  
-Figure out how to do a t test in R  
-Generate two vectors of 10 values drawn from N(0,1) and compare them with a t test  
+Figure out how to do a t-test in R  
+Generate two vectors of 10 values drawn from N(0,1) and compare them with a t-test  
 Figure out how to extract the p-value from that object (explore your R object with the functions `str` or `names`)    
-Write a function simT that generates two vectors of `n` random normals, compare them with a t test and return the p-value  
+Write a function simT that generates two vectors of `n` random normals, compare them with a t-test and return the p-value  
 Repeat with `nrep`=20 and draw a histogram for `n`=10  
 Repeat with `nrep`=100 and draw a histogram for `n`=10
 
 ***
 
-**p-values of t tests comparing means from 20 or 100 sims N(0,1) with n=10**   
+**p-values of t-tests comparing means from 20 or 100 sims N(0,1) with n=10**   
 <br/>
 <img src="./assets/ttest-changing-nrep.png" width="500">  
 <br/>
@@ -38,7 +38,7 @@ Plot the output of the function simT with `nrep`=1000 and `n`=100
 ***
 
 
-**p-values of t tests comparing means from 1000 sims N(0,1) with n=10 or n=100**   
+**p-values of t-tests comparing means from 1000 sims N(0,1) with n=10 or n=100**   
 <br/>
 <img src="./assets/ttest-changing-n.png" width="500">  
 <br/>
@@ -54,7 +54,7 @@ X-squared = 1.5211, df = 1, p-value = 0.2175
 
 It is important to note that, although `alpha = 0.05` is commonly used, this is an arbitrary choice and you should consider what is an appropriate type 1 error rate for your particular investigation.  
 
-Altough it isn't necessary to check that a statistical analysis as simple as a t test does not yield more than 5% of false-positive results, when the structure of the data is complex and analysed with more advanced models (e.g. when explanatory variables are mathematically linked to each other, and are combined in a mixed-effect models), this may allow to compare different modelling approach and select the one that does not produce more than 5% false positive results.  
+Altough it isn't necessary to check that a statistical analysis as simple as a t-test does not yield more than 5% of false-positive results, when the structure of the data is complex and analysed with more advanced models (e.g. when explanatory variables are mathematically linked to each other, and are combined in a mixed-effect models), this may allow to compare different modelling approach and select the one that does not produce more than 5% false positive results.  
 
 Such complex example where simulations is the only viable approach to construct a statistical model that does not lead to spurious effects can be found in this paper:
 * Ihle, Malika, et al (2020). "Measuring Up to Reality: Null Models and Analysis Simulations to Study Parental Coordination Over Provisioning Offspring." Frontiers in Ecology and Evolution. https://doi.org/10.3389/fevo.2019.00142 
