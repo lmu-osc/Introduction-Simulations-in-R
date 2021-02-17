@@ -16,4 +16,8 @@ Play around with the function `set.seed()` by running and modifying the examples
  
 ***
 
+You can set the seed at the beginning of a script, and if things are ran in the exact same order they will provide the same output in subsequent runs.  
+
+***
+
 [Previous](./repeat.md) | [Next](./sample-size-n.md)  
