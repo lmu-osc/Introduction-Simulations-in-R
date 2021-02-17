@@ -1,6 +1,6 @@
 # First real simulation: checking alpha and power
 
-In most quantitative sciences we accept a type 1 error rate of "0.05", which often called the `alpha` or significance level. This value tells us the probability of rejecting the null hypothesis given that it is true. 
+In most quantitative sciences we accept a type 1 error rate of "0.05", which is often called the `alpha` or significance level. This value tells us the probability of rejecting the null hypothesis (i.e. of finding an effect) given that the null hypothesis is true (i.e. that the alternative hypothesis that we test isn't true). 
 
 In other words, if there is no true effect (e.g. no difference between two groups), we would expect our null hypothesis of no effect to be rejected (incorrectly), `alpha`% of the time.
 
@@ -15,7 +15,7 @@ Generate two vectors of 10 values drawn from N(0,1) and compare them with a t te
 Figure out how to extract the p-value from that object (explore your R object with the functions `str` or `names`)    
 Write a function simT that generates two vectors of `n` random normals, compare them with a t test and return the p-value  
 Repeat with `nrep`=20 and draw a histogram for `n`=10  
-Repeat with `nrep`=100 and draw a histogram for a `n`=10
+Repeat with `nrep`=100 and draw a histogram for `n`=10
 
 ***
 
@@ -51,8 +51,6 @@ These proportions are not signicantly different from 5%.
 1-sample proportions test with continuity correction  
 data:  59 out of 1000, null probability 0.05  
 X-squared = 1.5211, df = 1, p-value = 0.2175  
-
-*** 
 
 It is important to note that, although `alpha = 0.05` is commonly used, this is an arbitrary choice and you should consider what is an appropriate type 1 error rate for your particular investigation.
 
