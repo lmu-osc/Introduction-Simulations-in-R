@@ -2,7 +2,7 @@
 
 How many values should you generate within a simulation? Let's explore.  
 
-If I draw 10 data points from a normal distribution of mean 0 and sd 1, or N(0,1), after setting the seed to 10 (for no specific reasons), here is the distribution of the values I get:
+If I draw 10 data points from a normal distribution of mean 0 and sd 1, or N(0,1), after setting the seed to 10 (for no specific reason), here is the distribution of the values I get:
 
 **1 sim of N(0,1) with n=10**  
 <img src="./assets/hist10N01.png" width="300">  
@@ -19,7 +19,7 @@ and if I replicate this simulation 24 times, here are the distributions of the 1
 Note that because we are drawing from N(0,1), we expect the mean of the values drawn (mean(x), blue lines) to be very closed to 0, the mean of the normal distribution we sample from (red dashed lines).  
 <br/>
 
-How distributed are the means and standards deviations of the 24 simulations of 10 sampled values from N(0,1)?  
+How distributed are the means and standard deviations of the 24 simulations of 10 sampled values from N(0,1)?  
 
 **mu and sd from 24 sims N(0,1) with n=10**  
 <br/>
@@ -42,8 +42,8 @@ Now, let's do the same with a sample size `n` of 1000.
 ### Conclusion  
 The sample size within a simulation affects the **precision** with which the parameters of that distribution can be estimated.  
 
-What should determine the sample size within a simulation?  
---> a sample size that is relevant to the context of the simulation, e.g. the sample size you will be able to reach in your study.
+What should determine the sample size within your simulation?  
+--> a sample size that is relevant to the context of the simulation, e.g. the sample size you will be able to reach in your study, the minimum sample size that would allow you to detect the smallest effect of interest (as determined by a power analysis, which we will cover in a moment).
  
 ***
 
