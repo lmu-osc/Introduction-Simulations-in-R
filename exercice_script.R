@@ -466,5 +466,99 @@ power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
     
 #~~~~~~~~~ Simulating for a preregistration  -----
 
+# YOUR TURN: 
+## Try to make a dataset that looks like this, using the 
+## functions `data.frame()`, `sample()`, and `rnorm()`    
+    
+    # smoking_status lung_cancer sex      age
+    # 1            Yes          No   M 12.67918
+    # 2            Yes         Yes   F 23.71397
+    # 3             No          No   M 28.87786
+    # 4            Yes          No   F 28.99327
+    # 5            Yes         Yes   F 30.41415
+    # 6             No          No   M 44.60615
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #### Possible solution
+    set.seed(1234)
+    N <- 10 # size of your dataset 
+    yes_no <- c("Yes", "No") # some options for the outcomes in the data
+    
+    # the dataframe() function let's us create a data frame
+    # before the "=" is the column name. After "=" is the contents of the columm
+    df <- data.frame(smoking_status = sample(yes_no, size = N, replace = T),
+                     lung_cancer = sample(yes_no, size = N, replace = T), 
+                     sex = sample(c("M", "F"), size = N, replace = T),
+                     age = rnorm(N, 30, sd = 10))
+    # run the parts after the "=" alone to make sure you understand what's going on
+    sample(c("M", "F"), size = N, replace = T)
+    
+    head(df)
 
+# YOUR TURN:
+## Run a logistic regression on the data with lung cancer as the outcome and
+## adjusting for the other variables. 
+## You could try something like:
+## glm(lung_cancer ~ smoking_status, sex, age, family = binomial(link = "logit"), data = df)
+## Why doesn't it work? Try to trouble shoot and get the code to work!
+
+## HINT: are the variables the correct data type?
+## HINT: once the model works, use summary() to look at the results
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #### Possible solution 
+    
+    # This mysterious error message appears because the categorical variables
+    # need to be factors for the model to run. So we are already learning
+    # something about how the data need to be that you might not have known
+    # before trying to run the code on a simulated dataset.
+    
+    # You can convert the relevant variables to factors
+    df[1:3] <- lapply(df[1:3], as.factor)
+    
+    # You could also do this one variable at a time:
+    # df$smoking_status <- as.factor(df$smoking_status)
+    
+    # Now we can rerun the model:
+    
+    m1 <- glm(lung_cancer ~ smoking_status + sex + age, 
+              family = binomial(link = "logit"), 
+              data = df)
+    
+    # and look at the results
+    summary(m1)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
