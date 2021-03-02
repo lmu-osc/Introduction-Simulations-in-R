@@ -6,7 +6,7 @@
 #  - a possible solution to those exercices (indented)                                                        #
 ###############################################################################################################
 
-#~~~~~~~~~ Random Numbers Generators and sampling theory
+#~~~~~~~~~ Random Numbers Generators and sampling theory -----
 
 # sample 
 
@@ -223,7 +223,7 @@ hist(apply(x1000, 2, sd), main="SD",col="grey")
 abline(v=1, col="red", lty=2, lwd=2)
 
 
-#~~~~~~~~~ Functions
+#~~~~~~~~~ Functions -----
 
 # writing a function
     ## function syntax:
@@ -299,7 +299,7 @@ abline(v=1, col="red", lty=2, lwd=2)
     
 
 
-#~~~~~~~~~ First simulation
+#~~~~~~~~~ First simulation -----
 
 # YOUR TURN: draw from the same normal distribution twice 
 ## and see if the sample differ from each other
@@ -410,7 +410,7 @@ hist(rpois(100,3))
     
 
     
-#~~~~~~~~~ Simulating an effect 
+#~~~~~~~~~ Simulating an effect  -----
 
 # we can calculate the power of a t.test for a given sample size using:
 power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
@@ -464,6 +464,7 @@ power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
     power.t.test(n = 64, delta = 0.5, sd = 1) # the results are similar
 
     
+#~~~~~~~~~ Simulating for a preregistration  -----
 
 
 
