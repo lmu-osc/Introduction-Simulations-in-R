@@ -22,7 +22,7 @@ It's very easy to make a dataset. Let's take a simple example. We are interested
 Here is the top of the simulated dataset. 
 
 <br/>
-<img src="./assets/simulated-data.png" width="500">  
+<img src="./assets/simulated-data.png" width="750">  
 <br/>
 
 ***
@@ -44,7 +44,7 @@ We can look at the summary of our model and make sure it behaves as we expected.
 <br/>
 
 
-And that's it! We have written down our code in a way that is totally unambiguous. This practice is useful for any project and is very easy to do. You can include the exact code that you plan to use in a preregistration, and reviewers will be able to veryify that you did what you planned.
+And that's it! We have written down our code in a way that is totally unambiguous. This practice is useful for any project and is very easy to do. You can include the exact code that you plan to use in a preregistration, and reviewers will be able to verify that you did what you planned.
 
 A real example of a simple simulation like this, used in the submission of a registered report, can be found in the rmd file [here](https://osf.io/5jf9p/).
 
