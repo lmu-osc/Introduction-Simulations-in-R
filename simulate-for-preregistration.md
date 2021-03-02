@@ -37,7 +37,10 @@ Here is the top of the simulated dataset.
 
 ***
 
-We can look at the summary of our model and make sure it behaves as we expected. And we can share the code with collaborators or reviewers.
+
+Once we have a working model, we can look at the summary and make sure it behaves as we expected. And we can share the code with collaborators or reviewers.
+
+You could combine this approach with the sampling approaches you learned in the power/alpha simulation session to look at power for more complex analyses like this.
 
 <br/>
 <img src="./assets/logreg-results.png" width="750">  
@@ -47,11 +50,6 @@ We can look at the summary of our model and make sure it behaves as we expected.
 And that's it! We have written down our code in a way that is totally unambiguous. This practice is useful for any project and is very easy to do. You can include the exact code that you plan to use in a preregistration, and reviewers will be able to verify that you did what you planned.
 
 A real example of a simple simulation like this, used in the submission of a registered report, can be found in the rmd file [here](https://osf.io/5jf9p/).
-
-
-## Further steps 
-
-You can combine this approach with the sampling approaches you learned in the power/alpha simulation session to look at power for more complex datasets. 
 
 *****
 
