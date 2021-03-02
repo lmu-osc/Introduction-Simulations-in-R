@@ -53,5 +53,6 @@ A real example of a simple simulation like this, used in the submission of a reg
 
 *****
 
+[Previous](./check-power.md) | [Next](./general-structure.md)
 
 
