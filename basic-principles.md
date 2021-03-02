@@ -6,7 +6,7 @@ Basically, a simulation consist in
 
 Once you know how to do this, the questions we will explore are:   
 **1) what sample size `n` should we use within a simulation?**  
-**2) how many repeat `nrep` should we run?**  
+**2) how many simulations `nrep` should we run?**  
 
  ***
 
