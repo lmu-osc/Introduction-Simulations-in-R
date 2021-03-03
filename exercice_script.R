@@ -165,7 +165,7 @@ set.seed(10)
 hist(replicate(100, mean(rnorm(10))))
 
 
-# defining sample size within a replication
+# defining sample size within a replication (n) and the number of simulation/repeats/replication (nrep)
 ## single random sample of normal distribution N(0,1) with n=10
 set.seed(10)
 x <- rnorm(10, mean=0, sd=1)
@@ -231,8 +231,8 @@ abline(v=1, col="red", lty=2, lwd=2)
     ##                                                         do stuff here
     ##                                                        }
 
-# YOUR TURN: write a function that takes input "nrep", replicates (mean(rnorm(100))) nrep
-# times, and draws a histogram of the results
+# YOUR TURN: write a function that takes input "nrep", replicates '(mean(rnorm(100)))'
+# nrep times, and draws a histogram of the results
 
 
 
@@ -299,14 +299,14 @@ abline(v=1, col="red", lty=2, lwd=2)
     
 
 
-#~~~~~~~~~ First simulation -----
+#~~~~~~~~~ Simulating no effect and check alpha -----
 
 # YOUR TURN: draw from the same normal distribution twice 
 ## and see if the sample differ from each other
 ## will they differ significantly in 5% of the nrep?
 ### Figure out how to do a t.test in R  
 ### Generate two vectors of 10 values drawn from N(0,1) and compare them with a t test  
-### Figure out how to extract the p-value from that object (use `str` and your subsetting skills)
+### Figure out how to extract the p-value from that object (HINT use `str` or `names`)
 ### Write a function simT that generates two vectors of n random normals, compare them with a t test and return the p-value  
 ### Repeat with nrep=20 and draw a histogram for n=10
 ### Repeat with nrep=100 and draw a histogram for n=10    
@@ -349,68 +349,21 @@ abline(v=1, col="red", lty=2, lwd=2)
     #### repeat function for n = 10 and for different nrep and plot
     par(mfrow=c(1,2))
     simTRep <- replicate(20, simT(10))
-    hist(simTRep, col="grey", breaks=21, main = "nrep=20, n=10", xlab="pvalue")
-    abline(v=0.05, lwd=2, lty=2, col="red")
-    
+    hist(simTRep, breaks=21, col=c('red',rep('grey',20)), main = "nrep=20, n=10", xlab="pvalue")
+
     simTRep2 <- replicate(100, simT(10))
-    hist(simTRep2, col="grey", breaks=21, main = "nrep=100, n=10", xlab="pvalue")
-    abline(v=0.05, lwd=2, lty=2, col="red")
-    
+    hist(simTRep2, breaks=21, col=c('red',rep('grey',20)), main = "nrep=100, n=10", xlab="pvalue")
+
     #### repeat function for nrep = 1000 and various n
     par(mfrow=c(1,2))
     simTRep <- replicate(1000, simT(10))
-    hist(simTRep, col="grey", breaks=21, main = "nrep=1000, n=10", xlab="pvalue")
-    abline(v=0.05, lwd=2, lty=2, col="red")
+    hist(simTRep, breaks=21, col=c('red',rep('grey',20)), main = "nrep=1000, n=10", xlab="pvalue")
     
     simTRep2 <- replicate(1000, simT(100))
-    hist(simTRep2, col="grey", breaks=21, main = "nrep=1000, n=100", xlab="pvalue")
-    abline(v=0.05, lwd=2, lty=2, col="red")
+    hist(simTRep2, breaks=21, col=c('red',rep('grey',20)),  main = "nrep=1000, n=100", xlab="pvalue")
+   
 
-
-# YOUR TURN: draw from the same distribution twice 
-## using a poisson with lambda = 3 rather than normal distribution
-## and see how t.test performs
-
-hist(rpois(100,3))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ### possible solutions
-    #### write new function
-    simTpoiss <- function(n){
-      x1 <- rpois(n,3)
-      x2 <- rpois(n,3)
-      t.test(x1, x2)$p.value 
-    }
-    
-    #### repeat function for n = 10 and for different nrep and plot
-    par(mfrow=c(1,2))
-    hist(replicate(20, simTpoiss(10)), breaks =21,main="nrep = 20, n=10", xlab ='pvalue', col="grey")
-    abline(v=0.05, lwd=2, lty=2, col="red")
-    hist(replicate(100, simTpoiss(10)), breaks =21,main="nrep =100, n=10", xlab ='pvalue', col="grey")
-    abline(v=0.05, lwd=2, lty=2, col="red")
-    
-    #### repeat function for nrep = 1000 and various n
-    par(mfrow=c(1,2))
-    hist(replicate(1000, simTpoiss(10)), breaks =21, main="nrep = 1000, n=10", xlab ='pvalue', col="grey")
-    abline(v=0.05, lwd=2, lty=2, col="red")
-    hist(replicate(1000, simTpoiss(100)), breaks =21,main="nrep = 1000, n=100", xlab ='pvalue', col="grey")
-    abline(v=0.05, lwd=2, lty=2, col="red")
-    
-
-    
-#~~~~~~~~~ Simulating an effect  -----
+#~~~~~~~~~ Simulating an effect and check power -----
 
 # we can calculate the power of a t.test for a given sample size using:
 power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
@@ -450,8 +403,7 @@ power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
     
     #### plot the results
     par(mfrow=c(1,1))
-    hist(p, breaks =21,main="nrep = 1000, n=64, delta = 0.5", xlab ='pvalue', col="grey")
-    abline(v=0.05, lwd=2, lty=2, col="red")
+    hist(p, breaks=21, col=c('red',rep('grey',20)), main="nrep = 1000, n=64, delta = 0.5", xlab ='pvalue')
     
     #### calculate the proportion "significant" 
     prop.table(table(p<0.05))
