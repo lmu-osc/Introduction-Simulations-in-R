@@ -14,4 +14,4 @@
 
 ***
 
-[Previous](./simulate.md) | [Next](./limitations.md)
+[Previous](./simulate-for-preregistration.md) | [Next](./limitations.md)

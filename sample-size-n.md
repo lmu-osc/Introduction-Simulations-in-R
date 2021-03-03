@@ -47,5 +47,5 @@ What should determine the sample size within your simulation?
  
 ***
 
-[Previous](./seed.md) | [Next](./sample-size-nrep.md) 
+[Previous](./seed.md) | [Next](./number-of-simulations-nrep.md) 
 

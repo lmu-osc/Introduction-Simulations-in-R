@@ -57,6 +57,6 @@ A simple example of a power analysis like the one you've just done can be found 
 
 ***
 
-[Previous](./check-alpha.md) | [Next](./general-structure.md)
+[Previous](./check-alpha.md) | [Next](./simulate-for-preregistration.md)
 
 
