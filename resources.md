@@ -27,7 +27,23 @@ Depending on the type of simulation that would be useful for you, these articles
 
 * Ronnegard, L., et al. (2016). Increasing the **power of genome wide association** studies in natural populations using repeated measures – evaluation and implementation. Methods in Ecology and Evolution 2016, 7, 792–799. https://doi.org/10.1111/2041-210X.12535   
 
-* Dalpiaz, D. (2020) Applied Statistics with R, Chapter 7 **Simple Linear Regression**, section 6  Simulating SLR https://daviddalpiaz.github.io/appliedstats/simple-linear-regression.html#simulating-slr
+* Dalpiaz, D. (2020) Applied Statistics with R, Chapter 7 **Simple Linear Regression**, section 6  Simulating SLR https://daviddalpiaz.github.io/appliedstats/simple-linear-regression.html#simulating-slr  
+
+
+## use of R packages to run simulations  
+
+* https://rpubs.com/bbolker/simpower  
+
+* https://cran.r-project.org/web/packages/simstudy/vignettes/simstudy.html  
+
+* https://debruine.github.io/faux/  
+
+* https://github.com/simsem/simsem/wiki/Vignette  
+
+* https://cran.r-project.org/web/packages/simglm/vignettes/tidy_simulation.html  
+
+* https://rpsychologist.com/therapists-effects-longitudinal  
+
 
 ***
 
