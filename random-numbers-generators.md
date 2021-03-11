@@ -26,7 +26,7 @@ Draw 50 values from a normal distribution with a mean of 10 and sd of 5.
 Draw 1000 values from a poisson distribution with a lambda of 50.  
 Draw 30 values from a uniform distribution between 0 and 10.  
 
-Try it out in your local exercice script.
+Try it out in your local exercise script.
 
 ***
 
