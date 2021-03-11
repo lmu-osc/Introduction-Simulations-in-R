@@ -2,8 +2,8 @@
 # This R script contains                                                                                      #
 #  - the examples shown in the step-by-step workshop pages                                                    #
 #    (for you to run line-by-line to observe the outcome, or to modify and play with)                         #
-#  - space called 'YOUR TURN' for you to write your own code to answer the exercices from the workshop pages  #
-#  - a possible solution to those exercices (indented)                                                        #
+#  - space called 'YOUR TURN' for you to write your own code to answer the exercises from the workshop pages  #
+#  - a possible solution to those exercises (indented)                                                        #
 ###############################################################################################################
 
 #~~~~~~~~~ Random Numbers Generators and sampling theory -----

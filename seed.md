@@ -11,7 +11,7 @@ This is useful for sharing code and reproduce simulations, as well as for debugg
 ***
 
 **YOUR TURN:**  
-In your local exercice script:  
+In your local exercise script:  
 Play around with the function `set.seed()` by running and modifying the examples provided (e.g. compare outputs with and without seeds, change the seed number)
  
 ***

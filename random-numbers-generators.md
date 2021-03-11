@@ -9,7 +9,7 @@ The function
 ***
 **YOUR TURN:**  
 Sample 100 values between 3 and 103 with replacement.    
-For this, open the file `./exercice_script.R` from the root of your local repository (i.e. after having forked and clone this GitHub repository), review the examples if needed, complete the exercice, and check out the proposed answer.
+For this, open the file `./exercise_script.R` from the root of your local repository (i.e. after having forked and clone this GitHub repository), review the examples if needed, complete the exercise, and check out the proposed answer.
 
 ***
 
