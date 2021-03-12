@@ -25,8 +25,8 @@ Repeat with `nrep`=100 and draw a histogram for `n`=10
 <br/>
 
 
-In the first case, where `nrep` = 20, we expect 1 out of the 20 tests to be significant (5%). In my case, I got 2. How many did you get?    
-In the second case, where `nrep` = 100, we expect 5 out of the 100 tests to be significant. In my case, I got 4. How many did you get?      
+In the first case, where `nrep` = 20, we expect 1 out of the 20 tests to be significant (5%). In my case, I did! How many did you get?    
+In the second case, where `nrep` = 100, we expect 5 out of the 100 tests to be significant. In my case, I got 6. How many did you get?      
 Are those deviations meaningful? Significant? 
 
 ***
@@ -43,14 +43,14 @@ Plot the output of the function simT with `nrep`=1000 and `n`=100
 <img src="./assets/ttest-changing-n.png" width="500">  
 <br/>
 
-In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a p value under 0.05). In my simulations, I get 59 and 48 false positive results, for `n`=10 and 100, respectively. How many did you get?  
+In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a p value under 0.05). In my simulations, I get 40 and 45 false positive results, for `n`=10 and 100, respectively. How many did you get?  
 
 These proportions are not signicantly different from 5%. 
 
-`prop.test(59, 1000, p = 0.05, alternative = "two.sided", correct = TRUE)`  
+`prop.test(45, 1000, p = 0.05, alternative = "two.sided", correct = TRUE)`  
 1-sample proportions test with continuity correction  
-data:  59 out of 1000, null probability 0.05  
-X-squared = 1.5211, df = 1, p-value = 0.2175  
+data:  45 out of 1000, null probability 0.05  
+X-squared = 0.42632, df = 1, p-value = 0.5138  
 
 It is important to note that, although `alpha = 0.05` is commonly used, this is an arbitrary choice and you should consider what is an appropriate type 1 error rate for your particular investigation.  
 

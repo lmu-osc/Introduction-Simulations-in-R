@@ -8,7 +8,7 @@ The function
 ***
 
 **YOUR TURN:**  
-In your local exercice script:  
+In your local exercise script:  
 Replicate 1000 times the mean of 10 values drawn from a unifrom distribution between 0 and 10.  
 Replicate 100 times the mean of 50 values drawn from a normal distribution of mean 10 and standard deviation 5.  
 Make a histogram of each of your results, are the distributions looking as expected?  

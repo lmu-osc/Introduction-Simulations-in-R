@@ -22,7 +22,7 @@ Select the downloaded (and extracted) folder, by clicking on 'Browse', then sele
 <img src="assets/find-directory.PNG" width="400">  
 <br/>
 
-In the panel containing the 'Files' tab, find the exercice sheet, and open it by double clicking on it.  
+In the panel containing the 'Files' tab, find the exercise sheet, and open it by double clicking on it.  
 <br/>
 <img src="assets/files-list.PNG" width="600">  
 <br/>

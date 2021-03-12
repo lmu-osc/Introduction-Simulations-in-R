@@ -1,4 +1,4 @@
-# Simulating data to check or pre-register code
+# Simulating data to check or preregister code
 
 
 One of the simplest uses of simulations is to make a dataset on which you can run and therefore pre-specify your analytic code. 
