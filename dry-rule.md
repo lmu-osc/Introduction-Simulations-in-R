@@ -26,4 +26,6 @@ Modify your function to draw a histogram of `nrep` mean(rnorm(`n`))
 
 ***
 
+Note that it is useful to define `nrep` outside of the function, so users of your script can more easily change that value e.g. from a low number (to verify the script runs without error) to a large number (to obtain reliable results).  
+
 [Previous](./number-of-simulations-nrep.md) | [Next](./check-alpha.md)
