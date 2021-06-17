@@ -14,15 +14,18 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
 
 2) Fork and clone this repository ([here](https://github.com/MalikaIhle/Collaborative-RStudio-GitHub) is a reminder on how to fork and clone and what it means). If you have never been introduced to version control system, follow [these instructions](./download-repo.md) instead.  
 
-3) Read [Hallgren A. K. 2013. Conducting simulation studies in the R programming environment. Tutor Quant Methods Psychol. ; 9(2): 43–60.](https://doi.org/10.20982/tqmp.09.2.p043) and answer the following 3 questions in your local copy of the [reading sheet](./Hallgren2013/ReadingSheet.md):  
+3) *Optional* (to start getting familiarised with the content of the session): Read [Hallgren A. K. 2013. Conducting simulation studies in the R programming environment. Tutor Quant Methods Psychol. ; 9(2): 43–60.](https://doi.org/10.20982/tqmp.09.2.p043) and answer the following 3 questions in your local copy of the [reading sheet](./Hallgren2013/ReadingSheet.md):  
   * describe 6 steps common to all simulations  
   * describe 3 types of simulations use  
   * describe 4 limitations of simulations
 
 ## During the session: self-paced workshop
-The workshop will alternate presentation of concepts and simple exercises for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the [exercise script](./exercise_script.R), review the examples if needed, complete the exercise, and check out the proposed answer (which often contains additional tips).  
-It is necessary that you work through the sections in order. Please read the blurbs of each sections below to get an overview of what is coming before starting.    
+### How it works
+The self-paced tutorial (pages linked below) will alternate presentation of concepts and simple exercises for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the [exercise script](./exercise_script.R), review the examples if needed, complete the exercise, and check out the proposed answer (which often contains additional tips). Come back to the online tutorial and after finishing one page, you can click 'next' at the bottom to continue. The exercice script contains  code for all the exercices and code that generates the plots that appear in the online tutorial, all in order of appearance in the tutorial.  
 
+It is necessary that you work through the sections of the tutorial in order. Please read the blurbs of each sections below to get an overview of this workshop.
+
+### Tutorial
 * [Definition](./definition.md) - what are simulations?
 * [Purpose](./purpose.md) - what can we use simulations for?
 * [Basic Principles](./basic-principles.md) - what do we need to create a simulation?
