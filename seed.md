@@ -3,8 +3,10 @@
 * `set.seed()`
 
 Computers in general, and R specifically, can, in fact, only provide *pseudo* random number generators.  
+A pseudorandom number generator's number sequence is completely determined by its seed, i.e. a number used to initialize that sequence.
 
-They generate numbers according to an algorithm, and, given the same 'seed', it will output the same numbers, i.e. repeat exactly the same simulation.  
+Thus, if a pseudorandom number generator is reinitialized with the same seed, it will produce the same sequence of numbers.
+You can set the seed (with any arbitrary number) at the beginning of a script, and if commands drawing random numbers are ran in the exact same order they will provide the same output in subsequent runs.
 
 This is useful for sharing code and reproduce simulations, as well as for debugging code.
 
@@ -14,10 +16,6 @@ This is useful for sharing code and reproduce simulations, as well as for debugg
 In your local exercise script:  
 Play around with the function `set.seed()` by running and modifying the examples provided (e.g. compare outputs with and without seeds, change the seed number)
  
-***
-
-You can set the seed at the beginning of a script, and if things are ran in the exact same order they will provide the same output in subsequent runs.  
-
 ***
 
 [Previous](./repeat.md) | [Next](./sample-size-n.md)  
