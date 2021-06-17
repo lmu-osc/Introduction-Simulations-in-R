@@ -9,10 +9,10 @@ Following the WET rule will:
 * Decrease clarity  
 * Leads to opportunities for inconsistency  
 <br/>
-To prevent duplication and follow the DRY rule, we can write custom functions.
+To prevent duplication and follow the DRY rule, we can write custom functions.  
 
-Functions are "self contained" suit of commands that accomplish a specific task. 
-Functions usually "take in" data or parameter value (these inputs are called 'function arguments'), process it, and "return" a result. 
+Functions are 'self contained' suit of commands that accomplish a specific task.   
+Functions usually 'take in' data or parameter values (these inputs are called 'function arguments'), process it, and 'return' a result. 
 Once a function is written, it can be used over and over and over again by calling its name like any other command. 
 
 * `AwesomeFunctionName <- function(argument1, argument2,…){  
