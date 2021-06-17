@@ -21,7 +21,7 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
 
 ## During the session: self-paced workshop
 ### How it works
-The self-paced tutorial (pages linked below) will alternate presentation of concepts and simple exercises for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the [exercise script](./exercise_script.R), review the examples if needed, complete the exercise, and check out the proposed answer (which often contains additional tips). Come back to the online tutorial and after finishing one page, you can click 'next' at the bottom to continue. The exercice script contains  code for all the exercices and code that generates the plots that appear in the online tutorial, all in order of appearance in the tutorial.  
+The self-paced tutorial (pages linked below) will alternate presentation of concepts and simple exercises for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the [exercise script](./exercise_script.R), review the examples if needed, complete the exercise, and check out the proposed answer (which often contains additional tips). Come back to the online tutorial and after finishing one page, you can click 'next' at the bottom to continue. The exercise script contains  code for all the exercises and code that generates the plots that appear in the online tutorial, all in order of appearance in the tutorial.  
 
 It is necessary that you work through the sections of the tutorial in order. Please read the blurbs of each sections below to get an overview of this workshop.
 
