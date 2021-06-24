@@ -34,7 +34,7 @@ Depending on the type of simulation that would be useful for you, these articles
 
 * [https://rpubs.com/bbolker/simpower](https://rpubs.com/bbolker/simpower){:target="_blank"}  
 
-* https://cran.r-project.org/web/packages/simstudy/vignettes/simstudy.html  
+* https://cran.r-project.org/web/packages/simstudy/vignettes/simstudy.html  <a href="https://cran.r-project.org/web/packages/simstudy/vignettes/simstudy.html" target="_blank">https://cran.r-project.org/web/packages/simstudy/vignettes/simstudy.html</a>
 
 * https://debruine.github.io/faux/  
 
