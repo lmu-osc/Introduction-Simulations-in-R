@@ -7,7 +7,7 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
 ## Prerequisites
 
 * Have R and RStudio installed. If you don't, follow [these instructions](https://github.com/MalikaIhle/Introduction-RStudio-Git-GitHub/blob/master/installing_software.md)  
-* Know some R basics (e.g. how to select a value in a data.frame, how to create a vector). If you don't, visit the tutorial: https://www.tutorialspoint.com/r/index.htm  
+* Know some R basics (e.g. how to select a value in a data.frame, how to create a vector). If you don't, visit the tutorial: <a href="https://www.tutorialspoint.com/r/index.htm" target ="_blank">https://www.tutorialspoint.com/r/index.htm</a>  
 
 ## Prior to the session
 1) Watch this [30 min introduction to credible research](https://osf.io/xtmek/), which contextualise the importance of simulations for reliable research. 
