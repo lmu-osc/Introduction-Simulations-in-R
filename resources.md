@@ -15,19 +15,19 @@ CSV dataset used in Example 3: "mediation_raw_data.csv"
 
 Depending on the type of simulation that would be useful for you, these articles may be of interest:  
 
-* Johnson, P.C.D., Barry, S.J.E., Ferguson, H.M. and Müller, P. (2015). Power analysis for **generalized linear mixed models** in ecology and evolution. Methods Ecol Evol, 6: 133-142. <a ref="https://doi.org/10.1111/2041-210X.12306" target="_blank">https://doi.org/10.1111/2041-210X.12306</a>
+* Johnson, P.C.D., Barry, S.J.E., Ferguson, H.M. and Müller, P. (2015). Power analysis for **generalized linear mixed models** in ecology and evolution. Methods Ecol Evol, 6: 133-142. <a href="https://doi.org/10.1111/2041-210X.12306" target="_blank">https://doi.org/10.1111/2041-210X.12306</a>
 
-* Blanco, David, et al (2020). "Effect of an editorial intervention to improve the completeness of reporting of randomised trials: a randomised controlled trial." BMJ open 10.5: e036799. <a ref="https://doi.org/10.1136/bmjopen-2020-036799" target="_blank">https://doi.org/10.1136/bmjopen-2020-036799</a>
+* Blanco, David, et al (2020). "Effect of an editorial intervention to improve the completeness of reporting of randomised trials: a randomised controlled trial." BMJ open 10.5: e036799. <a href="https://doi.org/10.1136/bmjopen-2020-036799" target="_blank">https://doi.org/10.1136/bmjopen-2020-036799</a>
   * In the "Power analysis" section, there is a **simple example of a power simulation**. R code is provided in the supplementary material. 
 
-* Getting started simulating data in R: some helpful functions and how to use them. <a ref="https://aosmith.rbind.io/2018/08/29/getting-started-simulating-data/" target="_blank">https://aosmith.rbind.io/2018/08/29/getting-started-simulating-data/</a> 
+* Getting started simulating data in R: some helpful functions and how to use them. <a href="https://aosmith.rbind.io/2018/08/29/getting-started-simulating-data/" target="_blank">https://aosmith.rbind.io/2018/08/29/getting-started-simulating-data/</a> 
   * This blog gives a great overview of how to start **simulating more complex datasets**, including step by step explanations of relevant R functions 
 
-* Prive, F., Aschard, H., Ziyatdinov, A. and Blum, M.G.B. (2018). Efficient analysis of **large-scale genome-wide data** with two R packages: bigstatsr and bigsnpr. Bioinformatics, 34(16), 2018, 2781–2787. <a ref="https://doi.org/10.1093/bioinformatics/bty185" target="_blank">https://doi.org/10.1093/bioinformatics/bty185</a>  
+* Prive, F., Aschard, H., Ziyatdinov, A. and Blum, M.G.B. (2018). Efficient analysis of **large-scale genome-wide data** with two R packages: bigstatsr and bigsnpr. Bioinformatics, 34(16), 2018, 2781–2787. <a href="https://doi.org/10.1093/bioinformatics/bty185" target="_blank">https://doi.org/10.1093/bioinformatics/bty185</a>  
 
-* Ronnegard, L., et al. (2016). Increasing the **power of genome wide association** studies in natural populations using repeated measures – evaluation and implementation. Methods in Ecology and Evolution 2016, 7, 792–799. <a ref="https://doi.org/10.1111/2041-210X.12535" target="_blank">https://doi.org/10.1111/2041-210X.12535</a>
+* Ronnegard, L., et al. (2016). Increasing the **power of genome wide association** studies in natural populations using repeated measures – evaluation and implementation. Methods in Ecology and Evolution 2016, 7, 792–799. <a href="https://doi.org/10.1111/2041-210X.12535" target="_blank">https://doi.org/10.1111/2041-210X.12535</a>
 
-* Dalpiaz, D. (2020) Applied Statistics with R, Chapter 7 **Simple Linear Regression**, section 6  Simulating SLR. <a ref="https://daviddalpiaz.github.io/appliedstats/simple-linear-regression.html#simulating-slr" target="_blank">https://daviddalpiaz.github.io/appliedstats/simple-linear-regression.html#simulating-slr</a>
+* Dalpiaz, D. (2020) Applied Statistics with R, Chapter 7 **Simple Linear Regression**, section 6  Simulating SLR. <a href="https://daviddalpiaz.github.io/appliedstats/simple-linear-regression.html#simulating-slr" target="_blank">https://daviddalpiaz.github.io/appliedstats/simple-linear-regression.html#simulating-slr</a>
 
 
 ## use of R packages to run simulations  
