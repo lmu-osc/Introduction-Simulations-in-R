@@ -9,4 +9,4 @@
 
 ***
 
-[Previous](https://github.com/MalikaIhle/Introduction-Simulations-in-R) | [Next](./purpose.md)  
+[Previous](../README.md) | [Next](./purpose.md)  
