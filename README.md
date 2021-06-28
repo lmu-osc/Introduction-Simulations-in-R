@@ -28,7 +28,7 @@ It is necessary that you work through the sections of the tutorial in order. Ple
 *Additional note for online instruction*: The main instructor will stay in the main room. Everyone is welcome to stay there and ask questions as necessary. Two additional break out rooms will be permanently opened and you can join/leave at any time: one quiet room to work in silence and one collaborative room to work out loud. The co-instructor will answer questions in the collaborative room.   
 
 ### Tutorial
-* [Definition](./definition.md) - what are simulations?
+* [Definition](./tutorial_pages/definition.md) - what are simulations?
 * [Purpose](./purpose.md) - what can we use simulations for?
 * [Basic Principles](./basic-principles.md) - what do we need to create a simulation?
 * [Random Number Generators](./random-numbers-generators.md) - how to generate random numbers in R?
