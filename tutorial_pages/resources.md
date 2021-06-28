@@ -47,6 +47,6 @@ Depending on the type of simulation that would be useful for you, these articles
 
 ***
 
-[Previous](./real-life-example.md) | [Home](/README.md)
+[Previous](./real-life-example.md) | [Home](../README.md)
 
 
