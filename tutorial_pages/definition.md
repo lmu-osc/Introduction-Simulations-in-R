@@ -9,4 +9,4 @@
 
 ***
 
-[Previous](./README.md) | [Next](./purpose.md)  
+[Previous](/README.md) | [Next](./purpose.md)  
