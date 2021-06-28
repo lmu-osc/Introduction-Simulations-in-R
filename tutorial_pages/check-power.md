@@ -43,7 +43,7 @@ Calculate the proportion of p-values that are <0.05
 **p-values of t tests comparing means from 1000 sims N(0,1) and N(0.5, 1) with n=64**  
 
 <br/>
-<img src="./assets/hist-power.png" width="500">  
+<img src="../assets/hist-power.png" width="500">  
 <br/>
 
 The proportion of correctly rejected null hypotheses in the simulation is close to `0.8`, which is what we would expect. 
