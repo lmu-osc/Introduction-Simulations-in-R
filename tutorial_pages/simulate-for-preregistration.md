@@ -22,7 +22,7 @@ It's very easy to make a dataset. Let's take a simple example. We are interested
 Here is the top of the simulated dataset. 
 
 <br/>
-<img src="./assets/simulated-data.png" width="750">  
+<img src="../assets/simulated-data.png" width="750">  
 <br/>
 
 ***
@@ -43,7 +43,7 @@ Once we have a working model, we can look at the summary and make sure it behave
 You could combine this approach with the sampling approaches you learned in the power/alpha simulation session to look at power for more complex analyses like this.
 
 <br/>
-<img src="./assets/logreg-results.png" width="750">  
+<img src="../assets/logreg-results.png" width="750">  
 <br/>
 
 
