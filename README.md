@@ -29,21 +29,21 @@ It is necessary that you work through the sections of the tutorial in order. Ple
 
 ### Tutorial
 * [Definition](./tutorial_pages/definition.md) - what are simulations?
-* [Purpose](./purpose.md) - what can we use simulations for?
-* [Basic Principles](./basic-principles.md) - what do we need to create a simulation?
-* [Random Number Generators](./random-numbers-generators.md) - how to generate random numbers in R?
-* [Repeat](./repeat.md) - how to repeat the generation of random numbers multiple times?
-* [Setting the seed](./seed.md) - how can you generate the same random numbers?
-* [Sample size `n`](./sample-size-n.md) - how many values should you generate within a simulation?
-* [Number of simulations `nrep`](./number-of-simulations-nrep.md) - how many repeats of a simulation should you run?
-* [Dry rule](./dry-rule.md) - how to write your own functions?
-* [Simulate to check alpha](./check-alpha.md) - write your first simulation and check the rate of false-positive findings.  
-* [Simulate to check power](./check-power.md) - simulate data to perform a power analysis.  
-* [Simulate to prepare a preregistration](./simulate-for-preregistration.md) - simulate data to test statistical analyses before preregistering them.  
-* [General structure](./general-structure.md) - what is the general structure of a simulation?
-* [Limitations](./limitations.md) - what are the limitations to simulations?
-* [Real-life example](./real-life-example.md) - what are real life examples of simulations?
-* [Additional resources](./resources.md) - what resource can help you write your own simulation?
+* [Purpose](./tutorial_pages/purpose.md) - what can we use simulations for?
+* [Basic Principles](./tutorial_pages/basic-principles.md) - what do we need to create a simulation?
+* [Random Number Generators](./tutorial_pages/random-numbers-generators.md) - how to generate random numbers in R?
+* [Repeat](./tutorial_pages/repeat.md) - how to repeat the generation of random numbers multiple times?
+* [Setting the seed](./tutorial_pages/seed.md) - how can you generate the same random numbers?
+* [Sample size `n`](./tutorial_pages/sample-size-n.md) - how many values should you generate within a simulation?
+* [Number of simulations `nrep`](./tutorial_pages/number-of-simulations-nrep.md) - how many repeats of a simulation should you run?
+* [Dry rule](./tutorial_pages/dry-rule.md) - how to write your own functions?
+* [Simulate to check alpha](./tutorial_pages/check-alpha.md) - write your first simulation and check the rate of false-positive findings.  
+* [Simulate to check power](./tutorial_pages/check-power.md) - simulate data to perform a power analysis.  
+* [Simulate to prepare a preregistration](./tutorial_pages/simulate-for-preregistration.md) - simulate data to test statistical analyses before preregistering them.  
+* [General structure](./tutorial_pages/general-structure.md) - what is the general structure of a simulation?
+* [Limitations](./tutorial_pages/limitations.md) - what are the limitations to simulations?
+* [Real-life example](./tutorial_pages/real-life-example.md) - what are real life examples of simulations?
+* [Additional resources](./tutorial_pages/resources.md) - what resource can help you write your own simulation?
 
 ## During the session: personal project
 In your local repository, write your own simulation in R to help you prepare the data analyses of your current or next study. When you require help, first push your current work on your GitHub remote (for a reminder on how to do this, see [here](https://github.com/MalikaIhle/Introduction-RStudio-Git-GitHub)) for us to be able to access it easily and possibly review and edit your code!  
