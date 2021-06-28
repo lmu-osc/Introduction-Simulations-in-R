@@ -3,7 +3,7 @@
 **1) Download the repository**  
 
 <br/>
-<img src="assets/download.PNG" width="750">  
+<img src="../assets/download.PNG" width="750">  
 <br/>
 
 Once the .zip file downloaded, extract it and place the folder in the desired directory (e.g. Documents).  
@@ -14,17 +14,17 @@ If you do not have R or RStudio installed, please follow [these instructions](ht
 
 Open RStudio, and go to 'File', 'New Project...', and select 'Exisiting Directory'.  
 <br/>
-<img src="assets/existing-directory.PNG" width="400">  
+<img src="../assets/existing-directory.PNG" width="400">  
 <br/>
 
 Select the downloaded (and extracted) folder, by clicking on 'Browse', then select 'Create Project'.   
 <br/>
-<img src="assets/find-directory.PNG" width="400">  
+<img src="../assets/find-directory.PNG" width="400">  
 <br/>
 
 In the panel containing the 'Files' tab, find the exercise sheet, and open it by double clicking on it.  
 <br/>
-<img src="assets/files-list.PNG" width="600">  
+<img src="../assets/files-list.PNG" width="600">  
 <br/>
 
  ***
