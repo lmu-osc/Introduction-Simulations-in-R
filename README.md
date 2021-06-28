@@ -6,13 +6,13 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
 
 ## Prerequisites
 
-* Have R and RStudio installed. If you don't, follow [these instructions](https://github.com/MalikaIhle/Introduction-RStudio-Git-GitHub/blob/master/installing_software.md)  
+* Have R and RStudio installed. If you don't, follow [these instructions](https://malikaihle.github.io/Introduction-RStudio-Git-GitHub/installing_software.html)  
 * Know some R basics (e.g. how to select a value in a data.frame, how to create a vector). If you don't, visit the tutorial: <a href="https://www.tutorialspoint.com/r/index.htm" target ="_blank">https://www.tutorialspoint.com/r/index.htm</a>  
 
 ## Prior to the session
 1) Watch this [30 min introduction to credible research](https://osf.io/xtmek/), which contextualise the importance of simulations for reliable research. 
 
-2) Fork and clone [this repository](https://github.com/MalikaIhle/Introduction-Simulations-in-R) ([here](https://github.com/MalikaIhle/Collaborative-RStudio-GitHub) is a reminder on how to fork and clone and what it means). If you have never been introduced to version control system, follow [these instructions](./tutorial_pages/download-repo.md) instead.  
+2) Fork and clone [this repository](https://github.com/MalikaIhle/Introduction-Simulations-in-R) ([here](https://malikaihle.github.io/Collaborative-RStudio-GitHub/) is a reminder on how to fork and clone and what it means). If you have never been introduced to version control system, follow [these instructions](./tutorial_pages/download-repo.md) instead.  
 
 3) *Optional* (to start getting familiarised with the content of the session): Read [Hallgren A. K. 2013. Conducting simulation studies in the R programming environment. Tutor Quant Methods Psychol. ; 9(2): 43–60.](https://doi.org/10.20982/tqmp.09.2.p043) and answer the following 3 questions in your local copy of the [reading sheet](./Hallgren2013/ReadingSheet.md):  
   * describe 6 steps common to all simulations  
@@ -46,5 +46,5 @@ It is necessary that you work through the sections of the tutorial in order. Ple
 * [Additional resources](./tutorial_pages/resources.md) - what resource can help you write your own simulation?
 
 ## During the session: personal project
-In your local repository, write your own simulation in R to help you prepare the data analyses of your current or next study. When you require help, first push your current work on your GitHub remote (for a reminder on how to do this, see [here](https://github.com/MalikaIhle/Introduction-RStudio-Git-GitHub)) for us to be able to access it easily and possibly review and edit your code!  
+In your local repository, write your own simulation in R to help you prepare the data analyses of your current or next study. When you require help, first push your current work on your GitHub remote (for a reminder on how to do this, see [here](https://malikaihle.github.io/Introduction-RStudio-Git-GitHub/)) for us to be able to access it easily and possibly review and edit your code!  
 
