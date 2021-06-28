@@ -21,7 +21,7 @@ Repeat with `nrep`=100 and draw a histogram for `n`=10
 
 **p-values of t-tests comparing means from 20 or 100 sims N(0,1) with n=10**   
 <br/>
-<img src="./assets/ttest-changing-nrep.png" width="500">  
+<img src="../assets/ttest-changing-nrep.png" width="500">  
 <br/>
 
 
@@ -40,7 +40,7 @@ Plot the output of the function simT with `nrep`=1000 and `n`=100
 
 **p-values of t-tests comparing means from 1000 sims N(0,1) with n=10 or n=100**   
 <br/>
-<img src="./assets/ttest-changing-n.png" width="500">  
+<img src="../assets/ttest-changing-n.png" width="500">  
 <br/>
 
 In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a p value under 0.05). In my simulations, I get 40 and 45 false positive results, for `n`=10 and 100, respectively. How many did you get?  
