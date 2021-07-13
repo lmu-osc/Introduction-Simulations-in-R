@@ -348,9 +348,9 @@ histrnorm_n(1000,100)
 ### possible solutions ###
 #### Figure out how to do a t.test in R
 ?t.test
-#### Generate two vectors of 50  N(0,1) 
-x1 <- rnorm(50,0,1)
-x2 <- rnorm(50,0,1)
+#### Generate two vectors of 10  N(0,1) 
+x1 <- rnorm(10,0,1)
+x2 <- rnorm(10,0,1)
 #### Compare them with a t test
 t.test(x1,x2)
 #### extract p value
