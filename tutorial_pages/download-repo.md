@@ -29,4 +29,4 @@ In the panel containing the 'Files' tab, find the exercise sheet, and open it by
 
  ***
 
-[Previous](./purpose.md) | [Next](./random-numbers-generators.md)  
+[Previous](https://malikaihle.github.io/Introduction-Simulations-in-R/) | [Next](./definition.md)  
