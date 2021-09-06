@@ -11,7 +11,7 @@ Sampling without replacement means that when you repeatedly draw e.g. 1 item fro
 ***
 **YOUR TURN:**  
 Sample 100 values between 3 and 103 with replacement.    
-For this, open the file `./exercise_script.R` from the root of your local repository (i.e. after having forked and clone this GitHub repository), review the examples if needed, complete the exercise, and check out the proposed answer.
+For this, open the file `./exercise_script.R` from the root of your local repository (with or without answers), review the examples if needed, complete the exercise, and check out the proposed answer.
 
 ***
 
