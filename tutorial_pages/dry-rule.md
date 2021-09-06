@@ -15,7 +15,7 @@ Functions are 'self contained' sets of commands that accomplish a specific task.
 Functions usually 'take in' data or parameter values (these inputs are called 'function arguments'), process it, and 'return' a result. 
 You've already used several functions in this tutorial; for example `rnorm(n, mean, sd)`, where `n`, `mean`, and `sd` are inputs and the result is a random sample from the normal distribution. 
 The only difference here is that you are writing the function yourself. 
-Once a function is written, it can be used over and over and over again by calling its name, just like other functions such as `rnorm()`. 
+Once a function is written, it can be used over and over again by calling its name, just like other functions such as `rnorm()`. 
 
 * `AwesomeFunctionName <- function(argument1, argument2,…){  
 do stuff here  
