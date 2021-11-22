@@ -1,7 +1,7 @@
 # Download the repository and make it a local RStudio project
 
 **1) Download the repository**  
-Please download the GitHub repository that we are using today: https://github.com/MalikaIhle/Introduction-Simulations-in-R.
+Please download the GitHub repository that we are using today: [https://github.com/MalikaIhle/Introduction-Simulations-in-R](https://github.com/MalikaIhle/Introduction-Simulations-in-R).
 
 <br/>
 <img src="../assets/download.PNG" width="750">  
