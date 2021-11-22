@@ -6,7 +6,7 @@
 <img src="../assets/download.PNG" width="750">  
 <br/>
 
-Once the .zip file downloaded, extract it and place the folder in the desired directory (e.g. Documents).  
+Here is the GitHub repository we are using today: https://github.com/MalikaIhle/Introduction-Simulations-in-R. Once the .zip file downloaded, extract it and place the folder in the desired directory (e.g. Documents).  
 
 **2) Turn it into a RStudio project**  
 
