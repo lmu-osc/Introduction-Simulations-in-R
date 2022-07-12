@@ -30,7 +30,7 @@ Just as we can check the alpha of our test by sampling from the same distributio
 Use your simulation skills to work out the power through simulation.
 Write a function which:
 
-1. Draws from two random normal distributions with different means and a given sample size
+1. Draws from two random normal distributions with different means and the same sample size
 
 2. Compares the means with a t-test and extracts the p.value
 
