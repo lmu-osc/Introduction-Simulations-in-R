@@ -24,8 +24,7 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
 The self-paced tutorial (pages linked below) will alternate presentation of concepts and simple exercises for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the exercise script (you can chose between a file <a href="https://github.com/MalikaIhle/Introduction-Simulations-in-R/blob/main/exercise_script_with_solutions.R" target ="_blank">with</a> or <a href="https://github.com/MalikaIhle/Introduction-Simulations-in-R/blob/main/exercise_script_without_solutions.R" target ="_blank">without</a> the solutions depending on e.g. your level of familiarity with R), review the examples if needed, complete the exercise, and check out the proposed answer (which often contains additional tips). Come back to the online tutorial and after finishing one page, you can click 'next' at the bottom to continue. The exercise script contains  code for all the exercises and code that generates the plots that appear in the online tutorial, all in order of appearance in the tutorial.  
 
 It is necessary that you work through the sections of the tutorial in order. Please read the blurbs of each sections below to get an overview of this workshop.
-
-*Additional note for online instruction*: The main instructor will stay in the main room. Everyone is welcome to stay there and ask questions as necessary. Two additional break out rooms will be permanently opened that you can join/leave at any time: one quiet room to work in silence and one collaborative room to work out loud. The co-instructor will answer questions in the collaborative room.   
+ 
 
 ### Tutorial
 * [Definition](./tutorial_pages/definition.md) - what are simulations?
