@@ -2,7 +2,7 @@
 
 1. **define** what type of data and variables need to be simulated, i.e. their **distribution**, their class (e.g. factor vs numerical value), **sample sizes** (within a dataset, and number of replicates), what will need to vary (e.g. the strength of relationship)  
 
-2. **generate data**, random data or data including an effect (e.g. an impose correlation between two variables)  
+2. **generate data**, random data or data including an effect (e.g. an imposed correlation between two variables)  
 
 3. **run the statistical test** you think is appropriate, and record the relevant statistic (e.g. p-value) 
 
