@@ -4,7 +4,7 @@ In most quantitative sciences we accept a type 1 error rate of "0.05", which is 
 
 In other words, if there is no true effect (e.g. no difference between two groups), we would expect our null hypothesis of no effect to be rejected (incorrectly), `alpha`% of the time.
 
-If you draw from the same distribution twice, will the mean of the two samples differ significantly in 5% of the cases? 
+If you draw from the same normal distribution twice, will the mean of the two samples differ significantly in 5% of the cases? 
 
 
 ***
@@ -13,7 +13,7 @@ If you draw from the same distribution twice, will the mean of the two samples d
 Figure out how to do a t-test in R  
 Generate two vectors of 10 values drawn from N(0,1) and compare them with a t-test  
 Figure out how to extract the p-value from that object (explore your R object with the functions `str` or `names`)    
-Write a function simT that generates two vectors of `n` random normals, compare them with a t-test and return the p-value  
+Write a function simT that generates two vectors of `n` values drawn from a N(0,1), compare them with a t-test and return the p-value  
 Repeat with `nrep`=20 and draw a histogram for `n`=10  
 Repeat with `nrep`=100 and draw a histogram for `n`=10
 
