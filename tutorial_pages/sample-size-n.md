@@ -45,6 +45,10 @@ The sample size within a simulation affects the **precision** with which the par
 What should determine the sample size within your simulation?  
 --> a sample size that is relevant to the context of the simulation, e.g. the sample size you will be able to reach in your study, the minimum sample size that would allow you to detect the smallest effect of interest (as determined by a power analysis, which we will cover in a moment).
  
+
+<br/>
+Note: the code generating the data and plots presented above are included in your exercice script for your records. Feel free to look into the code that simulates data and change parameters to better understand the principles presented in this page, but, at this stage, there is no need to look into the code that generates the plots .
+
 ***
 
 [Previous](./seed.md) | [Next](./number-of-simulations-nrep.md) 
