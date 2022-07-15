@@ -21,8 +21,7 @@ The number of simulations needs to be a big enough number to obtain a good repre
 ***
 
 **YOUR TURN:**  
-You can play with these graphs by running and modifying the examples provided in your local exercise script (e.g. changing parameters in turn)
- 
+The code generating the data and plots presented above are included in your exercice script. Feel free to modified the parameters of the functions that simulates data and plot the results to better understand the principles presented in these two pages, but, at this stage, there is no need to fully understand the code that generates the plots.
 
 ***
 
