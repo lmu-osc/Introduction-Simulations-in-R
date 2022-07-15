@@ -117,7 +117,7 @@ x24Plot <- apply(
   }
 )
 
-## distribution of mu and sd from 24 sims N(0,1) with n = 10
+## distribution of means and SDs from 24 sims N(0,1) with n = 10
 par(mfrow = c(1,2), mar = c(5,5,1,1))
 hist(apply(x24, 2, mean), main = "Mean", col = "grey", xlim = c(-1,1))
 abline(v = 0, col = "red", lty = 2, lwd = 2)
@@ -139,14 +139,14 @@ x24bPlot <- apply(
   }
 )
 
-## distribution of mu and sd from 24 sims N(0,1) with n = 1000
+## distribution of means and SDs from 24 sims N(0,1) with n = 1000
 par(mfrow = c(1,2), mar = c(5,5,1,1))
 hist(apply(x24b, 2, mean), main = "Mean",col = "grey", xlim = c(-1,1))
 abline(v = 0, col = "red", lty = 2, lwd = 2)
 hist(apply(x24b, 2, sd), main = "SD",col = "grey", xlim = c(0.6,1.4))
 abline(v = 1, col = "red", lty = 2, lwd = 2)
 
-## distribution of mu and sd from 1000 sims N(0,1) with n = 10
+## distribution of means and SDs from 1000 sims N(0,1) with n = 10
 set.seed(10)
 x1000 <- replicate(1000, rnorm(10))
 par(mfrow = c(1,2), mar = c(5,5,1,1))
@@ -193,6 +193,17 @@ abline(v = 1, col = "red", lty = 2, lwd = 2)
 
 
 
+
+##########################
+
+#### repeat function for nrep = 1000 and various n (e.g. 10 and 100)
+
+
+
+
+
+
+
 #~~~~~~~~~ Simulating an effect and check power -----
 
 # we can calculate the power of a t.test for a given sample size using:
@@ -201,9 +212,9 @@ power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
 
 # YOUR TURN: Use your simulation skills to work out the power of a t-test for a given sample size through simulation.
 ## Write a function which:
-### 1. Draws from two random normal distributions with different means and a given sample size
-### 2. Compares the means with a t.test and extracts the p.value
-## Then, use that function to replicate the function 1000 times using the parameters used in the power calculation.
+### 1. Draws n values from a random normal distribution with mean 1, and another n values from a normal distribution with mean 2
+### 2. Compares the means of these two samples with a t.test and extracts the p.value
+## Then, use that function to replicate the function 1000 times using the parameters used in the power calculation above (that used the power.t.test function).
 ## Calculate the proportion of p-values that are <0.05
 
 
