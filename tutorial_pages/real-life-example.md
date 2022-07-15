@@ -45,7 +45,7 @@ This walk through will use the steps as defined in the page '[general structure]
     <img src="../assets/replicate3.png" width="1000">  
     <br/>
 
-5. **explore the parameter space**. Here, vary the probabilities of sampling 0 or 1 depending on the treatment group category.
+5. **explore the parameter space**. Here, vary the probabilities of sampling between 0 and 1 depending on the treatment group category.
 
     <img src="../assets/explore.png" width="1000">  
     <br/>
