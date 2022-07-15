@@ -21,7 +21,7 @@ Note that because we are drawing from N(0,1), we expect the mean of the values d
 
 How distributed are the means and standard deviations of the 24 simulations of 10 sampled values from N(0,1)?  
 
-**mu and sd from 24 sims N(0,1) with n=10**  
+**Distributions of the means and SDs from 24 sims N(0,1) with n=10**  
 <br/>
 <img src="../assets/musd-24-10-N01.png" width="500">  
 <br/>
@@ -33,7 +33,7 @@ Now, let's do the same with a sample size `n` of 1000.
 <img src="../assets/24hist1000N01.png" width="600">  
 <br/>
 
-**mu and sd from 24 sims N(0,1) with n=1000**  
+**Distributions of the means and SDs from 24 sims N(0,1) with n=1000**  
 <br/>
 <img src="../assets/musd-24-1000-N01.png" width="500">  
 <br/>
