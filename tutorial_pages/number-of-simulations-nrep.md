@@ -2,14 +2,14 @@
 
 Sampling theory applies to the number of simulations `nrep` just as much as the sample size `n` within a simulation.
 
-**mu and sd from 24 sims N(0,1) with n=10**  
+**means and SDs from 24 sims N(0,1) with n=10**  
 <br/>
 <img src="../assets/musd-24-10-N01.png" width="500">  
 <br/>
 
 Now, let's do the same with a number of repeats `nrep` of 1000.  
 
-**mu and sd from 1000 sims N(0,1) with n=10**   
+**means and SDs from 1000 sims N(0,1) with n=10**   
 <br/>
 <img src="../assets/1000hist10N01.png" width="500">  
 <br/>
