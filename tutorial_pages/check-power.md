@@ -24,17 +24,19 @@ The sample size `n` we need given this set of parameters, is `64` per group.
 
 Just as we can check the alpha of our test by sampling from the same distribution (i.e. simulating data without an effect), we can check the power by sampling from different distributions (i.e. simulating data with an effect).
 
+If we sample values from two normal ditributions with different means (e.g. N(0,1) and N(0.5,1)), what is the minimum sample size we need to detect a significant difference in means with a t.test, 80% of the time?
+
 ***
 
 **YOUR TURN:**  
 Use your simulation skills to work out the power through simulation.
 Write a function which:
 
-1. Draws from two random normal distributions with different means and the same sample size
+1. Draws `n` values from a random normal distribution with `mean1`, and another `n` values from a normal distribution with `mean2`
 
-2. Compares the means with a t-test and extracts the p.value
+2. Compares the means of these two samples with a t-test and extracts the p.value
 
-Replicate the function 1000 times using the parameters used in the power calculation.
+Replicate the function 1000 times using the parameters used in the power calculation above (that used the `power.t.test` function)
 
 Calculate the proportion of p-values that are <0.05
 
