@@ -6,7 +6,7 @@ Computers in general, and R specifically, can, in fact, only provide *pseudo* ra
 A pseudorandom number generator's number sequence is completely determined by its seed, i.e. a number used to initialize that sequence.
 
 Thus, if a pseudorandom number generator is reinitialized with the same seed, it will produce the same sequence of numbers.
-You can set the seed (with any arbitrary number) at the beginning of a script, and if commands drawing random numbers are ran in the exact same order they will provide the same output in subsequent runs.
+You can set the seed (with any arbitrary number) at the beginning of a script, and, if commands drawing random numbers are ran in the exact same order, they will provide the same output in subsequent runs.
 
 This is useful for sharing code and reproduce simulations, as well as for debugging code.
 
