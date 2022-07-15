@@ -48,7 +48,7 @@ You could combine this approach with the sampling approaches you learned in the 
 <br/>
 
 
-And that's it! We have written down our code in a way that is totally unambiguous. This practice is useful for any project and is very easy to do. You can include the exact code that you plan to use in a preregistration, and reviewers will be able to verify that you did what you planned.
+And that's it! We have written down our code in a way that is totally unambiguous. This practice is useful for any project: you can include the exact code that you plan to use in a preregistration, and reviewers will be able to verify that you did what you planned.
 
 A real example of a simple simulation like this, used in the submission of a registered report, can be found in the rmd file [here](https://osf.io/5jf9p/).
 
