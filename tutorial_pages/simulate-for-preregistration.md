@@ -7,7 +7,7 @@ For example, let's say you plan to collect an observational dataset and want to 
 A typical protocol might state that the data will be analysed by logistic regression, adjusting for confounders. 
 But which confounders exactly? How will each variable be coded? What type of logistic regression will you use? 
 
-Making a dataset that has the variables you expect your real dataset to use allows you to exactly state (in **code** rather than potentially ambiguous words) what you will do. 
+Making a dataset that has the variables you expect your real dataset will have allows you to exactly state (in **code** rather than potentially ambiguous words) what you will do. 
 
 This is really useful if you want input from e.g. a statistician - they can look at your code and more clearly see what you are trying to do. 
 It has the added benefit of forcing you to really think about what your dataset will look like! I've found this to be very useful in the past.
@@ -34,6 +34,7 @@ Here is the top of the simulated dataset.
     HINT: use the `data.frame()`, `sample()`, and `rnorm()` functions.
 
 2. Now you've made a dataset, try to run a logistic regression on your data with lung cancer as the outcome. 
+3. Do you face any error message? Does the data need to be in a specific format for statistical models to run?
 
 ***
 
