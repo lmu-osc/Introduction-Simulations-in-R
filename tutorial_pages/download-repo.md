@@ -13,7 +13,7 @@ Once the .zip file downloaded, extract it and place the folder in the desired di
 
 If you do not have R or RStudio installed, please follow [these instructions](https://github.com/MalikaIhle/Introduction-RStudio-Git-GitHub/blob/master/installing_software.md) first.  
 
-Open RStudio, and go to 'File', 'New Project...', and select 'Exisiting Directory'.  
+Open RStudio, and go to 'File', 'New Project...', and select 'Existing Directory'.  
 <br/>
 <img src="../assets/existing-directory.PNG" width="400">  
 <br/>
