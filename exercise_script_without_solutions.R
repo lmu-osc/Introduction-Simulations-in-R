@@ -242,7 +242,7 @@ power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
 ## Run a logistic regression on the data with lung cancer as the outcome and
 ## adjusting for the other variables. 
 ## You could try something like:
-## glm(lung_cancer ~ smoking_status, sex, age, family = binomial(link = "logit"), data = df)
+## glm(lung_cancer ~ smoking_status + sex + age, family = binomial(link = "logit"), data = df)
 ## Why doesn't it work? Try to trouble shoot and get the code to work!
 
 ## HINT: are the variables the correct data type?
