@@ -21,7 +21,7 @@ The number of simulations needs to be a big enough number to obtain a good repre
 ***
 
 **YOUR TURN:**  
-The code generating the data and plots presented above are included in your exercice script. Feel free to modified the parameters of the functions that simulates data and plot the results to better understand the principles presented in these two pages, but, at this stage, there is no need to fully understand the code that generates the plots.
+The code generating the data and plots presented above are included in your exercice script. Feel free to modify the parameters of the functions that simulate data and plot the results to better understand the principles presented in these two pages, but, at this stage, there is no need to fully understand the code that generates the plots.
 
 ***
 
