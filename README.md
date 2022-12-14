@@ -12,7 +12,7 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
 ## Prior to the session: optional preparation to get familiarised with the subject
 1) Watch this [30 min introduction to credible research](https://osf.io/xtmek/), which contextualise the importance of simulations for reliable research. 
 
-2) Read [Hallgren A. K. 2013. Conducting simulation studies in the R programming environment. Tutor Quant Methods Psychol. ; 9(2): 43–60.](https://doi.org/10.20982/tqmp.09.2.p043).
+2) Read [Hallgren A. K. 2013. Conducting simulation studies in the R programming environment. Tutor Quant Methods Psychol. ; 9(2): 43–60](https://doi.org/10.20982/tqmp.09.2.p043).
 
 ## Self-paced workshop
 ### How it works
