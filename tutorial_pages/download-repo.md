@@ -1,4 +1,11 @@
-# Download the repository and make it a local RStudio project
+# Make this repository a local RStudio project
+
+You have two options to fetch this material:
+
+## A. You know version control with Git and GitHub
+Fork and clone [this repository](https://github.com/MalikaIhle/Introduction-Simulations-in-R) ([here](https://malikaihle.github.io/Collaborative-RStudio-GitHub/) is a reminder on how to do this)
+
+## B. You do not know version control, and/or simply want to download a copy of this material
 
 **1) Download the repository**  
 Please download the GitHub repository that we are using today: <a href="https://github.com/MalikaIhle/Introduction-Simulations-in-R" target="_blank">https://github.com/MalikaIhle/Introduction-Simulations-in-R</a>
