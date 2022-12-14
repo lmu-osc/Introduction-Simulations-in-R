@@ -2,7 +2,7 @@
 
 ## Hallgren 2013
 
-The article you read prior to the session contains accompanying R scripts and CSV data files which you can peruse in the [Hallgren2013](./Hallgren2013) folder of this repository. It contains:  
+The article suggested for getting familiarised with the topic prior to the session, i.e. [Hallgren A. K. 2013. Conducting simulation studies in the R programming environment. Tutor Quant Methods Psychol. ; 9(2): 43–60](https://doi.org/10.20982/tqmp.09.2.p043), contains accompanying R scripts and CSV data files which you can peruse in the [Hallgren2013](./Hallgren2013) folder of this repository. It contains:  
 
 Annotated R syntax file for Example 1: "novel question.R"  
 Annotated R syntax file for Example 2: "power analysis.R"  
