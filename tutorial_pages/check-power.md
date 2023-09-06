@@ -57,6 +57,9 @@ When analyses become complex and it is hard or impossible to determine a sample 
 A simple example of a power analysis like the one you've just done can be found in the "Power analysis" section of this paper:
 * Blanco, David, et al (2020). "Effect of an editorial intervention to improve the completeness of reporting of randomised trials: a randomised controlled trial." BMJ open 10.5: e036799. <a href="https://doi.org/10.1136/bmjopen-2020-036799" target="_blank">https://doi.org/10.1136/bmjopen-2020-036799</a>
 
+A complete self-paced tutorial to simulate data for power analysis of com0plex statistical desgin can be found here:
+* https://malikaihle.github.io/Simulations-for-Advanced-Power-Analyses/
+
 ***
 
 [Previous](./check-alpha.md) | [Next](./simulate-for-preregistration.md)
