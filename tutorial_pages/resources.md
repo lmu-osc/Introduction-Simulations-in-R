@@ -1,15 +1,17 @@
 # Resources
+## Follow-up self-paced tutorial on simulation of data analyses for advanced power analyses
+* <a href="https://malikaihle.github.io/Simulations-for-Advanced-Power-Analyses/" target="_blank">https://malikaihle.github.io/Simulations-for-Advanced-Power-Analyses/</a>
 
 ## Hallgren 2013
 
 The article suggested for getting familiarised with the topic prior to the session, i.e. [Hallgren A. K. 2013. Conducting simulation studies in the R programming environment. Tutor Quant Methods Psychol. ; 9(2): 43–60](https://doi.org/10.20982/tqmp.09.2.p043), contains accompanying R scripts and CSV data files which you can peruse in the [Hallgren2013](./Hallgren2013) folder of this repository. It contains:  
 
-Annotated R syntax file for Example 1: "novel question.R"  
-Annotated R syntax file for Example 2: "power analysis.R"  
-Annotated R syntax file for Example 3: "bootstrapping.R"  
+* Annotated R syntax file for Example 1: "novel question.R"  
+* Annotated R syntax file for Example 2: "power analysis.R"  
+* Annotated R syntax file for Example 3: "bootstrapping.R"  
 
-CSV dataset generated in Example 1, which is also used later in Example 2: "novel_question_output.csv"  
-CSV dataset used in Example 3: "mediation_raw_data.csv"
+* CSV dataset generated in Example 1, which is also used later in Example 2: "novel_question_output.csv"  
+* CSV dataset used in Example 3: "mediation_raw_data.csv"
 
 ## Other articles
 
