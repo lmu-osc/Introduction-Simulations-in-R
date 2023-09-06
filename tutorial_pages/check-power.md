@@ -58,7 +58,7 @@ A simple example of a power analysis like the one you've just done can be found 
 * Blanco, David, et al (2020). "Effect of an editorial intervention to improve the completeness of reporting of randomised trials: a randomised controlled trial." BMJ open 10.5: e036799. <a href="https://doi.org/10.1136/bmjopen-2020-036799" target="_blank">https://doi.org/10.1136/bmjopen-2020-036799</a>
 
 A complete self-paced tutorial to simulate data for power analysis of complex statistical designs can be found here:
-* <a href="https://malikaihle.github.io/Simulations-for-Advanced-Power-Analyses/" target="_blank">[https://doi.org/10.1136/bmjopen-2020-036799](https://malikaihle.github.io/Simulations-for-Advanced-Power-Analyses/)</a> 
+* <a href="https://malikaihle.github.io/Simulations-for-Advanced-Power-Analyses/" target="_blank">(https://malikaihle.github.io/Simulations-for-Advanced-Power-Analyses/)</a> 
 
 ***
 
