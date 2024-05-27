@@ -1,5 +1,9 @@
 project:
   type: website
+  render:
+    - "*.qmd"
+    - "!Hallgreen2013/"
+    - "!Ihle2020/"
 
 website:
   title: "Introduction to Simulations in R"
