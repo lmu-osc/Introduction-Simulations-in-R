@@ -14,8 +14,8 @@ Figure out how to do a t-test in R
 Generate two vectors of 10 values drawn from N(0,1) and compare them with a t-test  
 Figure out how to extract the p-value from that object (explore your R object with the functions `str` or `names`)    
 Write a function simT that generates two vectors of `n` values drawn from a N(0,1), compare them with a t-test and return the p-value  
-Repeat with `nrep`=20 and draw a histogram for `n`=10  
-Repeat with `nrep`=100 and draw a histogram for `n`=10
+Repeat with `nrep=20` and draw a histogram for `n=10`  
+Repeat with `nrep=100` and draw a histogram for `n=10`
 
 ***
 
@@ -32,8 +32,8 @@ Are those deviations meaningful? Significant?
 ***
 
 **YOUR TURN:**  
-Plot the output of the function simT with `nrep`=1000 and `n`=10  
-Plot the output of the function simT with `nrep`=1000 and `n`=100
+Plot the output of the function simT with `nrep=1000` and `n=10`
+Plot the output of the function simT with `nrep=1000` and `n=100`
 
 ***
 
@@ -45,9 +45,12 @@ Plot the output of the function simT with `nrep`=1000 and `n`=100
 
 In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a p value under 0.05). In my simulations, I get 40 and 45 false positive results, for `n`=10 and 100, respectively. How many did you get?  
 
-These proportions are not signicantly different from 5%. 
+These proportions are not significantly different from 5%. 
 
-`prop.test(45, 1000, p = 0.05, alternative = "two.sided", correct = TRUE)`  
+```r
+prop.test(45, 1000, p = 0.05, alternative = "two.sided", correct = TRUE)
+```
+
 1-sample proportions test with continuity correction  
 data:  45 out of 1000, null probability 0.05  
 X-squared = 0.42632, df = 1, p-value = 0.5138  

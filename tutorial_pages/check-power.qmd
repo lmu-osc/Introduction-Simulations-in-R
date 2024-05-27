@@ -15,7 +15,10 @@ Taking the example of a t-test, we need to understand a few parameters:
 You can calculate any one of these parameters, given all of the others. We usually want to specify, `delta`, `sd`, `sig.level` and `power` and calculate the required sample size.
 
 We can calculate the required sample size for a t.test using:
-`power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)`
+
+```r
+power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
+```
 
 Notice that `n = NULL`, so this parameter is calculated. 
 

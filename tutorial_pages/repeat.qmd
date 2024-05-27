@@ -3,7 +3,7 @@
 The function 
 * `replicate(nrep, expression)` repeats the `expression` provided `nrep` times.
 
-e.g. `replicate(10, mean(rnorm(100)))` reads: 'draw 100 values from a normal distribution with a mean 0 and sd 1 (the default values), caclulate the mean of these 100 values, and do all that 10 times.'
+e.g. `replicate(10, mean(rnorm(100)))` reads: 'draw 100 values from a normal distribution with a mean 0 and sd 1 (the default values), calculate the mean of these 100 values, and do all that 10 times.'
   
 ***
 
