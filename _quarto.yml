@@ -20,6 +20,8 @@ website:
   sidebar:
     style: docked
     contents:
+      - text: "Home"
+        href: index.qmd
       - section: "Tutorial"
         contents:
           - href: ./tutorial_pages/download-repo.qmd
