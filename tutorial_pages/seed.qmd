@@ -18,4 +18,3 @@ Play around with the function `set.seed()` by running and modifying the examples
  
 ***
 
-[Previous](./repeat.md) | [Next](./sample-size-n.md)  

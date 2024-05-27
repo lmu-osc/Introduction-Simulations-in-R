@@ -49,6 +49,5 @@ Depending on the type of simulation that would be useful for you, these articles
 
 ***
 
-[Previous](./real-life-example.md) | [Home](https://malikaihle.github.io/Introduction-Simulations-in-R/)
 
 

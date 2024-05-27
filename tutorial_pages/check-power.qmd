@@ -62,6 +62,5 @@ A complete self-paced tutorial to simulate data for power analysis of complex st
 
 ***
 
-[Previous](./check-alpha.md) | [Next](./simulate-for-preregistration.md)
 
 
