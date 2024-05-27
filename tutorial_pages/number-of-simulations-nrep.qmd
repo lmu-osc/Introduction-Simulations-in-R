@@ -25,4 +25,3 @@ The code generating the data and plots presented above are included in your exer
 
 ***
 
-[Previous](./sample-size-n.md) | [Next](./dry-rule.md)

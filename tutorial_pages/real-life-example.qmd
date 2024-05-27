@@ -59,5 +59,4 @@ This walk through will use the steps as defined in the page '[general structure]
 
 ***
 
-[Previous](./limitations.md) | [Next](./resources.md)
 

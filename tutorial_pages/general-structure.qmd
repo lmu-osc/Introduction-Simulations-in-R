@@ -14,4 +14,3 @@
 
 ***
 
-[Previous](./simulate-for-preregistration.md) | [Next](./limitations.md)

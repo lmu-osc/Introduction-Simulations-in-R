@@ -61,6 +61,5 @@ Such complex example where simulations is the only viable approach to construct 
 
 ***
 
-[Previous](./dry-rule.md) | [Next](./check-power.md)
 
 

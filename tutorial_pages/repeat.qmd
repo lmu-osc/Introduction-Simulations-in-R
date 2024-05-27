@@ -15,4 +15,3 @@ Make a histogram of each of your results, are the distributions looking as expec
 
 ***
 
-[Previous](./random-numbers-generators.md) | [Next](./seed.md)  
