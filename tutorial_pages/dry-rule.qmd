@@ -18,9 +18,11 @@ The only difference here is that you are writing the function yourself.
 Once a function is written, it can be used over and over again by calling its name, just like other functions such as `rnorm()`.  
 To write your own function, use the function `function`:
 
-* `AwesomeFunctionName <- function(argument1, argument2,…){  
-do stuff here  
-}`
+```r
+AwesomeFunctionName <- function(argument1, argument2,…) {  
+  do stuff here  
+}
+```
 
 To build up a function, start by writing the "`stuff`" to test that it works outside the function.
 
