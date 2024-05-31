@@ -11,7 +11,7 @@ The R script screenshoted below can be found in the folder [Ihle2020](./Ihle2020
 
 <br/>
 
-This walk through will use the steps as defined in the page '[general structure](./general-structure.md)'
+This walk through will use the steps as defined in the page '[general structure](./general-structure.qmd)'
 
 
 1. **define sample sizes** (within a dataset, and number of replicates), **experimental design** (fixed dataset structure, e.g. treatment groups, factors) and **parameters** that will need to vary (here, the strength of the effect)  
