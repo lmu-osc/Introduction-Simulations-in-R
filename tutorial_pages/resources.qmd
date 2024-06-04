@@ -1,6 +1,6 @@
 # Resources
 ## Follow-up self-paced tutorial on simulation of data analyses for advanced power analyses
-* <a href="https://malikaihle.github.io/Simulations-for-Advanced-Power-Analyses/" target="_blank">https://malikaihle.github.io/Simulations-for-Advanced-Power-Analyses/</a>
+* <a href="https://lmu-osc.github.io/Simulations-for-Advanced-Power-Analyses/" target="_blank">https://lmu-osc.github.io/Simulations-for-Advanced-Power-Analyses/</a>
 
 ## Hallgren 2013
 
