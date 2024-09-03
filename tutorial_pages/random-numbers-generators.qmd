@@ -4,7 +4,7 @@ R contains several functions to generate random numbers.
 Type *`?function`* in your consol to get information on the function's arguments (i.e. the values that must be provided to obtain the function's result).  
 
 The function  
-* `sample(x, n, replace=FALSE)` draws `n` values from a given vector `x` without replacement (by default) . 
+- `sample(x, n, replace=FALSE)` draws `n` values from a given vector `x` without replacement (by default) . 
 
 Sampling without replacement means that when you repeatedly draw e.g. 1 item from a pool of items, any item selected during the first draw is not available for selection during the second draw, and the first and second selected items are not in the pool to select from during the third draw, etc. Sampling with replacement means that all the original options are available at each draw.  
 
