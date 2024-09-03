@@ -26,7 +26,7 @@
     "href": "tutorial_pages/repeat.html",
     "title": "Repetition",
     "section": "",
-    "text": "Repetition\nThe function * replicate(nrep, expression) repeats the expression provided nrep times.\ne.g. replicate(10, mean(rnorm(100))) reads: ‘draw 100 values from a normal distribution with a mean 0 and sd 1 (the default values), calculate the mean of these 100 values, and do all that 10 times.’\n\nYOUR TURN:\nIn your local exercise script:\nReplicate 1000 times the mean of 10 values drawn from a unifrom distribution between 0 and 10.\nReplicate 100 times the mean of 50 values drawn from a normal distribution of mean 10 and standard deviation 5.\nMake a histogram of each of your results, are the distributions looking as expected?\n\n\n\n\n\n Back to top",
+    "text": "Repetition\nThe function\n\nreplicate(nrep, expression) repeats the expression provided nrep times.\n\ne.g. replicate(10, mean(rnorm(100))) reads: ‘draw 100 values from a normal distribution with a mean 0 and sd 1 (the default values), calculate the mean of these 100 values, and do all that 10 times.’\n\nYOUR TURN:\nIn your local exercise script:\nReplicate 1000 times the mean of 10 values drawn from a unifrom distribution between 0 and 10.\nReplicate 100 times the mean of 50 values drawn from a normal distribution of mean 10 and standard deviation 5.\nMake a histogram of each of your results, are the distributions looking as expected?\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Tutorial",
       "Repeat"
