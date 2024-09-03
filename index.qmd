@@ -7,7 +7,7 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
 ## Prerequisites
 
 * Have R and RStudio installed. If you don't, follow [these instructions](https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_software.html)  
-* Know some R basics (e.g. how to select a value in a data.frame, how to create a vector). If you don't, visit the tutorial: <a href="https://www.tutorialspoint.com/r/index.htm" target ="_blank">https://www.tutorialspoint.com/r/index.htm</a>  
+* Know some R basics (e.g. how to select a value in a data.frame, how to create a vector). If you don't, visit the tutorial: <a href="https://lmu-osc.github.io/introduction-to-R/" target ="_blank">https://lmu-osc.github.io/introduction-to-R/</a>  
 
 ## Prior to the session: optional preparation to get familiarised with the subject
 1) Watch this [30 min introduction to credible research](https://osf.io/xtmek/), which contextualise the importance of simulations for reliable research. 
@@ -16,9 +16,9 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
 
 ## Self-paced workshop
 ### How it works
-The self-paced tutorial (pages linked below) will alternate presentation of concepts and simple exercises for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the exercise script (you can chose between a file <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/exercise_script_with_solutions.R" target ="_blank">with</a> or <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/exercise_script_without_solutions.R" target ="_blank">without</a> the solutions depending on e.g. your level of familiarity with R), review the examples if needed, complete the exercise, and check out the proposed answer (which often contains additional tips). Come back to the online tutorial and after finishing one page, you can click 'next' at the bottom to continue. The exercise script contains  code for all the exercises and code that generates the plots that appear in the online tutorial, all in order of appearance in the tutorial.  
+The self-paced tutorial (pages linked below) will alternate presentation of concepts and simple exercises for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the exercise script (you can chose between a file <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/exercise_script_with_solutions.R" target ="_blank">with</a> or <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/exercise_script_without_solutions.R" target ="_blank">without</a> the solutions depending on e.g. your level of familiarity with R), review the examples if needed, complete the exercise, and check out the proposed answer (which often contains additional tips). Come back to the online tutorial and after finishing one page, you can navigate to the next page linked at the bottom to continue. The exercise script contains  code for all the exercises and code that generates the plots that appear in the online tutorial, all in order of appearance in the tutorial.  
 
-It is necessary that you work through the sections of the tutorial in order. Please read the blurbs of each sections below to get an overview of this workshop. Then click on the first page 'Download the material' and follow along by clicking 'Next' at the bottom of each page! You can get back to this overview at any time by clicking on the title 'Introduction-Simulations-in-R' at the top of each page.
+It is necessary that you work through the sections of the tutorial in order. Please read the blurbs of each sections below to get an overview of this workshop. Then click on the first page 'Download the material' and follow along by navigating to the next page linked at the bottom of each page!
  
 
 ### Tutorial
