@@ -16,6 +16,7 @@ For this, open the file `./exercise_script.R` from the root of your local reposi
 ***
 
 The following functions draw `n` values from distributions with the specified parameters  
+
 * `runif(n, min, max)` draws `n` values from a *uniform* distribution with the specified `min` and `max`  
 * `rpois(n, lambda)` draws `n` values from a *poisson* distribution with the specified `lambda`  
 * `rnorm(n, mean, sd)` draws `n` values from a *normal* distribution with the specified `mean` and `standard deviation`  
