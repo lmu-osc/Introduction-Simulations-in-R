@@ -8,7 +8,7 @@ Following the WET rule will:
 * Increase the difficulty of change  
 * Decrease clarity  
 * Leads to opportunities for inconsistency  
-<br/>
+
 To prevent duplication and follow the DRY rule, we can write custom functions.  
 
 Functions are 'self contained' sets of commands that accomplish a specific task.   
