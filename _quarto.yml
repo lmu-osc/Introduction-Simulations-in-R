@@ -16,6 +16,9 @@ website:
   repo-actions: [edit, issue]
   back-to-top-navigation: true
   page-navigation: true
+  favicon: assets/LMU_OSC_Book.png
+  margin-header: |
+    ![](/assets/LMU-OSC_logo.jpg){width="175"}
 
   sidebar:
     style: docked
@@ -61,7 +64,9 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - custom.scss
     css: styles.css
     toc: true
 
