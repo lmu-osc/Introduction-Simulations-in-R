@@ -16,7 +16,7 @@ website:
   repo-actions: [edit, issue]
   back-to-top-navigation: true
   page-navigation: true
-  favicon: assets/LMU_OSC_Book.png
+  favicon: assets/LMU_OSC_favicon.jpg
   margin-header: |
     ![](/assets/LMU-OSC_logo.jpg){width="175"}
 
