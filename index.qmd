@@ -22,22 +22,22 @@ It is necessary that you work through the sections of the tutorial in order. Ple
  
 
 ### Tutorial
-* [Download the material](./tutorial_pages/download-repo.qmd) -- Get this tutorial onto your machine.
-* [Definition](./tutorial_pages/definition.qmd) -- What are simulations?
-* [Purpose](./tutorial_pages/purpose.qmd) -- What can we use simulations for?
-* [Basic principles](./tutorial_pages/basic-principles.qmd) -- What do we need to create a simulation?
-* [Random number generators](./tutorial_pages/random-numbers-generators.qmd) -- How to generate random numbers in R?
-* [Repeat](./tutorial_pages/repeat.qmd) -- How to repeat the generation of random numbers multiple times?
-* [Setting the seed](./tutorial_pages/seed.qmd) -- How can you generate the same random numbers?
-* [Sample size `n`](./tutorial_pages/sample-size-n.qmd) -- How many values should you generate within a simulation?
-* [Number of simulations `nrep`](./tutorial_pages/number-of-simulations-nrep.qmd) -- How many repeats of a simulation should you run?
-* [Dry rule](./tutorial_pages/dry-rule.qmd) -- How to write your own functions?
+* [Download the material](./tutorial_pages/download-repo.qmd) – Get this tutorial onto your machine.
+* [Definition](./tutorial_pages/definition.qmd) – What are simulations?
+* [Purpose](./tutorial_pages/purpose.qmd) – What can we use simulations for?
+* [Basic principles](./tutorial_pages/basic-principles.qmd) – What do we need to create a simulation?
+* [Random number generators](./tutorial_pages/random-numbers-generators.qmd) – How to generate random numbers in R?
+* [Repeat](./tutorial_pages/repeat.qmd) – How to repeat the generation of random numbers multiple times?
+* [Setting the seed](./tutorial_pages/seed.qmd) – How can you generate the same random numbers?
+* [Sample size `n`](./tutorial_pages/sample-size-n.qmd) – How many values should you generate within a simulation?
+* [Number of simulations `nrep`](./tutorial_pages/number-of-simulations-nrep.qmd) – How many repeats of a simulation should you run?
+* [Dry rule](./tutorial_pages/dry-rule.qmd) – How to write your own functions?
 * [Simulate to check alpha](./tutorial_pages/check-alpha.qmd) - Write your first simulation and check the rate of false-positive findings.  
 * [Simulate to check power](./tutorial_pages/check-power.qmd) - Simulate data to perform a power analysis.  
-* [Simulate to prepare a preregistration](./tutorial_pages/simulate-for-preregistration.qmd) -- Simulate data to test statistical analyses before preregistering them.  
-* [General structure](./tutorial_pages/general-structure.qmd) -- What is the general structure of a simulation?
-* [Limitations](./tutorial_pages/limitations.qmd) -- What are the limitations to simulations?
-* [Real-life example](./tutorial_pages/real-life-example.qmd) -- What are real life examples of simulations?
-* [Additional resources](./tutorial_pages/resources.qmd) -- What resource can help you write your own simulation?
+* [Simulate to prepare a preregistration](./tutorial_pages/simulate-for-preregistration.qmd) – Simulate data to test statistical analyses before preregistering them.  
+* [General structure](./tutorial_pages/general-structure.qmd) – What is the general structure of a simulation?
+* [Limitations](./tutorial_pages/limitations.qmd) – What are the limitations to simulations?
+* [Real-life example](./tutorial_pages/real-life-example.qmd) – What are real life examples of simulations?
+* [Additional resources](./tutorial_pages/resources.qmd) – What resource can help you write your own simulation?
 
 

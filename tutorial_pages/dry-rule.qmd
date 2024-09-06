@@ -1,6 +1,6 @@
-# **D**o not **R**epeat **Y**ourself -- DRY rule
+# **D**o not **R**epeat **Y**ourself – DRY rule
 
-## *vs.* **W**rite **E**verything **T**wice -- WET rule
+## *vs.* **W**rite **E**verything **T**wice – WET rule
 
 <br/>
 Following the WET rule:  
