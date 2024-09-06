@@ -36,8 +36,8 @@ It is necessary that you work through the sections of the tutorial in order. Ple
 * [Simulate to check power](./tutorial_pages/check-power.qmd) – Simulate data to perform a power analysis.  
 * [Simulate to prepare a preregistration](./tutorial_pages/simulate-for-preregistration.qmd) – Simulate data to test statistical analyses before preregistering them.  
 * [General structure](./tutorial_pages/general-structure.qmd) – What is the general structure of a simulation?
-* [Limitations](./tutorial_pages/limitations.qmd) – What are the limitations to simulations?
-* [Real-life example](./tutorial_pages/real-life-example.qmd) – What are real life examples of simulations?
-* [Additional resources](./tutorial_pages/resources.qmd) – What resource can help you write your own simulation?
+* [Limitations](./tutorial_pages/limitations.qmd) – What are the limitations of simulations?
+* [Real-life example](./tutorial_pages/real-life-example.qmd) – What are real-life examples of simulations?
+* [Additional resources](./tutorial_pages/resources.qmd) – What resources can help you write your own simulation?
 
 
