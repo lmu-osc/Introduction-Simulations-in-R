@@ -15,7 +15,7 @@ It has the added benefit of forcing you to really think about what your dataset 
 It's very easy to make a dataset. Let's take the simple example about smoking and lung cancer. We are interested in only 4 variables:
 
 * `smoking_status`, a binary variable indicating whether an individual smokes (Yes/No). 
-* `lung_cancer`, a binary variable indicating wether an individual has lung cancer (Yes/No).
+* `lung_cancer`, a binary variable indicating whether an individual has lung cancer (Yes/No).
 * `sex`, a binary variable indicating an individual's sex (M/F).
 * `age`, a numeric variable containing an individual's age (in years).
 
