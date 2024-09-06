@@ -46,7 +46,7 @@ website:
           - href: ./tutorial_pages/number-of-simulations-nrep.qmd
             text: Number of simulations `nrep`
           - href: ./tutorial_pages/dry-rule.qmd
-            text: Dry rule
+            text: DRY rule
           - href: ./tutorial_pages/check-alpha.qmd
             text: Simulate to check alpha
           - href: ./tutorial_pages/check-power.qmd
