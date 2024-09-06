@@ -6,15 +6,15 @@ Generally, we want to do power analysis before collecting data, to work out the 
 
 Taking the example of a t-test, we need to understand a few parameters:
 
-* `n`, the sample size
-* `delta`, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), or you can use a 'minimally important difference': you specify the threshold below which you do not think a difference is interesting enough to be worth detecting. In a clinical trial, this might be the smallest difference that a patient would care about, for example. 
-* `sd`, the standard deviation. Usually this needs to be estimated from the literature or from pilot studies. 
+* `n`, the sample size.
+* `delta`, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), or you can use a minimally important difference, which is the threshold below which you do not consider a difference interesting enough to be worth detecting. In a clinical trial, for example, this might be the smallest difference that a patient would care about. 
+* `sd`, the standard deviation. Usually, this needs to be estimated from the literature or pilot studies. 
 * `sig.level`, the alpha, as discussed previously. 
 * `power`, the power as defined above.
 
 You can calculate any one of these parameters, given all of the others. We usually want to specify, `delta`, `sd`, `sig.level` and `power` and calculate the required sample size.
 
-We can calculate the required sample size for a t.test using:
+We can calculate the required sample size for a t-test using:
 
 ```r
 power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
@@ -22,44 +22,41 @@ power.t.test(n = NULL, delta = 0.5, sd = 1, sig.level = 0.05, power = 0.8)
 
 Notice that `n = NULL`, so this parameter is calculated. 
 
-The sample size `n` we need given this set of parameters, is `64` per group.
+The sample size `n` we need, given this set of parameters, is 64 per group.
 
 
 Just as we can check the alpha of our test by sampling from the same distribution (i.e. simulating data without an effect), we can check the power by sampling from different distributions (i.e. simulating data with an effect).
 
-If we sample values from two normal ditributions with different means (e.g. N(0,1) and N(0.5,1)), what is the minimum sample size we need to detect a significant difference in means with a t-test, 80% of the time?
+If we sample values from two normal distributions with different means (e.g. N(0,1) and N(0.5,1)), what is the minimum sample size we need to detect a significant difference in means with a t-test 80% of the time?
 
 ***
 
 **YOUR TURN:**  
-Use your simulation skills to work out the power through simulation.
-Write a function which:
+1. Use your simulation skills to work out the power through simulation.
+Write a function that does the following: 
 
-1. Draws `n` values from a random normal distribution with `mean1`, and another `n` values from a normal distribution with `mean2`
-
-2. Compares the means of these two samples with a t-test and extracts the p.value
-
-Replicate the function 1000 times using the parameters used in the power calculation above (that used the `power.t.test` function)
-
-Calculate the proportion of p-values that are <0.05
+i) Draws `n` values from a random normal distribution with `mean1` and another `n` values from a normal distribution with `mean2`.
+ii) Compares the means of these two samples with a t-test and extracts the p-value.
+2. Replicate the function 1000 times using the parameters used in the power calculation above (that used the `power.t.test()` function). 
+3. Calculate the proportion of p-values that are smaller than 0.05.
 
 ***
 
-**p-values of t tests comparing means from 1000 sims N(0,1) and N(0.5, 1) with n=64**  
+**p-values of t-tests comparing means from 1000 simulations of N(0,1) and N(0.5,1) with n=64:**  
 
 <br/>
 <img src="../assets/hist-power.png" width="500">  
 <br/>
 
-The proportion of correctly rejected null hypotheses in the simulation is close to `0.8`, which is what we would expect. 
+The proportion of correctly rejected null hypotheses in the simulation is close to 0.8, which is what we would expect. 
 
 Using simulations for power analysis is not really necessary for simple examples like a t-test, though it is useful to check your understanding. 
 
-When analyses become complex and it is hard or impossible to determine a sample size analytically (i.e. you can't calculate it, or there's no suitable function to use), then simulations are an indispensible tool.
+When analyses become complex and it is hard or impossible to determine a sample size analytically (i.e. you can't calculate it, or there's no suitable function to use), then simulations are an indispensable tool.
 
 A simple example of a power analysis like the one you've just done can be found in the "Power analysis" section of this paper:
 
-* Blanco, David, et al (2020). "Effect of an editorial intervention to improve the completeness of reporting of randomised trials: a randomised controlled trial." BMJ open 10.5: e036799. <a href="https://doi.org/10.1136/bmjopen-2020-036799" target="_blank">https://doi.org/10.1136/bmjopen-2020-036799</a>
+* Blanco, D., Schroter, S., Aldcroft, A., Moher, D., Boutron, I., Kirkham, J. J., & Cobo, E. (2020). Effect of an editorial intervention to improve the completeness of reporting of randomised trials: a randomised controlled trial. *BMJ Open*, *10*(5), e036799. <a href="https://doi.org/10.1136/bmjopen-2020-036799" target="_blank">https://doi.org/10.1136/bmjopen-2020-036799</a>
 
 A complete self-paced tutorial to simulate data for power analysis of complex statistical designs can be found here:
 
