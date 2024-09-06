@@ -32,8 +32,8 @@ It is necessary that you work through the sections of the tutorial in order. Ple
 * [Sample size `n`](./tutorial_pages/sample-size-n.qmd) – How many values should you generate within a simulation?
 * [Number of simulations `nrep`](./tutorial_pages/number-of-simulations-nrep.qmd) – How many repeats of a simulation should you run?
 * [Dry rule](./tutorial_pages/dry-rule.qmd) – How to write your own functions?
-* [Simulate to check alpha](./tutorial_pages/check-alpha.qmd) - Write your first simulation and check the rate of false-positive findings.  
-* [Simulate to check power](./tutorial_pages/check-power.qmd) - Simulate data to perform a power analysis.  
+* [Simulate to check alpha](./tutorial_pages/check-alpha.qmd) – Write your first simulation and check the rate of false-positive findings.  
+* [Simulate to check power](./tutorial_pages/check-power.qmd) – Simulate data to perform a power analysis.  
 * [Simulate to prepare a preregistration](./tutorial_pages/simulate-for-preregistration.qmd) – Simulate data to test statistical analyses before preregistering them.  
 * [General structure](./tutorial_pages/general-structure.qmd) – What is the general structure of a simulation?
 * [Limitations](./tutorial_pages/limitations.qmd) – What are the limitations to simulations?
