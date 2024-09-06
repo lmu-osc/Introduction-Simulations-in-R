@@ -34,9 +34,9 @@ website:
           - href: ./tutorial_pages/purpose.qmd
             text: Purpose
           - href: ./tutorial_pages/basic-principles.qmd
-            text: Basic Principles
+            text: Basic principles
           - href: ./tutorial_pages/random-numbers-generators.qmd
-            text: Random Number Generators
+            text: Random number generators
           - href: ./tutorial_pages/repeat.qmd
             text: Repeat
           - href: ./tutorial_pages/seed.qmd
