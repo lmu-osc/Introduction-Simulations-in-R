@@ -5,7 +5,7 @@ This is a walk through one relatively simple simulation written to check whether
 
 I created this code while preparing my preregistration for a simple behavioural ecology experiment about methods for independently manipulating palatability and colour in small insect prey ([article](https://doi.org/10.1371/journal.pone.0231205), [OSF preregistration](https://osf.io/f8uk9?view_only=3943e7bb9c5f4effbf119ca5b062fe80)).  
 
-The R script screenshot below can be found in the folder [Ihle2020](https://github.com/lmu-osc/Introduction-Simulations-in-R/tree/main/Ihle2020).  
+The R script screenshot below, `glm_Freq_vs_YN.R`, can be found in the folder [Ihle2020](https://github.com/lmu-osc/Introduction-Simulations-in-R/tree/main/Ihle2020).  
 
 <br/>
 

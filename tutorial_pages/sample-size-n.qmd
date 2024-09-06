@@ -4,13 +4,13 @@ How many values should you generate within a simulation? Let's explore.
 
 If I draw 10 data points from a normal distribution with a mean of 0 and a standard deviation of 1 (i.e N(0,1)), after setting the seed to 10 (for no specific reason), here is the distribution of the values I get:
 
-**1 simulation of N(0,1) with n=10:**  
+**1 simulation of N(0,1) with n = 10:**  
 <img src="../assets/hist10N01.png" width="300">  
 <br/>
 
 If I repeat this simulation 24 times, here are the distributions of the 10 values pseudo-randomly sampled from N(0,1):  
 
-**24 simulations of N(0,1) with n=10:**  
+**24 simulations of N(0,1) with n = 10:**  
 <br/>
 <img src="../assets/24hist10N01.png" width="600">  
 <br/>
@@ -21,19 +21,19 @@ Note that because we are drawing from N(0,1), we expect the mean of the values d
 
 How are the means and standard deviations of the 24 simulations distributed?  
 
-**Distributions of the means and SDs from 24 simulations of N(0,1) with n=10:**  
+**Distributions of the means and SDs from 24 simulations of N(0,1) with n = 10:**  
 <br/>
 <img src="../assets/musd-24-10-N01.png" width="500">  
 <br/>
 
 Now, let's do the same with a sample size `n` of 1000.  
 
-**24 simulations of the same distribution, i.e. N(0,1), with n=1000:**  
+**24 simulations of the same distribution, i.e. N(0,1), with n = 1000:**  
 <br/>
 <img src="../assets/24hist1000N01.png" width="600">  
 <br/>
 
-**Distributions of the means and SDs from 24 simulations of N(0,1) with n=1000:**  
+**Distributions of the means and SDs from 24 simulations of N(0,1) with n = 1000:**  
 <br/>
 <img src="../assets/musd-24-1000-N01.png" width="500">  
 <br/>

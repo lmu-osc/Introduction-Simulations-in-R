@@ -1,6 +1,6 @@
 # Checking power through simulations
 
-The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to `0.8`, though, as with `alpha = 0.05`, this is an arbitrary choice. 
+The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to 80%, though, as with `alpha = 0.05`, this is an arbitrary choice. 
 
 Generally, we want to do power analysis before collecting data, to work out the sample size we need to detect some effect. If we are calculating a required sample size, the power analysis can also be called a sample size calculation. 
 
@@ -42,7 +42,7 @@ ii) Compares the means of these two samples with a t-test and extracts the p-val
 
 ***
 
-**p-values of t-tests comparing means from 1000 simulations of N(0,1) and N(0.5,1) with n=64:**  
+**p-values of t-tests comparing means from 1000 simulations of N(0,1) and N(0.5,1) with n = 64:**  
 
 <br/>
 <img src="../assets/hist-power.png" width="500">  
