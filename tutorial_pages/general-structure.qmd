@@ -4,7 +4,7 @@
 
 2. **Generate data**, random data or data including an effect (e.g. an imposed correlation between two variables).  
 
-3. **Run the statistical test** you think is appropriate and record the relevant statistic (e.g. p-value). 
+3. **Run the statistical test** you think is appropriate and record the relevant statistic (e.g. *p*-value). 
 
 4. **Replicate** step 2 and 3 to get the distribution of the statistic of interest.  
 

@@ -10,17 +10,17 @@ If you draw from the same normal distribution twice, will the mean of the two sa
 ***
 
 **YOUR TURN:**  
-1. Figure out how to do a t-test in R.  
-2. Generate two vectors of 10 values drawn from N(0,1) and compare them with a t-test.  
-3. Figure out how to extract the p-value from that object (explore your R object with the functions `str()` or `names()`).    
-4. Write a function `simT()` that generates two vectors of `n` values drawn from a standard normal distribution (N(0,1)), compares them with a t-test, and returns the p-value.  
+1. Figure out how to do a *t*-test in R.  
+2. Generate two vectors of 10 values drawn from N(0,1) and compare them with a *t*-test.  
+3. Figure out how to extract the *p*-value from that object (explore your R object with the functions `str()` or `names()`).    
+4. Write a function `simT()` that generates two vectors of `n` values drawn from a standard normal distribution (N(0,1)), compares them with a *t*-test, and returns the *p*-value.  
 5. Test your function by calling it for `n = 50`.  
 6. For `n = 10`, generate `nrep = 20` repetitions and draw a histogram.  
 7. Repeat the previous task with `nrep = 100`.
 
 ***
 
-**p-values of t-tests comparing means from 20 or 100 simulations of N(0,1) with n = 10:**   
+***p*-values of *t*-tests comparing means from 20 or 100 simulations of N(0,1) with n = 10:**   
 <br/>
 <img src="../assets/ttest-changing-nrep.png" width="500">  
 <br/>
@@ -38,12 +38,12 @@ Are those deviations meaningful? Are they significant?
 
 ***
 
-**p-values of t-tests comparing means from 1000 simulations of N(0,1) with n=10 or n=100:**   
+***p*-values of *t*-tests comparing means from 1000 simulations of N(0,1) with n=10 or n=100:**   
 <br/>
 <img src="../assets/ttest-changing-n.png" width="500">  
 <br/>
 
-In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a p-value under 0.05). In my simulations, I get 40 and 45 false positive results, for `n = 10` and `n = 100`, respectively. How many did you get?  
+In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a *p*-value under 0.05). In my simulations, I get 40 and 45 false positive results, for `n = 10` and `n = 100`, respectively. How many did you get?  
 
 These proportions are not significantly different from 5%. 
 
@@ -57,7 +57,7 @@ prop.test(45, 1000, p = 0.05, alternative = "two.sided", correct = TRUE)
 
 It is important to note that, although `alpha = 0.05` is commonly used, this is an arbitrary choice and you should consider what is an appropriate type 1 error rate for your particular investigation.  
 
-Although it isn't necessary to check that a statistical analysis as simple as a t-test does not yield more than 5% false-positive results, in situations where the structure of the data is complex and analysed with more advanced models (e.g. when explanatory variables are mathematically linked to each other or are combined in a mixed-effect model), this may allow to compare different modelling approaches and select one that does not produce more than 5% false-positive results.  
+Although it isn't necessary to check that a statistical analysis as simple as a *t*-test does not yield more than 5% false-positive results, in situations where the structure of the data is complex and analysed with more advanced models (e.g. when explanatory variables are mathematically linked to each other or are combined in a mixed-effect model), this may allow to compare different modelling approaches and select one that does not produce more than 5% false-positive results.  
 
 Such complex example, where simulation is the only viable approach to construct a statistical model that does not lead to spurious effects, can be found in this paper:
 
