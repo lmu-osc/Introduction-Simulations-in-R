@@ -1,12 +1,12 @@
 # Limitations to simulations
 
-1. **assumptions** made regarding variables might not be true, e.g. the distribution of supposedly normally distributed data may not be quite normal (have a back-up analysis plan!)  
+1. **Assumptions** made regarding variables might not be true, e.g. the distribution of supposedly normally distributed data may not be quite normal. (Have a back-up analysis plan!)  
 
-2. **parameter space unknown** (explore it a bit, use previous observations to be at least in a relevant range)  
+2. **Parameter space may be unknown**. (Explore it a bit and use previous observations to be at least in a relevant range.)  
 
-3. **computational power and time** (use research software engineer staff on campus to optimize code, use parallel core processing, use server services on campus, etc.)  
+3. **Computational resources and time**. (Use research software engineer staff on campus to optimize code, use parallel core processing, use server services on campus, etc.)  
 
-4. **simulations might be redundant with mathematical demonstrations** (I don’t mind, still useful for me!)  
+4. **Simulations might be redundant with mathematical demonstrations**. (I don't mind, still useful for me!)  
 
 ***
 

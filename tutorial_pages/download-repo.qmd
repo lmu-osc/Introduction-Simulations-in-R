@@ -3,12 +3,12 @@
 You have two options to fetch this material:
 
 ## A. You know version control with Git and GitHub
-Fork and clone [this repository](https://github.com/lmu-osc/Introduction-Simulations-in-R) ([here](https://lmu-osc.github.io/Collaborative-RStudio-GitHub/) is a reminder on how to do this)
+Fork and clone [this repository](https://github.com/lmu-osc/Introduction-Simulations-in-R) ([here](https://lmu-osc.github.io/Collaborative-RStudio-GitHub/) is a reminder on how to do this).
 
 ## B. You do not know version control, and/or simply want to download a copy of this material
 
 **1) Download the repository**  
-Please download the GitHub repository that we are using today: <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R" target="_blank">https://github.com/lmu-osc/Introduction-Simulations-in-R</a>
+Please download the GitHub repository that we are using today: <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R" target="_blank">https://github.com/lmu-osc/Introduction-Simulations-in-R</a>.
 
 <br/>
 <img src="../assets/download.PNG" width="750">  
@@ -16,21 +16,21 @@ Please download the GitHub repository that we are using today: <a href="https://
 
 Once the .zip file downloaded, extract it and place the folder in the desired directory (e.g. Documents).  
 
-**2) Turn it into a RStudio project**  
+**2) Turn it into an RStudio project**  
 
 If you do not have R or RStudio installed, please follow [these instructions](https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_software.html) first.  
 
-Open RStudio, and go to 'File', 'New Project...', and select 'Existing Directory'.  
+Open RStudio, go to 'File', choose 'New Project...', and select 'Existing Directory'.  
 <br/>
 <img src="../assets/existing-directory.PNG" width="400">  
 <br/>
 
-Select the downloaded (and extracted) folder, by clicking on 'Browse', then select 'Create Project'.   
+Select the downloaded (and extracted) folder by clicking on 'Browse', then select 'Create Project'.   
 <br/>
 <img src="../assets/find-directory.PNG" width="400">  
 <br/>
 
-In the panel containing the 'Files' tab, find the exercise sheet, and open it by double clicking on it.  
+In the panel containing the 'Files' tab, find the exercise sheet and open it by double clicking on it.  
 <br/>
 <img src="../assets/files-list.PNG" width="600">  
 <br/>
