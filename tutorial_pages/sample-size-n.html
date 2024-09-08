@@ -143,13 +143,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/basic-principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic Principles</span></a>
+ <span class="menu-text">Basic principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/random-numbers-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Random Number Generators</span></a>
+ <span class="menu-text">Random number generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/dry-rule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dry rule</span></a>
+ <span class="menu-text">DRY rule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -254,32 +254,32 @@ ul.task-list li input[type="checkbox"] {
 <section id="sample-size-n" class="level1">
 <h1>Sample size <code>n</code></h1>
 <p>How many values should you generate within a simulation? Let’s explore.</p>
-<p>If I draw 10 data points from a normal distribution of mean 0 and sd 1, or N(0,1), after setting the seed to 10 (for no specific reason), here is the distribution of the values I get:</p>
-<p><strong>1 sim of N(0,1) with n=10</strong><br>
+<p>If I draw 10 data points from a normal distribution with a mean of 0 and a standard deviation of 1 (i.e N(0,1)), after setting the seed to 10 (for no specific reason), here is the distribution of the values I get:</p>
+<p><strong>1 simulation of N(0,1) with n = 10:</strong><br>
 <img src="../assets/hist10N01.png" width="300"><br>
 <br></p>
-<p>and if I replicate this simulation 24 times, here are the distributions of the 10 values pseudo-randomly sampled from N(0,1):</p>
-<p><strong>24 sims of N(0,1) with n=10</strong><br>
+<p>If I repeat this simulation 24 times, here are the distributions of the 10 values pseudo-randomly sampled from N(0,1):</p>
+<p><strong>24 simulations of N(0,1) with n = 10:</strong><br>
 <br> <img src="../assets/24hist10N01.png" width="600"><br>
 <br></p>
-<p>Note that because we are drawing from N(0,1), we expect the mean of the values drawn (mean(x), blue lines) to be very closed to 0, the mean of the normal distribution we sample from (red dashed lines).<br>
+<p>Note that because we are drawing from N(0,1), we expect the mean of the values drawn (mean(x), blue lines) to be very close to 0, i.e.&nbsp;the mean of the normal distribution we sample from (red dashed lines).<br>
 <br></p>
-<p>How distributed are the means and standard deviations of the 24 simulations of 10 sampled values from N(0,1)?</p>
-<p><strong>Distributions of the means and SDs from 24 sims N(0,1) with n=10</strong><br>
+<p>How are the means and standard deviations of the 24 simulations distributed?</p>
+<p><strong>Distributions of the means and SDs from 24 simulations of N(0,1) with n = 10:</strong><br>
 <br> <img src="../assets/musd-24-10-N01.png" width="500"><br>
 <br></p>
 <p>Now, let’s do the same with a sample size <code>n</code> of 1000.</p>
-<p><strong>24 sims of the same distribution N(0,1) with n=1000</strong><br>
+<p><strong>24 simulations of the same distribution, i.e.&nbsp;N(0,1), with n = 1000:</strong><br>
 <br> <img src="../assets/24hist1000N01.png" width="600"><br>
 <br></p>
-<p><strong>Distributions of the means and SDs from 24 sims N(0,1) with n=1000</strong><br>
+<p><strong>Distributions of the means and SDs from 24 simulations of N(0,1) with n = 1000:</strong><br>
 <br> <img src="../assets/musd-24-1000-N01.png" width="500"><br>
 <br></p>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
 <p>The sample size within a simulation affects the <strong>precision</strong> with which the parameters of that distribution can be estimated.</p>
 <p>What should determine the sample size within your simulation?<br>
-–&gt; a sample size that is relevant to the context of the simulation, e.g.&nbsp;the sample size you will be able to reach in your study, the minimum sample size that would allow you to detect the smallest effect of interest (as determined by a power analysis, which we will cover in a moment).</p>
+Choose a sample size that is relevant to the context of the simulation, e.g.&nbsp;the sample size you will be able to reach in your study or the minimum sample size that would allow you to detect the smallest effect of interest (as determined by a power analysis, which we will cover in a moment).</p>
 <hr>
 
 

@@ -143,13 +143,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/basic-principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic Principles</span></a>
+ <span class="menu-text">Basic principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/random-numbers-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Random Number Generators</span></a>
+ <span class="menu-text">Random number generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/dry-rule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dry rule</span></a>
+ <span class="menu-text">DRY rule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -253,13 +253,13 @@ ul.task-list li input[type="checkbox"] {
 <p>One of the simplest uses of simulations is to make a dataset on which you can run and therefore pre-specify your analytic code.</p>
 <p>For example, let’s say you plan to collect an observational dataset and want to look at the effect of smoking on lung cancer. A typical protocol might state that the data will be analysed by logistic regression, adjusting for confounders. But which confounders exactly? How will each variable be coded? What type of logistic regression will you use?</p>
 <p>Making a dataset that has the variables you expect your real dataset will have allows you to exactly state (in <strong>code</strong> rather than potentially ambiguous words) what you will do.</p>
-<p>This is really useful if you want input from e.g.&nbsp;a statistician - they can look at your code and more clearly see what you are trying to do. It has the added benefit of forcing you to really think about what your dataset will look like! I’ve found this to be very useful in the past.</p>
-<p>It’s very easy to make a dataset. Let’s take a simple example. We are interested in only 4 variables:</p>
+<p>This is really useful if you want input, e.g.&nbsp;from a statistician – they can look at your code and more clearly see what you are trying to do. It has the added benefit of forcing you to really think about what your dataset will look like! I’ve found this to be very useful in the past.</p>
+<p>It’s very easy to make a dataset. Let’s take the simple example about smoking and lung cancer. We are interested in only 4 variables:</p>
 <ul>
-<li>smoking status</li>
-<li>lung cancer</li>
-<li>sex</li>
-<li>age</li>
+<li><code>smoking_status</code>, a binary variable indicating whether an individual smokes (Yes/No).</li>
+<li><code>lung_cancer</code>, a binary variable indicating whether an individual has lung cancer (Yes/No).</li>
+<li><code>sex</code>, a binary variable indicating an individual’s sex (M/F).</li>
+<li><code>age</code>, a numeric variable containing an individual’s age (in years).</li>
 </ul>
 <p>Here is the top of the simulated dataset.</p>
 <p><br> <img src="../assets/simulated-data.png" width="750"><br>
@@ -269,16 +269,16 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p>Can you recreate it? Try it yourself!</p>
 <p>HINT: use the <code>data.frame()</code>, <code>sample()</code>, and <code>rnorm()</code> functions.</p></li>
-<li><p>Now you’ve made a dataset, try to run a logistic regression on your data with lung cancer as the outcome.</p></li>
+<li><p>Now that you’ve made a dataset, try to run a logistic regression on your data with <code>lung_cancer</code> as the outcome.</p></li>
 <li><p>Do you face any error message? Does the data need to be in a specific format for statistical models to run?</p></li>
 </ol>
 <hr>
-<p>Once we have a working model, we can look at the summary and make sure it behaves as we expected. And we can share the code with collaborators or reviewers.</p>
-<p>You could combine this approach with the sampling approaches you learned in the power/alpha simulation session to look at power for more complex analyses like this.</p>
+<p>Once we have a working model, we can look at the summary and make sure it behaves as we expected, and we can share the code with collaborators or reviewers.</p>
+<p>You could combine this approach with the sampling approaches you learned on the previous two pages to look at power for more complex analyses like this.</p>
 <p><br> <img src="../assets/logreg-results.png" width="750"><br>
 <br></p>
 <p>And that’s it! We have written down our code in a way that is totally unambiguous. This practice is useful for any project: you can include the exact code that you plan to use in a preregistration, and reviewers will be able to verify that you did what you planned.</p>
-<p>A real example of a simple simulation like this, used in the submission of a registered report, can be found in the rmd file <a href="https://osf.io/5jf9p/">here</a>.</p>
+<p>A real example of a simple simulation like this, used in the submission of a registered report, can be found in the R Markdown file <a href="https://osf.io/5jf9p/">here</a>.</p>
 <hr>
 
 

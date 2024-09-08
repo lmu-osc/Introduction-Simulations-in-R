@@ -177,13 +177,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/basic-principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic Principles</span></a>
+ <span class="menu-text">Basic principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/random-numbers-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Random Number Generators</span></a>
+ <span class="menu-text">Random number generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -213,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/dry-rule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dry rule</span></a>
+ <span class="menu-text">DRY rule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -284,42 +284,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="checking-power-through-simulations" class="level1">
 <h1>Checking power through simulations</h1>
-<p>The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to <code>0.8</code>, though, as with <code>alpha = 0.05</code>, this is an arbitrary choice.</p>
+<p>The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to 80%, though, as with <code>alpha = 0.05</code>, this is an arbitrary choice.</p>
 <p>Generally, we want to do power analysis before collecting data, to work out the sample size we need to detect some effect. If we are calculating a required sample size, the power analysis can also be called a sample size calculation.</p>
-<p>Taking the example of a t-test, we need to understand a few parameters:</p>
+<p>Taking the example of a <em>t</em>-test, we need to understand a few parameters:</p>
 <ul>
-<li><code>n</code>, the sample size</li>
-<li><code>delta</code>, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), or you can use a ‘minimally important difference’: you specify the threshold below which you do not think a difference is interesting enough to be worth detecting. In a clinical trial, this might be the smallest difference that a patient would care about, for example.</li>
-<li><code>sd</code>, the standard deviation. Usually this needs to be estimated from the literature or from pilot studies.</li>
+<li><code>n</code>, the sample size.</li>
+<li><code>delta</code>, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), or you can use a minimally important difference, which is the threshold below which you do not consider a difference interesting enough to be worth detecting. In a clinical trial, for example, this might be the smallest difference that a patient would care about.</li>
+<li><code>sd</code>, the standard deviation. Usually, this needs to be estimated from the literature or pilot studies.</li>
 <li><code>sig.level</code>, the alpha, as discussed previously.</li>
 <li><code>power</code>, the power as defined above.</li>
 </ul>
 <p>You can calculate any one of these parameters, given all of the others. We usually want to specify, <code>delta</code>, <code>sd</code>, <code>sig.level</code> and <code>power</code> and calculate the required sample size.</p>
-<p>We can calculate the required sample size for a t.test using:</p>
+<p>We can calculate the required sample size for a <em>t</em>-test using:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">power.t.test</span>(<span class="at">n =</span> <span class="cn">NULL</span>, <span class="at">delta =</span> <span class="fl">0.5</span>, <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Notice that <code>n = NULL</code>, so this parameter is calculated.</p>
-<p>The sample size <code>n</code> we need given this set of parameters, is <code>64</code> per group.</p>
+<p>The sample size <code>n</code> we need, given this set of parameters, is 64 per group.</p>
 <p>Just as we can check the alpha of our test by sampling from the same distribution (i.e.&nbsp;simulating data without an effect), we can check the power by sampling from different distributions (i.e.&nbsp;simulating data with an effect).</p>
-<p>If we sample values from two normal ditributions with different means (e.g.&nbsp;N(0,1) and N(0.5,1)), what is the minimum sample size we need to detect a significant difference in means with a t-test, 80% of the time?</p>
+<p>If we sample values from two normal distributions with different means (e.g.&nbsp;N(0,1) and N(0.5,1)), what is the minimum sample size we need to detect a significant difference in means with a <em>t</em>-test 80% of the time?</p>
 <hr>
 <p><strong>YOUR TURN:</strong><br>
-Use your simulation skills to work out the power through simulation. Write a function which:</p>
-<ol type="1">
-<li><p>Draws <code>n</code> values from a random normal distribution with <code>mean1</code>, and another <code>n</code> values from a normal distribution with <code>mean2</code></p></li>
-<li><p>Compares the means of these two samples with a t-test and extracts the p.value</p></li>
+1. Use your simulation skills to work out the power through simulation. Write a function that does the following:</p>
+<ol type="i">
+<li>Draws <code>n</code> values from a random normal distribution with <code>mean1</code> and another <code>n</code> values from a normal distribution with <code>mean2</code>.</li>
+<li>Compares the means of these two samples with a <em>t</em>-test and extracts the <em>p</em>-value.</li>
 </ol>
-<p>Replicate the function 1000 times using the parameters used in the power calculation above (that used the <code>power.t.test</code> function)</p>
-<p>Calculate the proportion of p-values that are &lt;0.05</p>
+<ol start="2" type="1">
+<li>Replicate the function 1000 times using the parameters used in the power calculation above (that used the <code>power.t.test()</code> function).</li>
+<li>Calculate the proportion of <em>p</em>-values that are smaller than 0.05.</li>
+</ol>
 <hr>
-<p><strong>p-values of t tests comparing means from 1000 sims N(0,1) and N(0.5, 1) with n=64</strong></p>
+<p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 1000 simulations of N(0,1) and N(0.5,1) with n = 64:</strong></p>
 <p><br> <img src="../assets/hist-power.png" width="500"><br>
 <br></p>
-<p>The proportion of correctly rejected null hypotheses in the simulation is close to <code>0.8</code>, which is what we would expect.</p>
-<p>Using simulations for power analysis is not really necessary for simple examples like a t-test, though it is useful to check your understanding.</p>
-<p>When analyses become complex and it is hard or impossible to determine a sample size analytically (i.e.&nbsp;you can’t calculate it, or there’s no suitable function to use), then simulations are an indispensible tool.</p>
+<p>The proportion of correctly rejected null hypotheses in the simulation is close to 0.8, which is what we would expect.</p>
+<p>Using simulations for power analysis is not really necessary for simple examples like a <em>t</em>-test, though it is useful to check your understanding.</p>
+<p>When analyses become complex and it is hard or impossible to determine a sample size analytically (i.e.&nbsp;you can’t calculate it, or there’s no suitable function to use), then simulations are an indispensable tool.</p>
 <p>A simple example of a power analysis like the one you’ve just done can be found in the “Power analysis” section of this paper:</p>
 <ul>
-<li>Blanco, David, et al (2020). “Effect of an editorial intervention to improve the completeness of reporting of randomised trials: a randomised controlled trial.” BMJ open 10.5: e036799. <a href="https://doi.org/10.1136/bmjopen-2020-036799" target="_blank">https://doi.org/10.1136/bmjopen-2020-036799</a></li>
+<li>Blanco, D., Schroter, S., Aldcroft, A., Moher, D., Boutron, I., Kirkham, J. J., &amp; Cobo, E. (2020). Effect of an editorial intervention to improve the completeness of reporting of randomised trials: a randomised controlled trial. <em>BMJ Open</em>, <em>10</em>(5), e036799. <a href="https://doi.org/10.1136/bmjopen-2020-036799" target="_blank">https://doi.org/10.1136/bmjopen-2020-036799</a></li>
 </ul>
 <p>A complete self-paced tutorial to simulate data for power analysis of complex statistical designs can be found here:</p>
 <ul>

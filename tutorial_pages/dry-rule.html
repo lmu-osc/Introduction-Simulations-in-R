@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorial_pages/download-repo.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../tutorial_pages/dry-rule.html">Dry rule</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorial_pages/download-repo.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../tutorial_pages/dry-rule.html">DRY rule</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -177,13 +177,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/basic-principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic Principles</span></a>
+ <span class="menu-text">Basic principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/random-numbers-generators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Random Number Generators</span></a>
+ <span class="menu-text">Random number generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -213,7 +213,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/dry-rule.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Dry rule</span></a>
+ <span class="menu-text">DRY rule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -272,9 +272,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#do-not-repeat-yourself---dry-rule" id="toc-do-not-repeat-yourself---dry-rule" class="nav-link active" data-scroll-target="#do-not-repeat-yourself---dry-rule"><strong>D</strong>o not <strong>R</strong>epeat <strong>Y</strong>ourself - DRY rule</a>
+  <li><a href="#do-not-repeat-yourself-dry-rule" id="toc-do-not-repeat-yourself-dry-rule" class="nav-link active" data-scroll-target="#do-not-repeat-yourself-dry-rule"><strong>D</strong>o not <strong>R</strong>epeat <strong>Y</strong>ourself – DRY rule</a>
   <ul class="collapse">
-  <li><a href="#vs.-write-everything-twice---wet-rule" id="toc-vs.-write-everything-twice---wet-rule" class="nav-link" data-scroll-target="#vs.-write-everything-twice---wet-rule"><em>vs.</em> <strong>W</strong>rite <strong>E</strong>verything <strong>T</strong>wice - WET rule</a></li>
+  <li><a href="#vs.-write-everything-twice-wet-rule" id="toc-vs.-write-everything-twice-wet-rule" class="nav-link" data-scroll-target="#vs.-write-everything-twice-wet-rule"><em>vs.</em> <strong>W</strong>rite <strong>E</strong>verything <strong>T</strong>wice – WET rule</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/edit/main/tutorial_pages/dry-rule.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -285,32 +285,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="do-not-repeat-yourself---dry-rule" class="level1">
-<h1><strong>D</strong>o not <strong>R</strong>epeat <strong>Y</strong>ourself - DRY rule</h1>
-<section id="vs.-write-everything-twice---wet-rule" class="level2">
-<h2 class="anchored" data-anchor-id="vs.-write-everything-twice---wet-rule"><em>vs.</em> <strong>W</strong>rite <strong>E</strong>verything <strong>T</strong>wice - WET rule</h2>
-<p><br> Following the WET rule will:</p>
+<section id="do-not-repeat-yourself-dry-rule" class="level1">
+<h1><strong>D</strong>o not <strong>R</strong>epeat <strong>Y</strong>ourself – DRY rule</h1>
+<section id="vs.-write-everything-twice-wet-rule" class="level2">
+<h2 class="anchored" data-anchor-id="vs.-write-everything-twice-wet-rule"><em>vs.</em> <strong>W</strong>rite <strong>E</strong>verything <strong>T</strong>wice – WET rule</h2>
+<p><br> Following the WET rule:</p>
 <ul>
-<li>Increase the difficulty of change<br>
+<li>Makes changes more difficult and/or time consuming.<br>
 </li>
-<li>Decrease clarity<br>
+<li>Decreases code clarity.<br>
 </li>
-<li>Leads to opportunities for inconsistency</li>
+<li>Increases the likelihood of inconsistencies.</li>
 </ul>
 <p>To prevent duplication and follow the DRY rule, we can write custom functions.</p>
-<p>Functions are ‘self contained’ sets of commands that accomplish a specific task.<br>
-Functions usually ‘take in’ data or parameter values (these inputs are called ‘function arguments’), process it, and ‘return’ a result. You’ve already used several functions in this tutorial; for example <code>rnorm(n, mean, sd)</code>, where <code>n</code>, <code>mean</code>, and <code>sd</code> are inputs and the result is a random sample from the normal distribution. The only difference here is that you are writing the function yourself. Once a function is written, it can be used over and over again by calling its name, just like other functions such as <code>rnorm()</code>.<br>
+<p>Functions are ‘self-contained’ sets of commands that accomplish a specific task.<br>
+Functions usually ‘take in’ data or parameter values (these inputs are called ‘function arguments’), process them, and ‘return’ a result. You’ve already used several functions in this tutorial; for example <code>rnorm(n, mean, sd)</code>, where <code>n</code>, <code>mean</code>, and <code>sd</code> are inputs and the result is a random sample from the normal distribution. The only difference here is that you are writing the function yourself. Once a function is written, it can be used over and over again by calling its name, just like other functions such as <code>rnorm()</code>.<br>
 To write your own function, use the function <code>function</code>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>AwesomeFunctionName <span class="ot">&lt;-</span> <span class="cf">function</span>(argument1, argument2,…) {  </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  do stuff here  </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>To build up a function, start by writing the “<code>stuff</code>” to test that it works outside the function.</p>
+<p>To build up a function, start by writing the “<code>stuff</code>” outside the function to test that it works.</p>
 <hr>
 <p><strong>YOUR TURN:</strong><br>
-Create a function that draws a histogram of <code>nrep</code> mean(rnorm(100))<br>
-Modify your function to draw a histogram of <code>nrep</code> mean(rnorm(<code>n</code>))</p>
+1. Create a function that repeats the calculation of the mean of 100 values drawn from a standard normal distribution (use <code>mean(rnorm(n = 100))</code> for this calculation) <code>nrep</code> times and returns a histogram of the <code>nrep</code> means.<br>
+2. Modify your function such that, in addition to <code>nrep</code>, the number of drawn values <code>n</code> (i.e.&nbsp;argument <code>n</code> of the <code>rnorm()</code> function) can also be varied when calling your function.</p>
 <hr>
-<p>Note that it is useful to define <code>nrep</code> outside of the function, so users of your script can more easily change that value e.g.&nbsp;from a low number (to verify the script runs without error) to a large number (to obtain reliable results).</p>
+<p>Note that it is useful to define <code>nrep</code> outside of the function, so users of your script can more easily change that value, e.g.&nbsp;from a low number (to verify the script runs without error) to a large number (to obtain reliable results).</p>
 
 
 </section>

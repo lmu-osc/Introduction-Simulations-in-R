@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorial_pages/download-repo.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../tutorial_pages/random-numbers-generators.html">Random Number Generators</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorial_pages/download-repo.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../tutorial_pages/random-numbers-generators.html">Random number generators</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -143,13 +143,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/basic-principles.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic Principles</span></a>
+ <span class="menu-text">Basic principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/random-numbers-generators.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Random Number Generators</span></a>
+ <span class="menu-text">Random number generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial_pages/dry-rule.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dry rule</span></a>
+ <span class="menu-text">DRY rule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -251,33 +251,29 @@ ul.task-list li input[type="checkbox"] {
 <section id="random-number-generators" class="level1">
 <h1>Random number generators</h1>
 <p>R contains several functions to generate random numbers.<br>
-Type <em><code>?function</code></em> in your consol to get information on the function’s arguments (i.e.&nbsp;the values that must be provided to obtain the function’s result).</p>
-<p>The function</p>
-<ul>
-<li><code>sample(x, n, replace=FALSE)</code> draws <code>n</code> values from a given vector <code>x</code> without replacement (by default) .</li>
-</ul>
-<p>Sampling without replacement means that when you repeatedly draw e.g.&nbsp;1 item from a pool of items, any item selected during the first draw is not available for selection during the second draw, and the first and second selected items are not in the pool to select from during the third draw, etc. Sampling with replacement means that all the original options are available at each draw.</p>
+Type <code>?</code><em><code>function</code></em> in your console to get information on the function’s arguments (i.e.&nbsp;the values that must be provided to obtain the function’s result).</p>
+<p>The function <code>sample(x, n, replace = FALSE)</code> draws <code>n</code> values from a given vector <code>x</code> without replacement (by default).</p>
+<p>Sampling without replacement means that when you repeatedly draw e.g.&nbsp;one item at a time from a pool of items, any item selected during the first draw is not available for selection during the second draw, and the first and second selected items are not in the pool to select from during the third draw, etc. Sampling with replacement means that all the original options are available at each draw.</p>
 <hr>
 <p><strong>YOUR TURN:</strong><br>
-Sample 100 values between 3 and 103 with replacement.<br>
-For this, open the file <code>./exercise_script.R</code> from the root of your local repository (with or without answers), review the examples if needed, complete the exercise, and check out the proposed answer.</p>
+Sample 100 values between 3 and 103 with replacement. For this, open the file <code>./exercise_script.R</code> from the root of your local repository (with or without answers), review the examples if needed, complete the exercise, and check out the proposed answer.</p>
 <hr>
-<p>The following functions draw <code>n</code> values from distributions with the specified parameters</p>
+<p>The following functions draw <code>n</code> values from distributions with the specified parameters:</p>
 <ul>
-<li><code>runif(n, min, max)</code> draws <code>n</code> values from a <em>uniform</em> distribution with the specified <code>min</code> and <code>max</code><br>
+<li><code>runif(n, min, max)</code> draws <code>n</code> values from a <em>uniform</em> distribution with the specified <code>min</code> and <code>max</code>.<br>
 </li>
-<li><code>rpois(n, lambda)</code> draws <code>n</code> values from a <em>poisson</em> distribution with the specified <code>lambda</code><br>
+<li><code>rpois(n, lambda)</code> draws <code>n</code> values from a <em>Poisson</em> distribution with the specified <code>lambda</code>.<br>
 </li>
-<li><code>rnorm(n, mean, sd)</code> draws <code>n</code> values from a <em>normal</em> distribution with the specified <code>mean</code> and <code>standard deviation</code><br>
+<li><code>rnorm(n, mean, sd)</code> draws <code>n</code> values from a <em>normal</em> distribution with the specified <code>mean</code> and standard deviation <code>sd</code>.<br>
 </li>
-<li><code>rbinom(n, prob)</code> draws <code>n</code> values from a <em>binomial</em> distribution with the specified <code>probability</code></li>
+<li><code>rbinom(n, prob)</code> draws <code>n</code> values from a <em>binomial</em> distribution with the specified probability <code>prob</code>.</li>
 </ul>
 <hr>
 <p><strong>YOUR TURN:</strong><br>
-Draw 100 values from a normal distribution with a mean of 0 and a sd of 1.<br>
-Draw 50 values from a normal distribution with a mean of 10 and sd of 5.<br>
-Draw 1000 values from a poisson distribution with a lambda of 50.<br>
-Draw 30 values from a uniform distribution between 0 and 10.</p>
+1. Draw 100 values from a normal distribution with a mean of 0 and a standard deviation of 1.<br>
+2. Draw 50 values from a normal distribution with a mean of 10 and a standard deviation of 5.<br>
+3. Draw 1000 values from a Poisson distribution with a lambda of 50.<br>
+4. Draw 30 values from a uniform distribution between 0 and 10.</p>
 <p>Try it out in your local exercise script.</p>
 <hr>
 
@@ -707,8 +703,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../tutorial_pages/basic-principles.html" class="pagination-link" aria-label="Basic Principles">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Basic Principles</span>
+      <a href="../tutorial_pages/basic-principles.html" class="pagination-link" aria-label="Basic principles">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Basic principles</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
