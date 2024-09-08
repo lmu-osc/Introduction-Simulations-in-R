@@ -51,9 +51,9 @@ These proportions are not significantly different from 5%.
 prop.test(45, 1000, p = 0.05, alternative = "two.sided", correct = TRUE)
 ```
 
-|  1-sample proportions test with continuity correction  
-|  data:  45 out of 1000, null probability 0.05  
-|  X-squared = 0.42632, df = 1, p-value = 0.5138  
+> 1-sample proportions test with continuity correction  
+> data:  45 out of 1000, null probability 0.05  
+> X-squared = 0.42632, df = 1, p-value = 0.5138  
 
 It is important to note that, although `alpha = 0.05` is commonly used, this is an arbitrary choice and you should consider what is an appropriate type 1 error rate for your particular investigation.  
 
