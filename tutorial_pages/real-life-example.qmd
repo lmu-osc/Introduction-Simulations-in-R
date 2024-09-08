@@ -1,6 +1,8 @@
 # Real-life example
 
-This is a walk through one relatively simple simulation written to check whether the following two models would provide the same results: * A generalized linear model based on a contingency table of counts (Poisson distribution).  
+This is a walk through one relatively simple simulation written to check whether the following two models would provide the same results: 
+
+* A generalized linear model based on a contingency table of counts (Poisson distribution).  
 * A generalized linear model with one line per observation and the occurrence of the variable of interest coded as 'Yes' or 'No' (binomial distribution).  
 
 I created this code while preparing my preregistration for a simple behavioural ecology experiment about methods for independently manipulating palatability and colour in small insect prey ([article](https://doi.org/10.1371/journal.pone.0231205), [OSF preregistration](https://osf.io/f8uk9?view_only=3943e7bb9c5f4effbf119ca5b062fe80)).  
