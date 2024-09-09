@@ -33,9 +33,12 @@ If we sample values from two normal distributions with different means (e.g. N(0
 
 **YOUR TURN:**  
 1.  Use your simulation skills to work out the power through simulation. Write a function that does the following:
-    i.  Draws `n` values from a random normal distribution with `mean1` and another `n` values from a normal distribution with `mean2`.
+
+    i.  Draws `n` values from a random normal distribution with `mean1` and another `n` values from a normal distribution with `mean2`.  
     ii. Compares the means of these two samples with a *t*-test and extracts the *p*-value.
+
 2.  Replicate the function 1000 times using the parameters used in the power calculation above (that used the `power.t.test()` function).
+
 3.  Calculate the proportion of *p*-values that are smaller than 0.05.
 
 ***
