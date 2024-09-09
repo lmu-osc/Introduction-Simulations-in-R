@@ -314,9 +314,11 @@ Are those deviations meaningful? Are they significant?</p>
 <p>In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e.&nbsp;with a <em>p</em>-value under 0.05). In my simulations, I get 40 and 45 false positive results, for <code>n = 10</code> and <code>n = 100</code>, respectively. How many did you get?</p>
 <p>These proportions are not significantly different from 5%.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="dv">45</span>, <span class="dv">1000</span>, <span class="at">p =</span> <span class="fl">0.05</span>, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, <span class="at">correct =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="line-block">&nbsp;1-sample proportions test with continuity correction<br>
-&nbsp;data: 45 out of 1000, null probability 0.05<br>
-&nbsp;X-squared = 0.42632, df = 1, p-value = 0.5138</div>
+<blockquote class="blockquote">
+<p>1-sample proportions test with continuity correction<br>
+data: 45 out of 1000, null probability 0.05<br>
+X-squared = 0.42632, df = 1, p-value = 0.5138</p>
+</blockquote>
 <p>It is important to note that, although <code>alpha = 0.05</code> is commonly used, this is an arbitrary choice and you should consider what is an appropriate type 1 error rate for your particular investigation.</p>
 <p>Although it isn’t necessary to check that a statistical analysis as simple as a <em>t</em>-test does not yield more than 5% false-positive results, in situations where the structure of the data is complex and analysed with more advanced models (e.g.&nbsp;when explanatory variables are mathematically linked to each other or are combined in a mixed-effect model), this may allow to compare different modelling approaches and select one that does not produce more than 5% false-positive results.</p>
 <p>Such complex example, where simulation is the only viable approach to construct a statistical model that does not lead to spurious effects, can be found in this paper:</p>
