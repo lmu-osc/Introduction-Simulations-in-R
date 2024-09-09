@@ -303,13 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If we sample values from two normal distributions with different means (e.g.&nbsp;N(0,1) and N(0.5,1)), what is the minimum sample size we need to detect a significant difference in means with a <em>t</em>-test 80% of the time?</p>
 <hr>
 <p><strong>YOUR TURN:</strong><br>
-1. Use your simulation skills to work out the power through simulation. Write a function that does the following:</p>
-<pre><code>i) Draws `n` values from a random normal distribution with `mean1` and another `n` values from a normal distribution with `mean2`.
-ii) Compares the means of these two samples with a *t*-test and extracts the *p*-value.</code></pre>
-<ol start="2" type="1">
-<li>Replicate the function 1000 times using the parameters used in the power calculation above (that used the <code>power.t.test()</code> function).</li>
-<li>Calculate the proportion of <em>p</em>-values that are smaller than 0.05.</li>
-</ol>
+1. Use your simulation skills to work out the power through simulation. Write a function that does the following: i. Draws <code>n</code> values from a random normal distribution with <code>mean1</code> and another <code>n</code> values from a normal distribution with <code>mean2</code>. ii. Compares the means of these two samples with a <em>t</em>-test and extracts the <em>p</em>-value. 2. Replicate the function 1000 times using the parameters used in the power calculation above (that used the <code>power.t.test()</code> function). 3. Calculate the proportion of <em>p</em>-values that are smaller than 0.05.</p>
 <hr>
 <p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 1000 simulations of N(0,1) and N(0.5,1) with n = 64:</strong></p>
 <p><br> <img src="../assets/hist-power.png" width="500"><br>
