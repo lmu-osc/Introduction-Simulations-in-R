@@ -2,7 +2,6 @@
 
 ## *vs.* **W**rite **E**verything **T**wice – WET rule
 
-<br/>
 Following the WET rule:  
 
 * Makes changes more difficult and/or time consuming.  

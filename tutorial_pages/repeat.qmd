@@ -1,8 +1,6 @@
 # Repetition
 
-The function 
-
-* `replicate(nrep, expression)` repeats the `expression` provided `nrep` times.
+The function `replicate(nrep, expression)` repeats the `expression` provided `nrep` times.
 
 For example, `replicate(10, mean(rnorm(100)))` reads: 'Draw 100 values from a normal distribution with a mean of 0 and a standard deviation of 1 (the default values of `rnorm(n, mean, sd)`), calculate the mean of these 100 values, and do all that 10 times.'
   
