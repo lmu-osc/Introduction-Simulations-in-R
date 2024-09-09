@@ -9,8 +9,6 @@ I created this code while preparing my preregistration for a simple behavioural 
 
 The R script screenshot below, `glm_Freq_vs_YN.R`, can be found in the folder [Ihle2020](https://github.com/lmu-osc/Introduction-Simulations-in-R/tree/main/Ihle2020).  
 
-<br/>
-
 This walkthrough will use the steps as defined on the page '[General structure](./general-structure.qmd)'.
 
 
