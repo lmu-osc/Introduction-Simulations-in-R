@@ -1,7 +1,7 @@
 # Introduction to Simulations in R
 
 ## About this work
-This tutorial was created by [Malika Ihle](https://www.osc.uni-muenchen.de/about_us/coordinator/index.html) based on materials from [Joel Pick](https://joelpick.wixsite.com/research), [Hadley Wickham](https://www.yumpu.com/en/document/view/19077330/simulation-hadley-wickham), and [Kevin Hallgren](https://doi.org/10.20982/tqmp.09.2.p043), with contributions from [James Smith](https://github.com/worcjamessmith).   
+This tutorial was created by [Malika Ihle](https://www.osc.uni-muenchen.de/about_us/coordinator/index.html) based on materials from [Joel Pick](https://joelpick.github.io/), [Hadley Wickham](https://www.yumpu.com/en/document/view/19077330/simulation-hadley-wickham), and [Kevin Hallgren](https://doi.org/10.20982/tqmp.09.2.p043), with contributions from [James Smith](https://github.com/worcjamessmith).   
 It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## Prerequisites
