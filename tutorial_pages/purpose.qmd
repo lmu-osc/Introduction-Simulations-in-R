@@ -11,7 +11,7 @@ You can use computer simulations to:
 <br/>
 
 * **Perform power analyses.**
-  * *Example: Assess whether the sample size (within a replicate) is high enough to detect a simulated effect in more than 80% of the cases.*  
+  * *Example: Assess whether the sample size (within a repetition) is high enough to detect a simulated effect in more than 80% of the cases.*  
 <br/>
 
 * **Perform bootstrapping to get a confidence interval around a parameter estimate.** 

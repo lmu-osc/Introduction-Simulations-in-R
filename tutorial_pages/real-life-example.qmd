@@ -12,7 +12,7 @@ The R script screenshot below, `glm_Freq_vs_YN.R`, can be found in the folder [I
 This walkthrough will use the steps as defined on the page '[General structure](./general-structure.qmd)'.
 
 
-1. **Define sample sizes** (within a dataset and number of replicates), **experimental design** (fixed dataset structure, e.g. treatment groups, factors), and **parameters** that will need to vary (here, the strength of the effect).  
+1. **Define sample sizes** (within a dataset and number of repetitions), **experimental design** (fixed dataset structure, e.g. treatment groups, factors), and **parameters** that will need to vary (here, the strength of the effect).  
 
     <img src="../assets/define.png" width="1000">  
     <br/>
@@ -28,7 +28,7 @@ This walkthrough will use the steps as defined on the page '[General structure](
     <br/>
 
 
-4. **Replicate** steps 2 (data simulation) and 3 (data analyses) to get the distribution of the parameter estimates by wrapping these steps in a function.  
+4. **Repeat** steps 2 (data simulation) and 3 (data analyses) to get the distribution of the parameter estimates by wrapping these steps in a function.  
 
     Definition of the function at the beginning: 
     <br/>
@@ -38,7 +38,7 @@ This walkthrough will use the steps as defined on the page '[General structure](
     <br/>
     <img src="../assets/replicate2.png" width="1000">  
     <br/>
-    Replicate the function `nrep` times. Here, `pbreplicate()` is used to provide a bar of progress for R to run this command. 
+    Repeat the function `nrep` times. Here, `pbreplicate()` is used to provide a bar of progress for R to run this command. 
     <br/>
     <img src="../assets/replicate3.png" width="1000">  
     <br/>
