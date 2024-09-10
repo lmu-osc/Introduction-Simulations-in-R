@@ -15,8 +15,8 @@ If you draw from the same normal distribution twice, will the mean of the two sa
 3. Figure out how to extract the *p*-value from that object (explore your R object with the functions `str()` or `names()`).    
 4. Write a function `simT()` that generates two vectors of `n` values drawn from a standard normal distribution (N(0,1)), compares them with a *t*-test, and returns the *p*-value.  
 5. Test your function by calling it for `n = 50`.  
-6. For `n = 10`, generate `nrep = 20` repetitions and draw a histogram.  
-7. Repeat the previous task with `nrep = 100`.
+6. For a sample size of `n = 10`, generate `nrep = 20` repetitions and draw a histogram.  
+7. Repeat the previous task with `nrep = 100` repetitions.
 
 ***
 
@@ -26,15 +26,15 @@ If you draw from the same normal distribution twice, will the mean of the two sa
 <br/>
 
 
-In the first case, where `nrep = 20`, we expect 1 out of the 20 tests to be significant (5%). In my case, I did! How many did you get?    
-In the second case, where `nrep = 100`, we expect 5 out of the 100 tests to be significant. In my case, I got 6. How many did you get?      
+In the first case, where the number of repetitions `nrep = 20`, we expect 1 out of the 20 tests to be significant (5%). In my case, I did! How many did you get?    
+In the second case, where number of repetitions `nrep = 100`, we expect 5 out of the 100 tests to be significant. In my case, I got 6. How many did you get?      
 Are those deviations meaningful? Are they significant? 
 
 ***
 
 **YOUR TURN:**  
-1. Plot a histogram of `nrep = 1000` outputs of the function `simT` with `n = 10`.  
-2. Plot a histogram of `nrep = 1000` outputs of the function `simT` with `n = 100`.
+1. Plot a histogram of `nrep = 1000` repetitions of the function `simT` with `n = 10`.  
+2. Plot a histogram of `nrep = 1000` repetitions of the function `simT` with `n = 100`.
 
 ***
 

@@ -28,11 +28,11 @@ To build up a function, start by writing the "`stuff`" outside the function to t
 ***
 
 **YOUR TURN:**  
-1. Create a function that repeats the calculation of the mean of 100 values drawn from a standard normal distribution (use `mean(rnorm(n = 100))` for this calculation) `nrep` times and returns a histogram of the `nrep` means.  
+1. Create a function that repeats the calculation of the mean of 100 values drawn from a standard normal distribution (use `mean(rnorm(n = 100))` for this calculation) number of repetitions `nrep` times and returns a histogram of the `nrep` means.
 2. Modify your function such that, in addition to `nrep`, the number of drawn values `n` (i.e. argument `n` of the `rnorm()` function) can also be varied when calling your function. 
 
 
 ***
 
-Note that it is useful to define `nrep` outside of the function, so users of your script can more easily change that value, e.g. from a low number (to verify the script runs without error) to a large number (to obtain reliable results).  
+Note that it is useful to define the number of repetitions `nrep` outside of the function, so users of your script can more easily change that value, e.g. from a low number (to verify the script runs without error) to a large number (to obtain reliable results).  
 

@@ -7,7 +7,7 @@ Sampling theory applies to the number of simulation repetitions `nrep` just as m
 <img src="../assets/musd-24-10-N01.png" width="500">  
 <br/>
 
-Now, let's do the same with a number of repeats `nrep` of 1000.  
+Now, let's do the same with a number of repetitions `nrep` of 1000.  
 
 **Means and SDs from 1000 simulation repetitions of N(0,1) with n = 10:**   
 <br/>
