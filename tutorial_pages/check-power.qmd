@@ -43,7 +43,7 @@ If we sample values from two normal distributions with different means (e.g. N(0
 
 ***
 
-***p*-values of *t*-tests comparing means from 1000 simulations of N(0,1) and N(0.5,1) with n = 64:**  
+***p*-values of *t*-tests comparing means from 1000 simulation repetitions of N(0,1) and N(0.5,1) with n = 64:**  
 
 <br/>
 <img src="../assets/hist-power.png" width="500">  
