@@ -26,8 +26,8 @@ If you draw from the same normal distribution twice, will the mean of the two sa
 <br/>
 
 
-In the first case, where the number of repetitions `nrep = 20`, we expect 1 out of the 20 tests to be significant (5%). In my case, I did! How many did you get?    
-In the second case, where number of repetitions `nrep = 100`, we expect 5 out of the 100 tests to be significant. In my case, I got 6. How many did you get?      
+In the first case, where `nrep = 20`, we expect 1 out of the 20 tests to be significant (5%). In my case, I did! How many did you get?    
+In the second case, where `nrep = 100`, we expect 5 out of the 100 tests to be significant. In my case, I got 6. How many did you get?      
 Are those deviations meaningful? Are they significant? 
 
 ***
@@ -43,7 +43,7 @@ Are those deviations meaningful? Are they significant?
 <img src="../assets/ttest-changing-n.png" width="500">  
 <br/>
 
-In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a *p*-value under 0.05). In my simulation repetitions, I get 40 and 45 false positive results, for `n = 10` and `n = 100`, respectively. How many did you get?  
+In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a *p*-value under 0.05). In my simulation repetitions, I get 40 and 45 false positive results for `n = 10` and `n = 100`, respectively. How many did you get?  
 
 These proportions are not significantly different from 5%. 
 

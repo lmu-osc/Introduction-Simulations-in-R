@@ -48,7 +48,7 @@ This walkthrough will use the steps as defined on the page '[General structure](
     <img src="../assets/explore.png" width="1000">  
     <br/>
 
-6. **Analyse and interpret the combined results of many simulations**. In this case, the results of the two models were qualitatively the same (comparison of results for a few simulations), and both models gave the same expected 5% false positive results when no effect was simulated. Varying the effect (the probability of sampling 0 or 1 depending on the experimental treatment) allowed us to find the minimum effect size for which the number of positive results of the tests is over 80%. 
+6. **Analyse and interpret the combined results of many simulation repetitions**. In this case, the results of the two models were qualitatively the same (comparison of results for a few different parameter values), and both models gave the same expected 5% false positive results when no effect was simulated. Varying the effect (the probability of sampling 0 or 1 depending on the experimental treatment) allowed us to find the minimum effect size for which the number of positive results of the tests is over 80%. 
 
     <img src="../assets/conclude.png" width="1000">  
     <br/>
