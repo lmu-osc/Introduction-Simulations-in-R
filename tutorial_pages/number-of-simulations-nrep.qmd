@@ -1,6 +1,6 @@
 # Number of repetitions `nrep`
 
-Sampling theory applies to the number of repetitions `nrep` just as much as the sample size `n` within a simulation.
+Sampling theory applies to the number of repetitions `nrep` (also referred to as the number of *replications*) just as much as it does to the sample size `n` within a simulation.
 
 **Means and SDs from 24 repetitions simulating N(0,1) with n = 10:**  
 <br/>
