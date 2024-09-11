@@ -30,7 +30,7 @@ It is necessary that you work through the sections of the tutorial in order. Ple
 * [Repeat](./tutorial_pages/repeat.qmd) – How to repeat the generation of random numbers multiple times?
 * [Setting the seed](./tutorial_pages/seed.qmd) – How can you generate the same random numbers?
 * [Sample size `n`](./tutorial_pages/sample-size-n.qmd) – How many values should you generate within a simulation?
-* [Number of simulation repetitions `nrep`](./tutorial_pages/number-of-simulations-nrep.qmd) – How many repeats of a simulation should you run?
+* [Number of repetitions `nrep`](./tutorial_pages/number-of-simulations-nrep.qmd) – How many repeats of a simulation should you run?
 * [DRY rule](./tutorial_pages/dry-rule.qmd) – How to write your own functions?
 * [Simulate to check alpha](./tutorial_pages/check-alpha.qmd) – Write your first simulation and check the rate of false-positive findings.  
 * [Simulate to check power](./tutorial_pages/check-power.qmd) – Simulate data to perform a power analysis.  

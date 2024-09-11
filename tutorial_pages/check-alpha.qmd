@@ -20,7 +20,7 @@ If you draw from the same normal distribution twice, will the mean of the two sa
 
 ***
 
-***p*-values of *t*-tests comparing means from 20 or 100 simulation repetitions of N(0,1) with n = 10:**   
+***p*-values of *t*-tests comparing means from 20 or 100 repetitions simulating N(0,1) with n = 10:**   
 <br/>
 <img src="../assets/ttest-changing-nrep.png" width="500">  
 <br/>
@@ -38,7 +38,7 @@ Are those deviations meaningful? Are they significant?
 
 ***
 
-***p*-values of *t*-tests comparing means from 1000 simulation repetitions of N(0,1) with n=10 or n=100:**   
+***p*-values of *t*-tests comparing means from 1000 repetitions simulating N(0,1) with n=10 or n=100:**   
 <br/>
 <img src="../assets/ttest-changing-n.png" width="500">  
 <br/>
