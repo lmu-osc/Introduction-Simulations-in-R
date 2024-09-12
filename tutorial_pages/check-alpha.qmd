@@ -15,12 +15,12 @@ If you draw from the same normal distribution twice, will the mean of the two sa
 3. Figure out how to extract the *p*-value from that object (explore your R object with the functions `str()` or `names()`).    
 4. Write a function `simT()` that generates two vectors of `n` values drawn from a standard normal distribution (N(0,1)), compares them with a *t*-test, and returns the *p*-value.  
 5. Test your function by calling it for `n = 50`.  
-6. For `n = 10`, generate `nrep = 20` repetitions and draw a histogram.  
-7. Repeat the previous task with `nrep = 100`.
+6. For a sample size of `n = 10`, generate `nrep = 20` repetitions and draw a histogram.  
+7. Repeat the previous task with `nrep = 100` repetitions.
 
 ***
 
-***p*-values of *t*-tests comparing means from 20 or 100 simulations of N(0,1) with n = 10:**   
+***p*-values of *t*-tests comparing means from 20 or 100 repetitions simulating N(0,1) with n = 10:**   
 <br/>
 <img src="../assets/ttest-changing-nrep.png" width="500">  
 <br/>
@@ -33,17 +33,17 @@ Are those deviations meaningful? Are they significant?
 ***
 
 **YOUR TURN:**  
-1. Plot a histogram of `nrep = 1000` outputs of the function `simT` with `n = 10`.  
-2. Plot a histogram of `nrep = 1000` outputs of the function `simT` with `n = 100`.
+1. Plot a histogram of `nrep = 1000` repetitions of the function `simT` with `n = 10`.  
+2. Plot a histogram of `nrep = 1000` repetitions of the function `simT` with `n = 100`.
 
 ***
 
-***p*-values of *t*-tests comparing means from 1000 simulations of N(0,1) with n=10 or n=100:**   
+***p*-values of *t*-tests comparing means from 1000 repetitions simulating N(0,1) with n=10 or n=100:**   
 <br/>
 <img src="../assets/ttest-changing-n.png" width="500">  
 <br/>
 
-In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a *p*-value under 0.05). In my simulations, I get 40 and 45 false positive results, for `n = 10` and `n = 100`, respectively. How many did you get?  
+In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e. with a *p*-value under 0.05). In my simulation repetitions, I get 40 and 45 false positive results for `n = 10` and `n = 100`, respectively. How many did you get?  
 
 These proportions are not significantly different from 5%. 
 

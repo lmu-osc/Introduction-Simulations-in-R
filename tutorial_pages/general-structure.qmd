@@ -1,16 +1,16 @@
 # General structure of a simulation
 
-1. **Define** what type of data and variables need to be simulated, i.e. their **distribution**, their class (e.g. factor vs. numerical values), **sample sizes** (within a dataset and number of replicates), what will need to vary (e.g. the strength of relationship), etc.  
+1. **Define** what type of data and variables need to be simulated, i.e. their **distribution**, their class (e.g. factor vs. numerical values), **sample sizes** (within a dataset and number of repetitions), what will need to vary (e.g. the strength of relationship), etc.  
 
 2. **Generate data**, random data or data including an effect (e.g. an imposed correlation between two variables).  
 
 3. **Run the statistical test** you think is appropriate and record the relevant statistic (e.g. *p*-value). 
 
-4. **Replicate** step 2 and 3 to get the distribution of the statistic of interest.  
+4. **Repeat** step 2 and 3 to get the distribution of the statistic of interest.  
 
 5. Try out different parameter sets (**explore the parameter space** for which results are similar).  
 
-6. **Analyse and interpret the combined results of many simulations** within each set of parameters. For instance, check that you only get a significant result in 5% of the simulations (if `alpha = 0.05`) when you simulated no effect and that you get a significant result in 80% of the simulations (if you targeted a power of 80%) when you simulated an effect.  
+6. **Analyse and interpret the combined results of many simulation repetitions** within each set of parameters. For instance, check that you only get a significant result in 5% of the repetitions (if `alpha = 0.05`) when you simulated no effect and that you get a significant result in 80% of the repetitions (if you targeted a power of 80%) when you simulated an effect.  
 
 ***
 

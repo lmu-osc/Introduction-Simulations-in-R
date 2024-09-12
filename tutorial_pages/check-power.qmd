@@ -38,12 +38,12 @@ If we sample values from two normal distributions with different means (e.g. N(0
     i. Draws `n` values from a random normal distribution with `mean1` and another `n` values from a normal distribution with `mean2`.
     ii. Compares the means of these two samples with a *t*-test and extracts the *p*-value.
 
-2. Replicate the function 1000 times using the parameters used in the power calculation above (that used the `power.t.test()` function).
+2. Repeat the function 1000 times using the parameters used in the power calculation above (that used the `power.t.test()` function).
 3. Calculate the proportion of *p*-values that are smaller than 0.05.
 
 ***
 
-***p*-values of *t*-tests comparing means from 1000 simulations of N(0,1) and N(0.5,1) with n = 64:**  
+***p*-values of *t*-tests comparing means from 1000 repetitions simulating N(0,1) and N(0.5,1) with n = 64:**  
 
 <br/>
 <img src="../assets/hist-power.png" width="500">  
