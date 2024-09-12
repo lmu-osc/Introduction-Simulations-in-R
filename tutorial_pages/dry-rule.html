@@ -307,10 +307,9 @@ To write your own function, use the function <code>function</code>:</p>
 <p>To build up a function, start by writing the “<code>stuff</code>” outside the function to test that it works.</p>
 <hr>
 <p><strong>YOUR TURN:</strong><br>
-1. Create a function that repeats the calculation of the mean of 100 values drawn from a standard normal distribution (use <code>mean(rnorm(n = 100))</code> for this calculation) <code>nrep</code> times and returns a histogram of the <code>nrep</code> means.<br>
-2. Modify your function such that, in addition to <code>nrep</code>, the number of drawn values <code>n</code> (i.e.&nbsp;argument <code>n</code> of the <code>rnorm()</code> function) can also be varied when calling your function.</p>
+1. Create a function that repeats the calculation of the mean of 100 values drawn from a standard normal distribution (use <code>mean(rnorm(n = 100))</code> for this calculation) <code>nrep</code> times and returns a histogram of the <code>nrep</code> means. 2. Modify your function such that, in addition to the number of repetitions <code>nrep</code>, the number of drawn values <code>n</code> (i.e.&nbsp;argument <code>n</code> of the <code>rnorm()</code> function) can also be varied when calling your function.</p>
 <hr>
-<p>Note that it is useful to define <code>nrep</code> outside of the function, so users of your script can more easily change that value, e.g.&nbsp;from a low number (to verify the script runs without error) to a large number (to obtain reliable results).</p>
+<p>Note that it is useful to define the number of repetitions <code>nrep</code> outside of the function, so users of your script can more easily change that value, e.g.&nbsp;from a low number (to verify the script runs without error) to a large number (to obtain reliable results).</p>
 
 
 </section>

@@ -309,11 +309,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Draws <code>n</code> values from a random normal distribution with <code>mean1</code> and another <code>n</code> values from a normal distribution with <code>mean2</code>.</li>
 <li>Compares the means of these two samples with a <em>t</em>-test and extracts the <em>p</em>-value.</li>
 </ol></li>
-<li><p>Replicate the function 1000 times using the parameters used in the power calculation above (that used the <code>power.t.test()</code> function).</p></li>
+<li><p>Repeat the function 1000 times using the parameters used in the power calculation above (that used the <code>power.t.test()</code> function).</p></li>
 <li><p>Calculate the proportion of <em>p</em>-values that are smaller than 0.05.</p></li>
 </ol>
 <hr>
-<p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 1000 simulations of N(0,1) and N(0.5,1) with n = 64:</strong></p>
+<p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 1000 repetitions simulating N(0,1) and N(0.5,1) with n = 64:</strong></p>
 <p><br> <img src="../assets/hist-power.png" width="500"><br>
 <br></p>
 <p>The proportion of correctly rejected null hypotheses in the simulation is close to 0.8, which is what we would expect.</p>

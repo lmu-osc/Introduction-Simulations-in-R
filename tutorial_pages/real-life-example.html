@@ -260,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The R script screenshot below, <code>glm_Freq_vs_YN.R</code>, can be found in the folder <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/tree/main/Ihle2020">Ihle2020</a>.</p>
 <p>This walkthrough will use the steps as defined on the page ‘<a href="../tutorial_pages/general-structure.html">General structure</a>’.</p>
 <ol type="1">
-<li><p><strong>Define sample sizes</strong> (within a dataset and number of replicates), <strong>experimental design</strong> (fixed dataset structure, e.g.&nbsp;treatment groups, factors), and <strong>parameters</strong> that will need to vary (here, the strength of the effect).</p>
+<li><p><strong>Define sample sizes</strong> (within a dataset and number of repetitions), <strong>experimental design</strong> (fixed dataset structure, e.g.&nbsp;treatment groups, factors), and <strong>parameters</strong> that will need to vary (here, the strength of the effect).</p>
 <p><img src="../assets/define.png" width="1000"><br>
 <br></p></li>
 <li><p><strong>Generate data</strong> (here, using <code>sample()</code> and the probabilities defined in step 1) and format it in two different ways to accommodate the two statistical tests to be compared.</p>
@@ -269,15 +269,15 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Run the statistical test and save the parameter estimate of interest for that iteration</strong>. Here, this is done for both statistical tests to be compared.</p>
 <p><img src="../assets/test.png" width="1000"><br>
 <br></p></li>
-<li><p><strong>Replicate</strong> steps 2 (data simulation) and 3 (data analyses) to get the distribution of the parameter estimates by wrapping these steps in a function.</p>
+<li><p><strong>Repeat</strong> steps 2 (data simulation) and 3 (data analyses) to get the distribution of the parameter estimates by wrapping these steps in a function.</p>
 <p>Definition of the function at the beginning: <br> <img src="../assets/replicate1.png" width="800"><br>
 <br> Output returned from the function at the end: <br> <img src="../assets/replicate2.png" width="1000"><br>
-<br> Replicate the function <code>nrep</code> times. Here, <code>pbreplicate()</code> is used to provide a bar of progress for R to run this command. <br> <img src="../assets/replicate3.png" width="1000"><br>
+<br> Repeat the function <code>nrep</code> times. Here, <code>pbreplicate()</code> is used to provide a bar of progress for R to run this command. <br> <img src="../assets/replicate3.png" width="1000"><br>
 <br></p></li>
 <li><p><strong>Explore the parameter space</strong>. Here, vary the probabilities of sampling between 0 and 1 depending on the treatment group category.</p>
 <p><img src="../assets/explore.png" width="1000"><br>
 <br></p></li>
-<li><p><strong>Analyse and interpret the combined results of many simulations</strong>. In this case, the results of the two models were qualitatively the same (comparison of results for a few simulations), and both models gave the same expected 5% false positive results when no effect was simulated. Varying the effect (the probability of sampling 0 or 1 depending on the experimental treatment) allowed us to find the minimum effect size for which the number of positive results of the tests is over 80%.</p>
+<li><p><strong>Analyse and interpret the combined results of many simulation repetitions</strong>. In this case, the results of the two models were qualitatively the same (comparison of results for a few different parameter values), and both models gave the same expected 5% false positive results when no effect was simulated. Varying the effect (the probability of sampling 0 or 1 depending on the experimental treatment) allowed us to find the minimum effect size for which the number of positive results of the tests is over 80%.</p>
 <p><img src="../assets/conclude.png" width="1000"><br>
 <br></p></li>
 </ol>

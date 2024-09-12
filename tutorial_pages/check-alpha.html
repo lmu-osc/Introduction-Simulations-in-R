@@ -294,10 +294,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 3. Figure out how to extract the <em>p</em>-value from that object (explore your R object with the functions <code>str()</code> or <code>names()</code>).<br>
 4. Write a function <code>simT()</code> that generates two vectors of <code>n</code> values drawn from a standard normal distribution (N(0,1)), compares them with a <em>t</em>-test, and returns the <em>p</em>-value.<br>
 5. Test your function by calling it for <code>n = 50</code>.<br>
-6. For <code>n = 10</code>, generate <code>nrep = 20</code> repetitions and draw a histogram.<br>
-7. Repeat the previous task with <code>nrep = 100</code>.</p>
+6. For a sample size of <code>n = 10</code>, generate <code>nrep = 20</code> repetitions and draw a histogram.<br>
+7. Repeat the previous task with <code>nrep = 100</code> repetitions.</p>
 <hr>
-<p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 20 or 100 simulations of N(0,1) with n = 10:</strong><br>
+<p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 20 or 100 repetitions simulating N(0,1) with n = 10:</strong><br>
 <br> <img src="../assets/ttest-changing-nrep.png" width="500"><br>
 <br></p>
 <p>In the first case, where <code>nrep = 20</code>, we expect 1 out of the 20 tests to be significant (5%). In my case, I did! How many did you get?<br>
@@ -305,13 +305,13 @@ In the second case, where <code>nrep = 100</code>, we expect 5 out of the 100 te
 Are those deviations meaningful? Are they significant?</p>
 <hr>
 <p><strong>YOUR TURN:</strong><br>
-1. Plot a histogram of <code>nrep = 1000</code> outputs of the function <code>simT</code> with <code>n = 10</code>.<br>
-2. Plot a histogram of <code>nrep = 1000</code> outputs of the function <code>simT</code> with <code>n = 100</code>.</p>
+1. Plot a histogram of <code>nrep = 1000</code> repetitions of the function <code>simT</code> with <code>n = 10</code>.<br>
+2. Plot a histogram of <code>nrep = 1000</code> repetitions of the function <code>simT</code> with <code>n = 100</code>.</p>
 <hr>
-<p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 1000 simulations of N(0,1) with n=10 or n=100:</strong><br>
+<p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 1000 repetitions simulating N(0,1) with n=10 or n=100:</strong><br>
 <br> <img src="../assets/ttest-changing-n.png" width="500"><br>
 <br></p>
-<p>In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e.&nbsp;with a <em>p</em>-value under 0.05). In my simulations, I get 40 and 45 false positive results, for <code>n = 10</code> and <code>n = 100</code>, respectively. How many did you get?</p>
+<p>In both cases, we expect 50 out of the 1000 tests to be significant by chance (i.e.&nbsp;with a <em>p</em>-value under 0.05). In my simulation repetitions, I get 40 and 45 false positive results for <code>n = 10</code> and <code>n = 100</code>, respectively. How many did you get?</p>
 <p>These proportions are not significantly different from 5%.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.test</span>(<span class="dv">45</span>, <span class="dv">1000</span>, <span class="at">p =</span> <span class="fl">0.05</span>, <span class="at">alternative =</span> <span class="st">"two.sided"</span>, <span class="at">correct =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <blockquote class="blockquote">
