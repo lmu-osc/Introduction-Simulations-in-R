@@ -44,7 +44,7 @@ website:
           - href: ./tutorial_pages/sample-size-n.qmd
             text: Sample size `n`
           - href: ./tutorial_pages/number-of-simulations-nrep.qmd
-            text: Number of simulations `nrep`
+            text: Number of repetitions `nrep`
           - href: ./tutorial_pages/dry-rule.qmd
             text: DRY rule
           - href: ./tutorial_pages/check-alpha.qmd
