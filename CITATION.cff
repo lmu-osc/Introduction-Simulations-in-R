@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Ihle"
+  given-names: "Malika"
+  orcid: "https://orcid.org/0000-0002-3242-5981"
+title: "Introduction to Simulations in R"
+version: 1.0.0
+doi:
+date-released: 2023-09-03
+repository-code: "https://github.com/lmu-osc/Introduction-Simulations-in-R "
+url: "https://github.com/lmu-osc/Introduction-Simulations-in-R "
