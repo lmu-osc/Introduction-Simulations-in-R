@@ -7,12 +7,6 @@ authors:
   affiliation:
   - name: "LMU Open Science Center"
     ror: "https://ror.org/029e6qe04"
-- family-names: "Callahan"
-  given-names: "Pat"
-  orcid: "https://orcid.org/0000-0003-1769-7580"
-  affiliation:
-    - name: "LMU Open Science Center"
-      ror: "https://ror.org/029e6qe04"
 
 title: "Introduction to Simulations in R"
 version: 0.1.0
@@ -25,9 +19,6 @@ preferred-citation:
     - family-names: "Ihle"
       given-names: "Malika"
       orcid: "https://orcid.org/0000-0002-3242-5981"
-    - family-names: "Callahan"
-      given-names: "Pat"
-      orcid: "https://orcid.org/0000-0003-1769-7580"
   title: "Introduction to Simulations in R"
   year: 2021
   doi: "DOI_HERE_AFTER_GENERATED"
