@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/real-life-example.html]
+title: "Real-life example"
 ---
-
-# Real-life example
 
 This is a walk through one relatively simple simulation written to check whether the following two models would provide the same results: 
 

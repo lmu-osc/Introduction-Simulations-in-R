@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/resources.html]
+title: "Resources"
 ---
-
-# Resources
 ## Follow-up self-paced tutorial on simulation of data analyses for advanced power analyses
 * <a href="https://lmu-osc.github.io/Simulations-for-Advanced-Power-Analyses/" target="_blank">https://lmu-osc.github.io/Simulations-for-Advanced-Power-Analyses/</a>
 

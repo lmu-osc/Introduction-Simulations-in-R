@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/dry-rule.html]
+title: "Do not Repeat Yourself – DRY rule"
 ---
-
-# **D**o not **R**epeat **Y**ourself – DRY rule
 
 ## *vs.* **W**rite **E**verything **T**wice – WET rule
 

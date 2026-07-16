@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/general-structure.html]
+title: "General structure of a simulation"
 ---
-
-# General structure of a simulation
 
 1. **Define** what type of data and variables need to be simulated, i.e. their **distribution**, their class (e.g. factor vs. numerical values), **sample sizes** (within a dataset and number of repetitions), what will need to vary (e.g. the strength of relationship), etc.  
 

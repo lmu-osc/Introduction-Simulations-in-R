@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/purpose.html]
+title: "Purpose"
 ---
-
-# Purpose
 
 You can use computer simulations to: 
 

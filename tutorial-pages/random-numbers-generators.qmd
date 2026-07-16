@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/random-numbers-generators.html]
+title: "Random number generators"
 ---
-
-# Random number generators
 
 R contains several functions to generate random numbers.  
 Type `?`*`function`* in your console to get information on the function's arguments (i.e. the values that must be provided to obtain the function's result).  

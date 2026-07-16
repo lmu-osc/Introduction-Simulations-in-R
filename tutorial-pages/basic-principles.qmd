@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/basic-principles.html]
+title: "Basic principles"
 ---
-
-# Basic principles
 
 Basically, a simulation consists of:  
 **1) Generating `n` random numbers from a known distribution.**    

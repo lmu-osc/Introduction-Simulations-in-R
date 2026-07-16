@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/definition.html]
+title: "Definition"
 ---
-
-# Definition
 
 **"A computer simulation (or 'sim') is an attempt to model a real-life or hypothetical situation on a computer so that it can be studied to see how the system works. By changing variables in the simulation, predictions may be made about the behavior of the system. It is a tool to virtually investigate the behavior of the system under study."**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Wikipedia*

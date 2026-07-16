@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/download-repo.html]
+title: "Make this repository a local RStudio project"
 ---
-
-# Make this repository a local RStudio project
 
 You have two options to fetch this material:
 

@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/check-power.html]
+title: "Checking power through simulations"
 ---
-
-# Checking power through simulations
 
 The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to 80%, though, as with `alpha = 0.05`, this is an arbitrary choice. 
 

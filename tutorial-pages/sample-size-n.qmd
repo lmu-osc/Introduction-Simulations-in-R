@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/sample-size-n.html]
+title: "Sample size `n`"
 ---
-
-# Sample size `n`
 
 How many values should you generate within a simulation? Let's explore.  
 
@@ -43,7 +42,7 @@ Now, let's do the same with a sample size `n` of 1000.
 <br/>
 
 
-### Conclusion  
+## Conclusion  
 The sample size within a simulation affects the **precision** with which the parameters of that distribution can be estimated.  
 
 What should determine the sample size within your simulation?  

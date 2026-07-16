@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/repeat.html]
+title: "Repetition"
 ---
-
-# Repetition
 
 The function `replicate(nrep, expression)` repeats the `expression` provided `nrep` times.
 

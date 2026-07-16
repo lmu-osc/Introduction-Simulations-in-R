@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/check-alpha.html]
+title: "Using simulations to check alpha"
 ---
-
-# Using simulations to check alpha
 
 In most quantitative sciences, we accept a type I error rate of 0.05, which is often called the `alpha` or significance level. This value tells us the probability of rejecting the null hypothesis (i.e. of finding an effect) given that the null hypothesis is true. 
 

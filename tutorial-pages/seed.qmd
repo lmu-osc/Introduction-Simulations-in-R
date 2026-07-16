@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/seed.html]
+title: "Setting the seed"
 ---
-
-# Setting the seed
 
 * `set.seed()`
 

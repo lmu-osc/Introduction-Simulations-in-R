@@ -1,8 +1,7 @@
 ---
 aliases: [tutorial_pages/limitations.html]
+title: "Limitations to simulations"
 ---
-
-# Limitations to simulations
 
 1. **Assumptions** made regarding variables might not be true, e.g. the distribution of supposedly normally distributed data may not be quite normal. (Have a back-up analysis plan!)  
 
