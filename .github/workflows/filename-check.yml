@@ -1,0 +1,22 @@
+name: Filename Checks
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-names:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check filenames
+        uses: NeuroShepherd/check-filenames-action@v1
+        with:
+          max-path-length: "65"
+          max-depth: "2"
+          file-types: "html,md,qmd,css,scss,rmd,pdf,png,jpg,svg,yml"
+          ignore-file: ".filenameignore"
+          dotfile-mode: "strip-leading-dot"

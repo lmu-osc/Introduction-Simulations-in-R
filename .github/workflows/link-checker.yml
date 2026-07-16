@@ -1,0 +1,44 @@
+name: Link Checker
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Check links
+        id: check
+        uses: filiph/linkcheck@master
+        continue-on-error: true
+        with:
+          arguments: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+
+      - name: Create issue on broken links
+        if: steps.check.outputs.exit_code != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('log', 'utf8');
+
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'link-checker'
+            });
+
+            if (issues.length === 0) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: '🔗 Broken Links Found on Site',
+                body: `The monthly link checker detected broken links.\n\n${report}`,
+                labels: ['link-checker']
+              });
+            }

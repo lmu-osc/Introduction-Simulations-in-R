@@ -1,0 +1,20 @@
+---
+aliases: [tutorial_pages/repeat.qmd]
+---
+
+# Repetition
+
+The function `replicate(nrep, expression)` repeats the `expression` provided `nrep` times.
+
+For example, `replicate(10, mean(rnorm(100)))` reads: 'Draw 100 values from a normal distribution with a mean of 0 and a standard deviation of 1 (the default values of `rnorm(n, mean, sd)`), calculate the mean of these 100 values, and do all that 10 times.'
+  
+***
+
+**YOUR TURN:**  
+In your local exercise script:  
+1. Repeat 1000 times the calculation of the mean of 10 values drawn from a uniform distribution between 0 and 10.  
+2. Repeat 100 times the calculation of the mean of 50 values drawn from a normal distribution with a mean of 10 and a standard deviation of 5.  
+3. Make a histogram of your results for each task. Are the distributions looking as expected?  
+
+***
+

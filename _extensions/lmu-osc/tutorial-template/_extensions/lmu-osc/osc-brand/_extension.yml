@@ -1,0 +1,16 @@
+title: LMU Open Science Center Brand
+author: Patrick Callahan
+version: 1.0.0
+url: https://github.com/lmu-osc/osc-brand
+description: LMU Open Science Center brand assets and default HTML format
+license: MIT
+quarto-required: ">=1.9.0"
+contributes:
+  metadata:
+    project:
+      brand: brand.yml
+  formats:
+    html:
+      theme:
+        light: [flatly, brand, lmu-osc-custom.scss]
+        dark: [darkly, brand, lmu-osc-custom.scss]

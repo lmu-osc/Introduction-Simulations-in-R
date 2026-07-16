@@ -1,0 +1,120 @@
+# minimal brand.yml enabling dark mode
+
+meta:
+  name:
+    full: LMU Open Science Center
+    short: OSC
+  link:
+    home: https://www.osc.lmu.de/
+    github: https://github.com/lmu-osc
+    bluesky: https://bsky.app/profile/lmu-osc.bsky.social
+  description: |
+    Home of open science praxis at Ludwig-Maximilian Universität München.
+  founded: 2019
+  author: Pat Callahan
+
+# replace with your brand colors, logos, and typography!
+color:
+  palette:
+    lmu-green: "#00883A"
+    lmu-black: "#232323"
+    lmu-white: "#FFF"
+    lmu-darkgrey: "#626468"
+    lmu-darkgray: "#626468"
+    lmu-middlegrey: "#C0C1C3"
+    lmu-middlegray: "#C0C1C3"
+    lmu-lightgrey: "#E6E6E7"
+    lmu-lightgray: "#E6E6E7"
+    lmu-lichtgrau: "#F5F5F5"
+    lmu-blue: "#0F1987"
+    lmu-cyan: "#009FE3"
+    lmu-violet: "#8C4091"
+    lmu-red: "#D71919"
+    lmu-orange: "#F18700"
+  background:
+    light: lmu-white
+    dark: lmu-black
+  foreground:
+    light: lmu-black
+    dark: lmu-white
+  primary:
+    light: lmu-green
+    dark: lmu-green
+  secondary:
+    light: lmu-black
+    dark: lmu-middlegray
+  tertiary:
+    light: lmu-blue
+    dark: lmu-violet
+  success:
+    light: lmu-cyan
+    dark: lmu-cyan
+  info:
+    light: lmu-violet
+    dark: lmu-violet
+  warning:
+    light: lmu-orange
+    dark: lmu-orange
+  danger:
+    light: lmu-red
+    dark: lmu-red
+
+logo:
+  images:
+    icon:
+      path: lmu-osc-favicon.jpg
+      alt: "LMU Open Science Center open book icon"
+    default:
+      path: lmu-osc-logo.svg
+      alt: "LMU Open Science Center logo"
+    dark:
+      path: lmu-osc-logo-dark.svg
+      alt: "LMU Open Science Center logo"
+    large:
+      path: lmu-osc-logo-large.jpg
+      alt: "LMU Open Science Center logo, large"
+  small: icon
+  medium:
+    light: default
+    dark: dark
+  large:
+    light: large
+    dark: large
+
+# https://www.lmu.de/de/die-lmu/struktur/zentrale-universitaetsverwaltung/presse-und-kommunikation-puk/lmu-brand-guide/designgrundsaetze/schrift/
+# Compatil is the official font, but license limited. Online content should use Roboto, and other software e.g. presentations use Arial
+typography:
+  fonts:
+    - family: Roboto
+      source: google
+    - family: Arial
+      source: google
+    - family: Fira Code
+      source: google
+  base:
+    family: "Roboto, Arial"
+    # size: 1.1rem
+    # line-height: 1.65
+    # weight:
+    # style:
+  headings:
+    family: "Roboto, Arial"
+    color: secondary
+  monospace:
+    family: "Fira Code"
+    # size:
+    # weight:
+  monospace-inline:
+    family: "Fira Code"
+    # color:
+    # background-color:
+  monospace-block:
+    family: "Fira Code"
+    # line-height:
+    # color:
+    # background-color:
+  # link:
+  #   weight:
+  #   color:
+  #   background-color:
+  #   decoration:
