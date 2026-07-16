@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/check-alpha.qmd]
+aliases: [tutorial_pages/check-alpha.html]
 ---
 
 # Using simulations to check alpha

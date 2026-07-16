@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/download-repo.qmd]
+aliases: [tutorial_pages/download-repo.html]
 ---
 
 # Make this repository a local RStudio project

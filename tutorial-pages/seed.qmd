@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/seed.qmd]
+aliases: [tutorial_pages/seed.html]
 ---
 
 # Setting the seed

@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/sample-size-n.qmd]
+aliases: [tutorial_pages/sample-size-n.html]
 ---
 
 # Sample size `n`

@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/repeat.qmd]
+aliases: [tutorial_pages/repeat.html]
 ---
 
 # Repetition

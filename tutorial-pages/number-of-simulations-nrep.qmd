@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/number-of-simulations-nrep.qmd]
+aliases: [tutorial_pages/number-of-simulations-nrep.html]
 ---
 
 # Number of repetitions `nrep`

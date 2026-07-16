@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/simulate-for-preregistration.qmd]
+aliases: [tutorial_pages/simulate-for-preregistration.html]
 ---
 
 # Simulating data to check or preregister code

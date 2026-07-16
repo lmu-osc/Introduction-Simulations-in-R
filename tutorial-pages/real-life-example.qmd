@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/real-life-example.qmd]
+aliases: [tutorial_pages/real-life-example.html]
 ---
 
 # Real-life example

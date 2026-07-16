@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/general-structure.qmd]
+aliases: [tutorial_pages/general-structure.html]
 ---
 
 # General structure of a simulation

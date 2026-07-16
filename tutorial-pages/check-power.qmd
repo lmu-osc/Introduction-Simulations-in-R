@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/check-power.qmd]
+aliases: [tutorial_pages/check-power.html]
 ---
 
 # Checking power through simulations

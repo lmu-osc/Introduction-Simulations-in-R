@@ -1,5 +1,5 @@
 ---
-aliases: [tutorial_pages/random-numbers-generators.qmd]
+aliases: [tutorial_pages/random-numbers-generators.html]
 ---
 
 # Random number generators
