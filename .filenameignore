@@ -5,7 +5,7 @@ _site/**
 .quarto/**
 .github/**
 _extensions/
-assets/bootstrap-grid.min.css
+assets/
 
 # Common documentation files to ignore
 LICENSE-CODE.md
