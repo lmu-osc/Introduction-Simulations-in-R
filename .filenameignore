@@ -6,6 +6,8 @@ _site/**
 .github/**
 _extensions/
 assets/
+hallgren-2013
+ihle-2020
 
 # Common documentation files to ignore
 LICENSE-CODE.md
