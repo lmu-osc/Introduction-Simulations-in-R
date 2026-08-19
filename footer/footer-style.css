@@ -1,0 +1,21 @@
+
+.osc-footer-card {
+  --osc-primary-green: #00883A;
+  background-color: var(--osc-primary-green);
+}
+
+.osc-footer-socials a:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  transition: all 0.2s ease;
+}
+
+.osc-footer-card a:focus-visible {
+  outline: 2px solid #FFD700;
+  outline-offset: 2px;
+}
+
+/* no external window thing for the icons */
+.osc-footer-socials a::after {
+  display: none !important;
+}

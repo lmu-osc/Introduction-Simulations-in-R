@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction to Simulations in R</title>
+<title>Sample size n – Introduction to Simulations in R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -64,29 +64,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./tutorial-pages/download-repo.html" rel="next">
-<link href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-97e28f47ad423cfcb72627c3f906fd98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-eb46ca9efdd02f6dfb5628a3b2cbea03.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-934778ad9b083564446b567f8672e471.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-eb46ca9efdd02f6dfb5628a3b2cbea03.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../tutorial-pages/number-of-simulations-nrep.html" rel="next">
+<link href="../tutorial-pages/seed.html" rel="prev">
+<link href="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-97e28f47ad423cfcb72627c3f906fd98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-eb46ca9efdd02f6dfb5628a3b2cbea03.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-934778ad9b083564446b567f8672e471.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-eb46ca9efdd02f6dfb5628a3b2cbea03.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -133,8 +134,8 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <!-- End Matomo Code -->
 
 
-<link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
-<link rel="stylesheet" href="footer/footer-style.css">
+<link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
+<link rel="stylesheet" href="../footer/footer-style.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -306,11 +307,11 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo light-content">
-    <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo light-content">
+    <img src="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Introduction to Simulations in R</span>
     </a>
   </div>
@@ -320,13 +321,13 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -362,7 +363,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorial-pages/download-repo.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../tutorial-pages/sample-size-n.html">Sample size <code>n</code></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -376,9 +377,9 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo.svg" alt="LMU Open Science Center logo" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo-dark.svg" alt="LMU Open Science Center logo" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo.svg" alt="LMU Open Science Center logo" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo-dark.svg" alt="LMU Open Science Center logo" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -390,7 +391,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -405,103 +406,103 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/download-repo.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/download-repo.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Download the material</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/definition.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/definition.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Definition</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/purpose.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/purpose.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Purpose</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/basic-principles.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/basic-principles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Basic principles</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/random-numbers-generators.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/random-numbers-generators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Random number generators</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/repeat.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/repeat.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Repeat</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/seed.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/seed.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Setting the seed</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/sample-size-n.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/sample-size-n.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Sample size <code>n</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/number-of-simulations-nrep.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/number-of-simulations-nrep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Number of repetitions <code>nrep</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/dry-rule.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/dry-rule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRY rule</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/check-alpha.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/check-alpha.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Simulate to check alpha</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/check-power.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/check-power.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Simulate to check power</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/simulate-for-preregistration.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/simulate-for-preregistration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Simulate to prepare a preregistration</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/general-structure.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/general-structure.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">General structure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/limitations.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/limitations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Limitations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/real-life-example.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/real-life-example.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Real-life example</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial-pages/resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../tutorial-pages/resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional resources</span></a>
   </div>
 </li>
@@ -516,24 +517,17 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         <nav id="TOC" role="doc-toc" class="toc-active">
    
   <ul>
-  <li><a href="#about-this-work" id="toc-about-this-work" class="nav-link active" data-scroll-target="#about-this-work">About this work</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#prior-to-the-session-optional-preparation-to-get-familiarised-with-the-subject" id="toc-prior-to-the-session-optional-preparation-to-get-familiarised-with-the-subject" class="nav-link" data-scroll-target="#prior-to-the-session-optional-preparation-to-get-familiarised-with-the-subject">Prior to the session: optional preparation to get familiarised with the subject</a></li>
-  <li><a href="#self-paced-workshop" id="toc-self-paced-workshop" class="nav-link" data-scroll-target="#self-paced-workshop">Self-paced workshop</a>
-  <ul class="collapse">
-  <li><a href="#how-it-works" id="toc-how-it-works" class="nav-link" data-scroll-target="#how-it-works">How it works</a></li>
-  <li><a href="#tutorial" id="toc-tutorial" class="nav-link" data-scroll-target="#tutorial">Tutorial</a></li>
-  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link active" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/edit/main/tutorial-pages/sample-size-n.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/tutorial-pages/sample-size-n.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../tutorial-pages/download-repo.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../tutorial-pages/sample-size-n.html">Sample size <code>n</code></a></li></ol></nav>
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Introduction to Simulations in R</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<div class="quarto-title-block"><div><h1 class="title">Sample size <code>n</code></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -550,95 +544,38 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </header>
 
 
-<section id="about-this-work" class="level2">
-<h2 class="anchored" data-anchor-id="about-this-work">About this work</h2>
-<p>This tutorial was created by <a href="https://www.osc.uni-muenchen.de/about_us/coordinator/index.html">Malika Ihle</a> based on materials from <a href="https://joelpick.github.io/">Joel Pick</a>, <a href="https://www.yumpu.com/en/document/view/19077330/simulation-hadley-wickham">Hadley Wickham</a>, and <a href="https://doi.org/10.20982/tqmp.09.2.p043">Kevin Hallgren</a>, with contributions from <a href="https://github.com/worcjamessmith">James Smith</a>.<br>
-It is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-</section>
-<section id="prerequisites" class="level2">
-<h2 class="anchored" data-anchor-id="prerequisites">Prerequisites</h2>
-<ul>
-<li>Have R and RStudio installed. If you don’t, follow <a href="https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_software.html">these instructions</a>.<br>
-</li>
-<li>Know some R basics (e.g.&nbsp;how to select a value in a data frame, how to create a vector). If you don’t, visit the following tutorial: <a href="https://lmu-osc.github.io/introduction-to-R/" target="_blank">https://lmu-osc.github.io/introduction-to-R/</a>.</li>
-</ul>
-</section>
-<section id="prior-to-the-session-optional-preparation-to-get-familiarised-with-the-subject" class="level2">
-<h2 class="anchored" data-anchor-id="prior-to-the-session-optional-preparation-to-get-familiarised-with-the-subject">Prior to the session: optional preparation to get familiarised with the subject</h2>
-<ol type="1">
-<li><p>Watch this <a href="https://osf.io/xtmek/">30-minute introduction to credible research</a>, which contextualises the importance of simulations for reliable research.</p></li>
-<li><p>Read <a href="https://doi.org/10.20982/tqmp.09.2.p043">Hallgren, A. K. (2013). Conducting simulation studies in the R programming environment. <em>Tutorials in Quantitative Methods for Psychology</em>, <em>9</em>(2), 43–60</a>.</p></li>
-</ol>
-</section>
-<section id="self-paced-workshop" class="level2">
-<h2 class="anchored" data-anchor-id="self-paced-workshop">Self-paced workshop</h2>
-<section id="how-it-works" class="level3">
-<h3 class="anchored" data-anchor-id="how-it-works">How it works</h3>
-<p>The self-paced tutorial (pages linked below) will alternate presentation of concepts and simple exercises for you to try to apply them in R. Each time you see written <strong>YOUR TURN</strong>, switch to your local copy of the exercise script (you can choose between a file <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/exercise-script-with-solutions.R" target="_blank">with</a> or <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/exercise-script-without-solutions.R" target="_blank">without</a> the solutions depending on e.g.&nbsp;your level of familiarity with R), review the examples if needed, complete the exercise, and check out the proposed answer (which often contains additional tips). Come back to the online tutorial and after finishing one page, you can navigate to the next page linked at the bottom to continue. The exercise script contains code for all the exercises and code that generates the plots that appear in the online tutorial, all in order of appearance in the tutorial.</p>
-<p>It is necessary that you work through the sections of the tutorial in order. Please read the blurbs of each section below to get an overview of this workshop. Then click on the first page ‘Download the material’ and follow along by navigating to the next page linked at the bottom of each page! You can get back to this overview at any time by clicking on the title ‘Introduction-Simulations-in-R’ at the top of each page.</p>
-</section>
-<section id="tutorial" class="level3">
-<h3 class="anchored" data-anchor-id="tutorial">Tutorial</h3>
-<ul>
-<li><a href="./tutorial-pages/download-repo.html">Download the material</a> – Get this tutorial onto your machine.</li>
-<li><a href="./tutorial-pages/definition.html">Definition</a> – What are simulations?</li>
-<li><a href="./tutorial-pages/purpose.html">Purpose</a> – What can we use simulations for?</li>
-<li><a href="./tutorial-pages/basic-principles.html">Basic principles</a> – What do we need to create a simulation?</li>
-<li><a href="./tutorial-pages/random-numbers-generators.html">Random number generators</a> – How to generate random numbers in R?</li>
-<li><a href="./tutorial-pages/repeat.html">Repeat</a> – How to repeat the generation of random numbers multiple times?</li>
-<li><a href="./tutorial-pages/seed.html">Setting the seed</a> – How can you generate the same random numbers?</li>
-<li><a href="./tutorial-pages/sample-size-n.html">Sample size <code>n</code></a> – How many values should you generate within a simulation?</li>
-<li><a href="./tutorial-pages/number-of-simulations-nrep.html">Number of repetitions <code>nrep</code></a> – How many repeats of a simulation should you run?</li>
-<li><a href="./tutorial-pages/dry-rule.html">DRY rule</a> – How to write your own functions?</li>
-<li><a href="./tutorial-pages/check-alpha.html">Simulate to check alpha</a> – Write your first simulation and check the rate of false-positive findings.<br>
-</li>
-<li><a href="./tutorial-pages/check-power.html">Simulate to check power</a> – Simulate data to perform a power analysis.<br>
-</li>
-<li><a href="./tutorial-pages/simulate-for-preregistration.html">Simulate to prepare a preregistration</a> – Simulate data to test statistical analyses before preregistering them.<br>
-</li>
-<li><a href="./tutorial-pages/general-structure.html">General structure</a> – What is the general structure of a simulation?</li>
-<li><a href="./tutorial-pages/limitations.html">Limitations</a> – What are the limitations of simulations?</li>
-<li><a href="./tutorial-pages/real-life-example.html">Real-life example</a> – What are real-life examples of simulations?</li>
-<li><a href="./tutorial-pages/resources.html">Additional resources</a> – What resources can help you write your own simulation?</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:47.5%;">
-<div class="callout callout-style-default callout-tip callout-titled" title="Support the LMU Open Science Center!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Support the LMU Open Science Center!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Like this tutorial? Be sure to give <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R">the repository</a> a star and <a href="https://github.com/lmu-osc">follow us on GitHub</a>!</strong></p>
-</div>
-</div>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:47.5%;">
-<div class="callout callout-style-default callout-tip callout-titled" title="Questions about this tutorial?">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Questions about this tutorial?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>If you have questions for the author of this tutorial, please take a look at the <a href="./about.html">About</a> page.</strong></p>
-</div>
-</div>
-</div>
-</div>
+<p>How many values should you generate within a simulation? Let’s explore.</p>
+<p>If I draw 10 data points from a normal distribution with a mean of 0 and a standard deviation of 1 (i.e N(0,1)), after setting the seed to 10 (for no specific reason), here is the distribution of the values I get:</p>
+<p><strong>1 repetition simulating N(0,1) with n = 10:</strong><br>
+<img src="../assets/hist-n10-n01.png" width="300"><br>
+<br></p>
+<p>If I repeat this simulation 24 times, here are the distributions of the 10 values pseudo-randomly sampled from N(0,1):</p>
+<p><strong>24 repetitions simulating N(0,1) with n = 10:</strong><br>
+<br> <img src="../assets/24-hists-n10-n01.png" width="600"><br>
+<br></p>
+<p>Note that because we are drawing from N(0,1), we expect the mean of the values drawn (mean(x), blue lines) to be very close to 0, i.e.&nbsp;the mean of the normal distribution we sample from (red dashed lines).<br>
+<br></p>
+<p>How are the means and standard deviations of the 24 repetitions distributed?</p>
+<p><strong>Distributions of the means and SDs from 24 repetitions simulating N(0,1) with n = 10:</strong><br>
+<br> <img src="../assets/musd-24-n10-n01.png" width="500"><br>
+<br></p>
+<p>Now, let’s do the same with a sample size <code>n</code> of 1000.</p>
+<p><strong>24 repetitions simulating the same distribution, i.e.&nbsp;N(0,1), with n = 1000:</strong><br>
+<br> <img src="../assets/24-hists-n1000-n01.png" width="600"><br>
+<br></p>
+<p><strong>Distributions of the means and SDs from 24 repetitions simulating N(0,1) with n = 1000:</strong><br>
+<br> <img src="../assets/musd-24-n1000-n01.png" width="500"><br>
+<br></p>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The sample size within a simulation affects the <strong>precision</strong> with which the parameters of that distribution can be estimated.</p>
+<p>What should determine the sample size within your simulation?</p>
+<p>Choose a sample size that is relevant to the context of the simulation, e.g.&nbsp;the sample size you will be able to reach in your study or the minimum sample size that would allow you to detect the smallest effect of interest (as determined by a power analysis, which we will cover in a moment).</p>
+<hr>
 
 
 <!-- -->
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -1115,84 +1052,68 @@ It is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/"
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../tutorial-pages/seed.html" class="pagination-link" aria-label="Setting the seed">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Setting the seed</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./tutorial-pages/download-repo.html" class="pagination-link" aria-label="Download the material">
-        <span class="nav-page-text">Download the material</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../tutorial-pages/number-of-simulations-nrep.html" class="pagination-link" aria-label="Number of repetitions `nrep`">
+        <span class="nav-page-text">Number of repetitions <code>nrep</code></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Introduction to Simulations in R"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Sample size `n`"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## About this work</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>This tutorial was created by <span class="co">[</span><span class="ot">Malika Ihle</span><span class="co">](https://www.osc.uni-muenchen.de/about_us/coordinator/index.html)</span> based on materials from <span class="co">[</span><span class="ot">Joel Pick</span><span class="co">](https://joelpick.github.io/)</span>, <span class="co">[</span><span class="ot">Hadley Wickham</span><span class="co">](https://www.yumpu.com/en/document/view/19077330/simulation-hadley-wickham)</span>, and <span class="co">[</span><span class="ot">Kevin Hallgren</span><span class="co">](https://doi.org/10.20982/tqmp.09.2.p043)</span>, with contributions from <span class="co">[</span><span class="ot">James Smith</span><span class="co">](https://github.com/worcjamessmith)</span>.   </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>It is licensed under a <span class="co">[</span><span class="ot">Creative Commons Attribution-ShareAlike 4.0 International License</span><span class="co">](https://creativecommons.org/licenses/by-sa/4.0/)</span>.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>How many values should you generate within a simulation? Let's explore.  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>If I draw 10 data points from a normal distribution with a mean of 0 and a standard deviation of 1 (i.e N(0,1)), after setting the seed to 10 (for no specific reason), here is the distribution of the values I get:</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prerequisites</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Have R and RStudio installed. If you don't, follow <span class="co">[</span><span class="ot">these instructions</span><span class="co">](https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/installing_software.html)</span>.  </span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>Know some R basics (e.g. how to select a value in a data frame, how to create a vector). If you don't, visit the following tutorial: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://lmu-osc.github.io/introduction-to-R/"</span><span class="ot"> target </span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>https://lmu-osc.github.io/introduction-to-R/<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span>.  </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prior to the session: optional preparation to get familiarised with the subject</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>1) Watch this <span class="co">[</span><span class="ot">30-minute introduction to credible research</span><span class="co">](https://osf.io/xtmek/)</span>, which contextualises the importance of simulations for reliable research. </span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>2) Read <span class="co">[</span><span class="ot">Hallgren, A. K. (2013). Conducting simulation studies in the R programming environment. *Tutorials in Quantitative Methods for Psychology*, *9*(2), 43–60</span><span class="co">](https://doi.org/10.20982/tqmp.09.2.p043)</span>.</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Self-paced workshop</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">### How it works</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>The self-paced tutorial (pages linked below) will alternate presentation of concepts and simple exercises for you to try to apply them in R. Each time you see written **YOUR TURN**, switch to your local copy of the exercise script (you can choose between a file <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/exercise-script-with-solutions.R"</span><span class="ot"> target </span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>with<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> or <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/exercise-script-without-solutions.R"</span><span class="ot"> target </span><span class="op">=</span><span class="st">"_blank"</span><span class="dt">&gt;</span>without<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span> the solutions depending on e.g. your level of familiarity with R), review the examples if needed, complete the exercise, and check out the proposed answer (which often contains additional tips). Come back to the online tutorial and after finishing one page, you can navigate to the next page linked at the bottom to continue. The exercise script contains code for all the exercises and code that generates the plots that appear in the online tutorial, all in order of appearance in the tutorial.  </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>It is necessary that you work through the sections of the tutorial in order. Please read the blurbs of each section below to get an overview of this workshop. Then click on the first page 'Download the material' and follow along by navigating to the next page linked at the bottom of each page! You can get back to this overview at any time by clicking on the title 'Introduction-Simulations-in-R' at the top of each page.</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>**1 repetition simulating N(0,1) with n = 10:**  </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../assets/hist-n10-n01.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"300"</span><span class="dt">&gt;</span>  </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>If I repeat this simulation 24 times, here are the distributions of the 10 values pseudo-randomly sampled from N(0,1):  </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>**24 repetitions simulating N(0,1) with n = 10:**  </span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../assets/24-hists-n10-n01.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"600"</span><span class="dt">&gt;</span>  </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>Note that because we are drawing from N(0,1), we expect the mean of the values drawn (mean(x), blue lines) to be very close to 0, i.e. the mean of the normal distribution we sample from (red dashed lines).  </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>How are the means and standard deviations of the 24 repetitions distributed?  </span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="fu">### Tutorial</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Download the material</span><span class="co">](./tutorial-pages/download-repo.qmd)</span> – Get this tutorial onto your machine.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Definition</span><span class="co">](./tutorial-pages/definition.qmd)</span> – What are simulations?</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Purpose</span><span class="co">](./tutorial-pages/purpose.qmd)</span> – What can we use simulations for?</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Basic principles</span><span class="co">](./tutorial-pages/basic-principles.qmd)</span> – What do we need to create a simulation?</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Random number generators</span><span class="co">](./tutorial-pages/random-numbers-generators.qmd)</span> – How to generate random numbers in R?</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Repeat</span><span class="co">](./tutorial-pages/repeat.qmd)</span> – How to repeat the generation of random numbers multiple times?</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Setting the seed</span><span class="co">](./tutorial-pages/seed.qmd)</span> – How can you generate the same random numbers?</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Sample size `n`</span><span class="co">](./tutorial-pages/sample-size-n.qmd)</span> – How many values should you generate within a simulation?</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Number of repetitions `nrep`</span><span class="co">](./tutorial-pages/number-of-simulations-nrep.qmd)</span> – How many repeats of a simulation should you run?</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">DRY rule</span><span class="co">](./tutorial-pages/dry-rule.qmd)</span> – How to write your own functions?</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Simulate to check alpha</span><span class="co">](./tutorial-pages/check-alpha.qmd)</span> – Write your first simulation and check the rate of false-positive findings.  </span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Simulate to check power</span><span class="co">](./tutorial-pages/check-power.qmd)</span> – Simulate data to perform a power analysis.  </span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Simulate to prepare a preregistration</span><span class="co">](./tutorial-pages/simulate-for-preregistration.qmd)</span> – Simulate data to test statistical analyses before preregistering them.  </span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">General structure</span><span class="co">](./tutorial-pages/general-structure.qmd)</span> – What is the general structure of a simulation?</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Limitations</span><span class="co">](./tutorial-pages/limitations.qmd)</span> – What are the limitations of simulations?</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Real-life example</span><span class="co">](./tutorial-pages/real-life-example.qmd)</span> – What are real-life examples of simulations?</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Additional resources</span><span class="co">](./tutorial-pages/resources.qmd)</span> – What resources can help you write your own simulation?</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>**Distributions of the means and SDs from 24 repetitions simulating N(0,1) with n = 10:**  </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../assets/musd-24-n10-n01.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"500"</span><span class="dt">&gt;</span>  </span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>Now, let's do the same with a sample size <span class="in">`n`</span> of 1000.  </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>**24 repetitions simulating the same distribution, i.e. N(0,1), with n = 1000:**  </span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../assets/24-hists-n1000-n01.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"600"</span><span class="dt">&gt;</span>  </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>**Distributions of the means and SDs from 24 repetitions simulating N(0,1) with n = 1000:**  </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../assets/musd-24-n1000-n01.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"500"</span><span class="dt">&gt;</span>  </span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Conclusion  </span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>The sample size within a simulation affects the **precision** with which the parameters of that distribution can be estimated.  </span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>What should determine the sample size within your simulation?  </span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>::: {.column width="47.5%"}</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>Choose a sample size that is relevant to the context of the simulation, e.g. the sample size you will be able to reach in your study or the minimum sample size that would allow you to detect the smallest effect of interest (as determined by a power analysis, which we will cover in a moment).</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Support the LMU Open Science Center!"}</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>**Like this tutorial? Be sure to give [the repository](https://github.com/lmu-osc/Introduction-Simulations-in-R) a star and [follow us on GitHub](https://github.com/lmu-osc)!**</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>::: {.column width="5%"}</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>::: {.column width="47.5%"}</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Questions about this tutorial?"}</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>**If you have questions for the author of this tutorial, please take a look at the [About](about.qmd) page.**</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>::::</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
@@ -1202,7 +1123,7 @@ It is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/"
     </div>   
     <div class="nav-footer-center">
 <p>© 2024 Malika Ihle. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/edit/main/tutorial-pages/sample-size-n.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/blob/main/tutorial-pages/sample-size-n.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/Introduction-Simulations-in-R/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
@@ -1287,11 +1208,11 @@ It is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/"
     <hr class="my-4 border-light">
 
     <div class="d-flex flex-wrap gap-3 small">
-      <a href="./footer/imprint.html" class="text-white text-decoration-underline">Imprint</a>
+      <a href="../footer/imprint.html" class="text-white text-decoration-underline">Imprint</a>
       <span aria-hidden="true">|</span>
-      <a href="./footer/privacy.html" class="text-white text-decoration-underline">Privacy Policy</a>
+      <a href="../footer/privacy.html" class="text-white text-decoration-underline">Privacy Policy</a>
       <span aria-hidden="true">|</span>
-      <a href="./footer/accessibilty.html" class="text-white text-decoration-underline">Accessibility</a>
+      <a href="../footer/accessibilty.html" class="text-white text-decoration-underline">Accessibility</a>
     </div>
 
   </div>
@@ -1300,5 +1221,5 @@ It is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/"
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
