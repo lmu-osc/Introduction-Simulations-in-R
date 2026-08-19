@@ -14,7 +14,7 @@ Fork and clone [this repository](https://github.com/lmu-osc/Introduction-Simulat
 Please download the GitHub repository that we are using today: <a href="https://github.com/lmu-osc/Introduction-Simulations-in-R" target="_blank">https://github.com/lmu-osc/Introduction-Simulations-in-R</a>.
 
 <br/>
-<img src="../assets/download.PNG" width="750">  
+<img src="../assets/download.png" width="750">  
 <br/>
 
 Once the .zip file downloaded, extract it and place the folder in the desired directory (e.g. Documents).  
@@ -25,17 +25,17 @@ If you do not have R or RStudio installed, please follow [these instructions](ht
 
 Open RStudio, go to 'File', choose 'New Project...', and select 'Existing Directory'.  
 <br/>
-<img src="../assets/existing-directory.PNG" width="400">  
+<img src="../assets/existing-directory.png" width="400">  
 <br/>
 
 Select the downloaded (and extracted) folder by clicking on 'Browse', then select 'Create Project'.   
 <br/>
-<img src="../assets/find-directory.PNG" width="400">  
+<img src="../assets/find-directory.png" width="400">  
 <br/>
 
 In the panel containing the 'Files' tab, find the exercise sheet and open it by double clicking on it.  
 <br/>
-<img src="../assets/files-list.PNG" width="600">  
+<img src="../assets/files-list.png" width="600">  
 <br/>
 
  ***

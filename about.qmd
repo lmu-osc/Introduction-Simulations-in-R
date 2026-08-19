@@ -17,10 +17,11 @@ author:
     affiliation: 
       - id: osc
         name: LMU Open Science Center
-        ror: https://ror.org/05591te55
-        isni: 000000041936973X
+        ror: https://ror.org/029e6qe04
       - id: other1
         name: LMU Munich
+        ror: https://ror.org/05591te55
+        isni: 000000041936973X
     orcid: 0000-0002-3242-5981
 google-scholar: true
 ---
@@ -42,3 +43,10 @@ This tutorial was primarily written in 2021 using R and RStudio.
 ## Tutorial Template Quarto Extension
 
 This tutorial was written using the [`lmu-osc/tutorial-template`](https://github.com/lmu-osc/tutorial-template) Quarto extension [@callahan2026].
+
+::: {#refs}
+:::
+
+## How to Cite
+
+**To cite this tutorial, please refer to the project's [CITATION.cff](CITATION.cff) file or use the BibTeX citation provided in the appendix below.**

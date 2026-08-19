@@ -1,12 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you refer to this tutorial, please cite it as below."
 authors:
-- family-names: "Ihle"
-  given-names: "Malika"
-  orcid: "https://orcid.org/0000-0002-3242-5981"
-  affiliation:
-  - name: "LMU Open Science Center"
-    ror: "https://ror.org/029e6qe04"
+  - family-names: "Ihle"
+    given-names: "Malika"
+    orcid: "https://orcid.org/0000-0002-3242-5981"
+    affiliation: "LMU Open Science Center"
 title: "Introduction to Simulations in R"
 version: 0.1.0
 doi: "DOI_HERE_AFTER_GENERATED"

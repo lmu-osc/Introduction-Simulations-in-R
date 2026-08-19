@@ -1,6 +1,4 @@
----
-aliases: Hallgren2013/ReadingSheet.md
----
+
 
 # Conducting Simulation Studies in the R Programming Environment - Reading Sheet
 

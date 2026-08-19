@@ -8,6 +8,7 @@ project:
 # End Project
 
 # Begin Website
+repo-url: https://github.com/lmu-osc/Introduction-Simulations-in-R
 website:
   title: "Introduction to Simulations in R"
   page-footer:
