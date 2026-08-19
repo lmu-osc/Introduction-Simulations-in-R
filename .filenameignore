@@ -17,3 +17,8 @@ CITATION.cff
 CITATION-template.cff
 _quarto.yml
 404.qmd
+
+# exceptions
+assets/
+hallgren-2013
+ihle-2020
