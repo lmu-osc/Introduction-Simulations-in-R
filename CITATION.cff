@@ -7,7 +7,7 @@ authors:
     affiliation: "LMU Open Science Center"
 title: "Introduction to Simulations in R"
 version: 0.1.0
-doi: "DOI_HERE_AFTER_GENERATED"
+# doi: "DOI_HERE_AFTER_GENERATED"
 date-released: 2021-11-22
 repository-code: "https://github.com/lmu-osc/Introduction-Simulations-in-R"
 url: "https://lmu-osc.github.io/Introduction-Simulations-in-R"
@@ -18,10 +18,7 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0002-3242-5981"
   title: "Introduction to Simulations in R"
   year: 2021
-  doi: "DOI_HERE_AFTER_GENERATED"
-  publisher:
-    name: "LMU Open Science Center"
-    ror: "https://ror.org/029e6qe04"
+  # doi: "DOI_HERE_AFTER_GENERATED"
   repository-code: "https://github.com/lmu-osc/Introduction-Simulations-in-R"
   url: "https://lmu-osc.github.io/Introduction-Simulations-in-R"
   type: "book"
