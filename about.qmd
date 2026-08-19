@@ -1,18 +1,17 @@
 ---
 title: "About"
-date: 2021-11-22
+date: 2026-08-19
 citation:
   type: "webpage"
   title: "Introduction to Simulations in R"
   container-title: "LMU Open Science Center"
   url: https://lmu-osc.github.io/Introduction-Simulations-in-R
-  doi: "DOI_HERE_AFTER_GENERATED"
+  doi: "10.5281/zenodo.22017633"
+  version: 0.1.1
 author:
   - name: Malika Ihle
     roles: [conceptualization, funding acquisition, investigation, methodology, project administration, software, resources, supervision, validation, visualization, writing - original draft, writing - editing & review]
     degrees:
-      - B.Sc.
-      - M.Sc.
       - PhD
     affiliation: 
       - id: osc
