@@ -1,0 +1,122 @@
+---
+title: "Accessibility"
+page-layout: full
+---
+
+<style>
+  /* css styles */
+:root {
+    --primary-color: #00883A;
+    --primary-light: rgba(43, 134, 75, 0.1);
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --osc-white: #ffffff;
+    --text-light: #5f5f5f;
+    --lmu-black: #232323;
+  }
+  
+#quarto-content.page-columns main.column-page{
+    margin:0 auto;
+    max-width: 1200px;
+    padding: 5rem;
+    width:100%;
+    background-color: #f9fcf9;
+}
+
+
+.accessibility-container h4{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 600; 
+    color:var(--primary-color);
+}
+.accessibility-container h5{
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 600; 
+    color:var(--text-light);
+}
+
+.accessibility-container p,
+.accessibility-container li{
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.85;
+    font-weight:400;
+    color: var(--text-light);
+}
+
+.accessibility-container a{
+    color:var(--primary-color);
+}
+
+</style>
+
+:::{.accessibility-container}
+
+The Ludwig-Maximilians-Universität München strives to make its offers accessible in accordance with § 9 Act on Digitalisation in the Free State of Bavaria (Bayerisches Digitalgesetz – BayDig).
+
+This Accessibility Statement applies to applications available at [https://www.lmu.de/de/index.html](https://www.lmu.de/de/index.html), [https://www.lmu.de/de/index.html](https://www.lmu.de/de/index.html) and all subdomain pages.
+
+#### Status of Compliance
+
+Partially compliant: This application partially corresponds to § 1 BayEGovV.
+
+##### Legal Name
+Ludwig-Maximilians-Universität München
+
+##### Website(s):
+[https://www.lmu.de/de/index.html](https://www.lmu.de/de/index.html), [https://www.lmu.de/de/index.html](https://www.lmu.de/de/index.html) and all subdomain pages.
+
+#### Known Accessibility Issues
+List and explanation of the problems encountered when implementing the accessibility of these websites
+
+##### Content Not Accessible to People With Disabilities
+- Apart from the main pages, alternative text-based content for images and tables may be missing. There may also be errors in content hierarchy and links may be unintelligible.
+- PDF documents created before 09/23/2018 have not yet been converted to a fully accessible format.
+- Some documents have been provided by institutions of the LMU, which are not yet all available in a fully accessible version.
+- Many of our videos also lack subtitles and audio descriptions.
+We will be adding written directions for the maps used to give directions.
+- Quotes are often not indicated as such using the appropriate HTML tag.
+- Responsive design (for viewing on mobile devices) is only partially available for the websites, screen orientation is otherwise limited to landscape format. For non-responsive pages, texts do not wrap correctly in a small viewport.
+- Fields for inputting user data are not always sufficiently designated as such.
+- Words or passages in other languages are not always indicated as such.
+- Because of the Google Search plugin, the criteria for "valid HTML text" is not being fulfilled.
+
+#### Explanation
+
+All LMU websites are currently undergoing a complete relaunch. It therefore no longer makes sense to revise the existing websites.\
+The deficiencies of the old website have been listed above.
+
+
+**Creation Date**: 09/22/2019\
+**Methodology**: Self-assessment
+
+#### Feedback Mechanism
+As a user, you can inform us of any shortcomings in complying with accessibility requirements or request information in an accessible format that is not required to be displayed in an accessible format.
+
+##### Contact Information
+Unit VI.5 Internet Services\
+Martiusstraße 4\
+80802 Munich\
+Mail: [it.internet@verwaltung.uni-muenchen.de](mailto:it.internet@verwaltung.uni-muenchen.de)\
+Phone: +49 (0) 89 / 2180-9832
+
+#### Enforcement Procedure
+If a request for contact remains unanswered in whole or in part within six weeks, the Landesamt für Digitalisierung, Breitband und Vermessung (Agency for Digitisation, High-Speed Internet and Surveying) will, at the request of the user, examine whether measures are necessary with regard to the monitoring of the obligated party.
+
+##### Contact information of the agency responsible for the enforcement procedure
+Landesamt für Digitalisierung, Breitband und Vermessung\above
+Alexandrastraße 4\
+80538 Munich\
+Phone: +49 89 2129-1111\
+Fax: +49 89 2129-1113\
+Email:[service@geodaten.bayern.de](mailto:service@geodaten.bayern.de)\
+[https://www.ldbv.bayern.de/service/kontakt/](https://www.ldbv.bayern.de/service/kontakt/)
+
+##### Other Help Services
+Students with disabilities are supported by the [Beratungsstelle für Studierende mit Behinderung und chronischer Erkrankung](https://www.lmu.de/de/workspace-fuer-studierende/support-angebote/studieren-mit-beeintraechtigung/) (Counselling Center for Students with Disabilities and Chronic Illnesses).
+
+The [Schwerbehindertenvertretung (Representative for Disabled Persons)](https://login.lmu.de/idp/profile/SAML2/Redirect/SSO?execution=e3s1) (access protected on the service portal) can support employees.
+
+:::

@@ -1,0 +1,52 @@
+---
+title: "About"
+date: 2021-11-22
+citation:
+  type: "webpage"
+  title: "Introduction to Simulations in R"
+  container-title: "LMU Open Science Center"
+  url: https://lmu-osc.github.io/Introduction-Simulations-in-R
+  doi: "DOI_HERE_AFTER_GENERATED"
+author:
+  - name: Malika Ihle
+    roles: [conceptualization, funding acquisition, investigation, methodology, project administration, software, resources, supervision, validation, visualization, writing - original draft, writing - editing & review]
+    degrees:
+      - B.Sc.
+      - M.Sc.
+      - PhD
+    affiliation: 
+      - id: osc
+        name: LMU Open Science Center
+        ror: https://ror.org/029e6qe04
+      - id: other1
+        name: LMU Munich
+        ror: https://ror.org/05591te55
+        isni: 000000041936973X
+    orcid: 0000-0002-3242-5981
+google-scholar: true
+---
+
+## Contributors
+
+This site was authored by Malika Ihle, based on materials from Joel Pick, Hadley Wickham, and Kevin Hallgren, with contributions from James Smith.
+
+## Licenses
+
+The overall project is available under the [**CC BY-SA 4.0**](https://creativecommons.org/licenses/by-sa/4.0/) license found at [LICENSE](LICENSE.md); all code without any narrative text is also (at your option) available under the [**CC0 1.0 Universal**](https://creativecommons.org/publicdomain/zero/1.0/) license found at [LICENSE-CODE](LICENSE-CODE.md).
+
+Why two licenses? The CC BY-SA 4.0 license is for the content of the website, while the CC0 1.0 Universal license is for the code and configuration files. This is a common practice for websites that include code snippets and other content that may be reused in other projects, particularly because the CC BY-SA 4.0 license is not intended to be used with software.
+
+## Notes
+
+This tutorial was primarily written in 2021 using R and RStudio.
+
+## Tutorial Template Quarto Extension
+
+This tutorial was written using the [`lmu-osc/tutorial-template`](https://github.com/lmu-osc/tutorial-template) Quarto extension [@callahan2026].
+
+::: {#refs}
+:::
+
+## How to Cite
+
+**To cite this tutorial, please refer to the project's [CITATION.cff](CITATION.cff) file or use the BibTeX citation provided in the appendix below.**

@@ -1,0 +1,27 @@
+on:
+  workflow_dispatch:
+
+name: Air Formatting
+
+permissions:
+  contents: write
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Install Air
+        uses: posit-dev/setup-air@v1
+
+      - name: Format
+        run: air format .
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "Style code (Air)"

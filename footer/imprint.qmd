@@ -1,0 +1,112 @@
+---
+title: "Imprint and Disclaimer"
+format: 
+  html:
+    toc: false
+    page-layout: full
+---
+
+<style>
+  /* css styles */
+:root {
+    --primary-color: #00883A;
+    --primary-light: rgba(43, 134, 75, 0.1);
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --osc-white: #ffffff;
+    --text-light: #5f5f5f;
+    --lmu-black: #232323;
+  }
+  
+#quarto-content.page-columns main.column-page{
+    margin:0 auto;
+    max-width: 1200px;
+    padding: 5rem;
+    width:100%;
+    background-color: #f9fcf9;
+}
+
+h4{
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 600; 
+    color:var(--primary-color);
+}
+
+.imprint-container p{
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.85;
+    font-weight:400;
+    color: var(--text-light);
+}
+
+.imprint-container a{
+    color:var(--primary-color);
+}
+
+</style>
+
+:::{.imprint-container}
+
+Information pursuant to § 5 Telemedia Law and § 18 Abs. 2 Medienstaatsvertrag (MStV)
+
+Ludwig-Maximilians-Universität München is a state institution of the Free State of Bavaria and a legal entity under public law (Art. 4 (1) sentence 1 BayHIG). It is legally represented by its President, Professor Dr. med. Dr. h.c. Matthias H. Tschöp.
+
+#### Address
+Ludwig-Maximilians-Universität München\
+Geschwister-Scholl-Platz 1\
+80539 Munich\
+Phone: +49 (0) 89 / 2180-0
+
+Web presence: [https://www.lmu.de/de/index.html](https://www.lmu.de/de/index.html) \
+Contact: [poststelle@verwaltung.uni-muenchen.de](mailto:poststelle@verwaltung.uni-muenchen.de)\
+[Addition contact information](https://www.lmu.de/en/index.html)
+
+#### Notices for encrypted communication
+
+In the event that you wish to send us an encrypted message, please use the following public X509-certificate for encryption of your message.
+
+#### Authorized Oversight Agency
+
+Bavarian State Ministry for Science and Art\
+Salvatorstraße 2\
+80333 Munich
+
+Internet: [https://www.stmwk.bayern.de](https://www.stmwk.bayern.de)
+
+#### Sales Tax ID Number of the LMU
+
+Sales tax ID number pursuant to § 27 a Sales Tax Law:\
+DE 811205325
+
+#### Responsible for content according to § 18 para. 2 MStV
+
+Ludwig-Maximilians-Universität München\
+Felix Schönbrodt\
+Email: [felix.schoenbrodt@psy.lmu.de](mailto:felix.schoenbrodt@psy.lmu.de)
+
+#### Responsible party for technical implementation
+
+The webmaster of the facility is responsible for technical implementation. Technical implementation is handled by the Content Management System Fiona by [Infopark AG](https://www.lmu.de/en/index.html).
+
+#### Statement of Release
+
+The information herein is correct to the best of our knowledge, however, error cannot be avoided with absolute certainty. Solely the specifications in the pertinent legal bases (laws, orders, statutes) are legally binding.
+
+We cannot assume any liability for the particular currency, accuracy, completeness and availability of the provided information.
+
+We are not liable for damages caused by the use of this internet offer. This exclusion of liability shall not apply if the regulations of § 839 BGB (liability for violation of official duty) are involved. We are not liable for any damages caused by call-up or downloading of data by damaged software or by the installation or use of software.
+
+This exclusion of liability does not apply to information that falls within the scope of the Order (EU) 2016/679 of the European Parliament and of the Council dated 27 April 2016 (General Data Protection Regulation). The accuracy and currency of this information is guaranteed.
+
+#### Disclaimer
+The information offered by the LMU contains cross-references (“links”) to other internet offers by the LMU or by external, third-parties. Basically the internet pages will open automatically in a new window.
+
+Through this cross-reference, the LMU handles access for use of this content (§ 5 Telemedia Law). We are not responsible for this “foreign” content since we do not initiate the transmission of the information, have not selected the addressee of the transmitted information and also have not selected or changed the transmitted information.
+
+An automatic, short-term interim saving of this “foreign information” by the LMU does not occur due to the selected call-up and linking method, so that the LMU does not thereby assume any responsibility for this foreign content.
+
+However, upon initial linking with these internet offers, the LMU has checked the foreign content to determine whether it may trigger a potential responsibility under civil or penal law. But we do not receive any automatic information about changes to the foreign internet offers and thus cannot constantly monitor their content for any changes. Therefore we also cannot assume any responsibility for them. Solely the particular merchant of the foreign internet offer is liable for illegal, erroneous or incomplete content, and in particular for damages which arise from the use or non-use of information by third parties. However, we endeavor to check the included links regularly with regard to these named criteria.
+
+:::

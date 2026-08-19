@@ -1,0 +1,48 @@
+title: tutorial-template
+author: Patrick Callahan
+description: A template website for the LMU Open Science Center's tutorials
+version: 1.0.4
+license: CC0-1.0
+quarto-required: ">=1.9.0"
+contributes:
+  metadata:
+    project:
+      brand: _extensions/lmu-osc/osc-brand/brand.yml
+  project:
+    project:
+      type: website
+    website:
+      search:
+        location: sidebar
+      repo-actions: [edit, source, issue]
+      back-to-top-navigation: true
+      page-navigation: true
+      # favicon: Quarto  detects the "small" image from the brand file automatically
+      reader-mode: true
+      navbar:
+        background: primary
+        logo: small
+    format: tutorial-template-html+tutorial
+  formats:
+    html+tutorial:
+      theme:
+        light:
+          [flatly, brand, _extensions/lmu-osc/osc-brand/lmu-osc-custom.scss]
+        dark: [darkly, brand, _extensions/lmu-osc/osc-brand/lmu-osc-custom.scss]
+      toc: true
+      toc-title: " "
+      code-tools: true
+      code-overflow: wrap
+      code-copy: true
+      code-link: true
+      smooth-scroll: true
+      link-external-icon: true
+      link-external-newwindow: true
+      footnotes-hover: true
+      citations-hover: true
+      crossrefs-hover: true
+      grid:
+        sidebar-width: 300px
+      css:
+        - assets/bootstrap-grid.min.css
+    html+base: osc-brand-html

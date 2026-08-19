@@ -1,12 +1,14 @@
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 23 * * 0"
   push:
-    branches: main
+    branches: [main]
 
-name: Quarto Publish
+name: Render Quarto Site
 
 jobs:
-  build-deploy:
+  quarto-publish:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -16,16 +18,85 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
 
-      - name: Install R
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt install -y \
+            libcurl4-openssl-dev \
+            libfontconfig1-dev \
+            libssl-dev \
+            libxml2-dev \
+            libpng-dev \
+            libjpeg-dev \
+            libtiff-dev \
+            libcairo2-dev \
+            libxt-dev \
+            libfreetype6-dev \
+            libharfbuzz-dev \
+            libfribidi-dev \
+            zlib1g-dev \
+            libv8-dev \
+            libglpk-dev \
+            librsvg2-bin
+
+      - name: Install R with renv
         uses: r-lib/actions/setup-r@v2
         with:
-          r-version: '4.4.0'
+          r-version: renv
+        if: ${{ hashFiles('renv.lock') != '' }}
 
-      - name: Install R Dependencies
+      - name: Install R Dependencies with renv
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
+        if: ${{ hashFiles('renv.lock') != '' }}
+
+      - name: Install R latest
+        uses: r-lib/actions/setup-r@v2
+        if: ${{ hashFiles('renv.lock') == '' }}
+
+      - name: Set R library path (no lockfile)
+        run: echo "R_LIBS_USER=$HOME/.local/lib/R/site-library" >> "$GITHUB_ENV"
+        if: ${{ hashFiles('renv.lock') == '' }}
+
+      - name: Cache R library (no lockfile)
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/lib/R/site-library
+          key: ${{ runner.os }}-r-nolock-${{ hashFiles('**/*.R', '**/*.Rmd', '**/*.qmd', '_quarto.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-r-nolock-
+        if: ${{ hashFiles('renv.lock') == '' }}
+
+      - name: Install R latest dependencies
+        run: |
+          lib <- Sys.getenv("R_LIBS_USER")
+          if (nzchar(lib)) {
+            dir.create(lib, recursive = TRUE, showWarnings = FALSE)
+            .libPaths(c(lib, .libPaths()))
+          }
+          install.packages("renv")
+          install.packages("rmarkdown")
+          install.packages("yaml")
+          deps <- unique(stats::na.omit(renv::dependencies()$Package))
+          if (length(deps) > 0) install.packages(deps)
+        shell: Rscript {0}
+        if: ${{ hashFiles('renv.lock') == '' }}
+
+      - name: Ensure Quarto R runtime packages
+        run: |
+          lib <- Sys.getenv("R_LIBS_USER")
+          if (nzchar(lib)) {
+            dir.create(lib, recursive = TRUE, showWarnings = FALSE)
+            .libPaths(c(lib, .libPaths()))
+          }
+          pkgs <- c("knitr", "rmarkdown")
+          missing <- pkgs[!vapply(pkgs, requireNamespace, logical(1), quietly = TRUE)]
+          if (length(missing) > 0) install.packages(missing)
+        shell: Rscript {0}
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2

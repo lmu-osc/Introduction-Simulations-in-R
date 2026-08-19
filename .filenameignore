@@ -1,0 +1,24 @@
+# Paths to ignore for filename/path validation checks.
+# Patterns use fnmatch syntax and are relative to repo root.
+
+_site/**
+.quarto/**
+.github/**
+_extensions/
+
+# Common documentation files to ignore
+LICENSE-CODE.md
+LICENSE.md
+LICENSE
+README.md
+README
+README-template.md
+CITATION.cff
+CITATION-template.cff
+_quarto.yml
+404.qmd
+
+# exceptions
+assets/
+hallgren-2013
+ihle-2020

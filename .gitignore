@@ -58,3 +58,9 @@ rsconnect/
 .httr-oauth
 .quarto
 _site/
+**_files/
+
+**/*.quarto_ipynb
+
+# ignore posi assistant settings
+.posit/assistant

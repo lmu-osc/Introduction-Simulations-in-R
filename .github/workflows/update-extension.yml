@@ -1,0 +1,32 @@
+name: Update Tutorial Template Extension
+
+on:
+  schedule:
+    - cron: "0 0 2 * *"
+  workflow_dispatch:
+
+permissions: read-all
+
+jobs:
+  update-downstream-tutorials:
+    # prevent action from running in actual extension repo--else, recursive installations
+    # only users of the extension should have these auto-updates
+    if: github.repository != 'lmu-osc/tutorial-template'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Update tutorial-template extension
+        run: quarto update lmu-osc/tutorial-template --no-prompt
+
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "Update tutorial-template extension (GHA)"
