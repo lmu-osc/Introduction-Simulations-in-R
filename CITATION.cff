@@ -6,9 +6,9 @@ authors:
     orcid: "https://orcid.org/0000-0002-3242-5981"
     affiliation: "LMU Open Science Center"
 title: "Introduction to Simulations in R"
-version: 0.1.0
-# doi: "DOI_HERE_AFTER_GENERATED"
-date-released: 2021-11-22
+version: 0.1.1
+doi: "10.5281/zenodo.22017633"
+date-released: 2026-08-19
 repository-code: "https://github.com/lmu-osc/Introduction-Simulations-in-R"
 url: "https://lmu-osc.github.io/Introduction-Simulations-in-R"
 preferred-citation:
@@ -17,8 +17,8 @@ preferred-citation:
       given-names: "Malika"
       orcid: "https://orcid.org/0000-0002-3242-5981"
   title: "Introduction to Simulations in R"
-  year: 2021
-  # doi: "DOI_HERE_AFTER_GENERATED"
+  year: 2026
+  doi: "10.5281/zenodo.22017633"
   repository-code: "https://github.com/lmu-osc/Introduction-Simulations-in-R"
   url: "https://lmu-osc.github.io/Introduction-Simulations-in-R"
   type: "book"
