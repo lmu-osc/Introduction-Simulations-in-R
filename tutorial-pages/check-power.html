@@ -133,6 +133,35 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </script>
 <!-- End Matomo Code -->
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
 <link rel="stylesheet" href="../footer/footer-style.css">
@@ -467,7 +496,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial-pages/check-alpha.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Simulate to check alpha</span></a>
+ <span class="menu-text">Simulate to check <span class="math inline">\(\alpha\)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -539,39 +568,38 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </header>
 
 
-<p>The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to 80%, though, as with <code>alpha = 0.05</code>, this is an arbitrary choice.</p>
-<p>Generally, we want to do power analysis before collecting data, to work out the sample size we need to detect some effect. If we are calculating a required sample size, the power analysis can also be called a sample size calculation.</p>
+<p>The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to 80%, though, as with <span class="math inline">\(\alpha = .05\)</span>, this is an arbitrary choice.</p>
+<p>Generally, we want to do a power analysis before collecting data, to work out the sample size we need to detect some effect with a sufficient probability. If we are calculating a required sample size, the analysis is called “a priori power analyses”, or simply “sample size calculation”.</p>
 <p>Taking the example of a <em>t</em>-test, we need to understand a few parameters:</p>
 <ul>
 <li><code>n</code>, the sample size.</li>
 <li><code>delta</code>, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), or you can use a minimally important difference, which is the threshold below which you do not consider a difference interesting enough to be worth detecting. In a clinical trial, for example, this might be the smallest difference that a patient would care about.</li>
 <li><code>sd</code>, the standard deviation. Usually, this needs to be estimated from the literature or pilot studies.</li>
-<li><code>sig.level</code>, the alpha, as discussed previously.</li>
+<li><code>sig.level</code>, the <span class="math inline">\(\alpha\)</span>, as discussed previously.</li>
 <li><code>power</code>, the power as defined above.</li>
 </ul>
-<p>You can calculate any one of these parameters, given all of the others. We usually want to specify, <code>delta</code>, <code>sd</code>, <code>sig.level</code> and <code>power</code> and calculate the required sample size.</p>
-<p>We can calculate the required sample size for a <em>t</em>-test using:</p>
+<p>You can calculate any one of these parameters, given all of the others. In an a-priori power analysis, we need to specify <code>delta</code>, <code>sd</code>, <code>sig.level</code> and <code>power</code> to calculate the required sample size:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">power.t.test</span>(<span class="at">n =</span> <span class="cn">NULL</span>, <span class="at">delta =</span> <span class="fl">0.5</span>, <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.8</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Notice that <code>n = NULL</code>, so this parameter is calculated.</p>
+<p>Notice that <code>n = NULL</code>, so this parameter is calculated and returned by the function.</p>
 <p>The sample size <code>n</code> we need, given this set of parameters, is 64 per group.</p>
-<p>Just as we can check the alpha of our test by sampling from the same distribution (i.e.&nbsp;simulating data without an effect), we can check the power by sampling from different distributions (i.e.&nbsp;simulating data with an effect).</p>
-<p>If we sample values from two normal distributions with different means (e.g.&nbsp;N(0,1) and N(0.5,1)), what is the minimum sample size we need to detect a significant difference in means with a <em>t</em>-test 80% of the time?</p>
+<p>Just as we can check the <span class="math inline">\(\alpha\)</span> of our test by sampling from the same distribution (i.e., simulating data without an effect), we can check the power by sampling from different distributions (i.e., simulating data with an effect).</p>
+<p>If we sample values from two normal distributions with different means (e.g.&nbsp;<span class="math inline">\(N(0,1)\)</span> and <span class="math inline">\(N(0.5,1)\)</span>), what is the minimum sample size we need to detect a significant difference in means with a <em>t</em>-test 80% of the time?</p>
 <hr>
 <p><strong>YOUR TURN:</strong></p>
 <ol type="1">
 <li><p>Use your simulation skills to work out the power through simulation. Write a function that does the following:</p>
 <ol type="i">
-<li>Draws <code>n</code> values from a random normal distribution with <code>mean1</code> and another <code>n</code> values from a normal distribution with <code>mean2</code>.</li>
-<li>Compares the means of these two samples with a <em>t</em>-test and extracts the <em>p</em>-value.</li>
+<li>Draw <code>n</code> values from a random normal distribution with <code>mean1</code> and another <code>n</code> values from a normal distribution with <code>mean2</code>.</li>
+<li>Compare the means of these two samples with a <em>t</em>-test and extract the <em>p</em>-value.</li>
 </ol></li>
 <li><p>Repeat the function 1000 times using the parameters used in the power calculation above (that used the <code>power.t.test()</code> function).</p></li>
 <li><p>Calculate the proportion of <em>p</em>-values that are smaller than 0.05.</p></li>
 </ol>
 <hr>
-<p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 1000 repetitions simulating N(0,1) and N(0.5,1) with n = 64:</strong></p>
+<p><strong><em>p</em>-values of <em>t</em>-tests comparing means from 1000 repetitions simulating <span class="math inline">\(N(0,1)\)</span> and <span class="math inline">\(N(0.5,1)\)</span> with n = 64:</strong></p>
 <p><br> <img src="../assets/hist-power.png" width="500"><br>
 <br></p>
-<p>The proportion of correctly rejected null hypotheses in the simulation is close to 0.8, which is what we would expect.</p>
+<p>The proportion of correctly rejected null hypotheses in the simulation is close to 0.8, which is what we would expect:</p>
 <p>Using simulations for power analysis is not really necessary for simple examples like a <em>t</em>-test, though it is useful to check your understanding.</p>
 <p>When analyses become complex and it is hard or impossible to determine a sample size analytically (i.e.&nbsp;you can’t calculate it, or there’s no suitable function to use), then simulations are an indispensable tool.</p>
 <p>A simple example of a power analysis like the one you’ve just done can be found in the “Power analysis” section of this paper:</p>
@@ -1062,8 +1090,8 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../tutorial-pages/check-alpha.html" class="pagination-link" aria-label="Simulate to check alpha">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Simulate to check alpha</span>
+      <a href="../tutorial-pages/check-alpha.html" class="pagination-link" aria-label="Simulate to check $\alpha$">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Simulate to check <span class="math inline">\(\alpha\)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -1077,56 +1105,56 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Checking power through simulations"</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to 80%, though, as with <span class="in">`alpha = 0.05`</span>, this is an arbitrary choice. </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>The power of a statistical test tells us the probability that the test correctly rejects the null hypothesis. In other words, if we only examine true effects, the power is the proportion of tests that will (correctly) reject the null hypothesis. Often, the power is set to 80%, though, as with $\alpha = .05$, this is an arbitrary choice. </span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Generally, we want to do power analysis before collecting data, to work out the sample size we need to detect some effect. If we are calculating a required sample size, the power analysis can also be called a sample size calculation. </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>Generally, we want to do a power analysis before collecting data, to work out the sample size we need to detect some effect with a sufficient probability. If we are calculating a required sample size, the analysis is called "a priori power analyses", or simply "sample size calculation". </span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>Taking the example of a *t*-test, we need to understand a few parameters:</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`n`</span>, the sample size.</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`delta`</span>, the difference in means that you want to be able to detect. Deciding what this value should be is tricky. You might rely on estimates from the literature (though bear in mind they are likely to be inflated), or you can use a minimally important difference, which is the threshold below which you do not consider a difference interesting enough to be worth detecting. In a clinical trial, for example, this might be the smallest difference that a patient would care about. </span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`sd`</span>, the standard deviation. Usually, this needs to be estimated from the literature or pilot studies. </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`sig.level`</span>, the alpha, as discussed previously. </span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`sig.level`</span>, the $\alpha$, as discussed previously. </span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`power`</span>, the power as defined above.</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>You can calculate any one of these parameters, given all of the others. We usually want to specify, <span class="in">`delta`</span>, <span class="in">`sd`</span>, <span class="in">`sig.level`</span> and <span class="in">`power`</span> and calculate the required sample size.</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>You can calculate any one of these parameters, given all of the others. In an a-priori power analysis, we need to specify <span class="in">`delta`</span>, <span class="in">`sd`</span>, <span class="in">`sig.level`</span> and <span class="in">`power`</span> to calculate the required sample size:</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>We can calculate the required sample size for a *t*-test using:</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="fu">power.t.test</span>(<span class="at">n =</span> <span class="cn">NULL</span>, <span class="at">delta =</span> <span class="fl">0.5</span>, <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.8</span>)</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">power.t.test</span>(<span class="at">n =</span> <span class="cn">NULL</span>, <span class="at">delta =</span> <span class="fl">0.5</span>, <span class="at">sd =</span> <span class="dv">1</span>, <span class="at">sig.level =</span> <span class="fl">0.05</span>, <span class="at">power =</span> <span class="fl">0.8</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>Notice that <span class="in">`n = NULL`</span>, so this parameter is calculated and returned by the function. </span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>Notice that <span class="in">`n = NULL`</span>, so this parameter is calculated. </span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>The sample size <span class="in">`n`</span> we need, given this set of parameters, is 64 per group.</span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>The sample size <span class="in">`n`</span> we need, given this set of parameters, is 64 per group.</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>Just as we can check the $\alpha$ of our test by sampling from the same distribution (i.e., simulating data without an effect), we can check the power by sampling from different distributions (i.e., simulating data with an effect).</span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>Just as we can check the alpha of our test by sampling from the same distribution (i.e. simulating data without an effect), we can check the power by sampling from different distributions (i.e. simulating data with an effect).</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>If we sample values from two normal distributions with different means (e.g. $N(0,1)$ and $N(0.5,1)$), what is the minimum sample size we need to detect a significant difference in means with a *t*-test 80% of the time?</span>
 <span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>If we sample values from two normal distributions with different means (e.g. N(0,1) and N(0.5,1)), what is the minimum sample size we need to detect a significant difference in means with a *t*-test 80% of the time?</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>***</span>
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>**YOUR TURN:**</span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>**YOUR TURN:**</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Use your simulation skills to work out the power through simulation. Write a function that does the following: </span>
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Use your simulation skills to work out the power through simulation. Write a function that does the following: </span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    i. Draws <span class="in">`n`</span> values from a random normal distribution with <span class="in">`mean1`</span> and another <span class="in">`n`</span> values from a normal distribution with <span class="in">`mean2`</span>.</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    ii. Compares the means of these two samples with a *t*-test and extracts the *p*-value.</span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Repeat the function 1000 times using the parameters used in the power calculation above (that used the <span class="in">`power.t.test()`</span> function).</span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Calculate the proportion of *p*-values that are smaller than 0.05.</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    i. Draw <span class="in">`n`</span> values from a random normal distribution with <span class="in">`mean1`</span> and another <span class="in">`n`</span> values from a normal distribution with <span class="in">`mean2`</span>.</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    ii. Compare the means of these two samples with a *t*-test and extract the *p*-value.</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Repeat the function 1000 times using the parameters used in the power calculation above (that used the <span class="in">`power.t.test()`</span> function).</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Calculate the proportion of *p*-values that are smaller than 0.05.</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>***</span>
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>***</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>***p*-values of *t*-tests comparing means from 1000 repetitions simulating $N(0,1)$ and $N(0.5,1)$ with n = 64:**  </span>
 <span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>***p*-values of *t*-tests comparing means from 1000 repetitions simulating N(0,1) and N(0.5,1) with n = 64:**  </span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../assets/hist-power.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"500"</span><span class="dt">&gt;</span>  </span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../assets/hist-power.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"500"</span><span class="dt">&gt;</span>  </span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>The proportion of correctly rejected null hypotheses in the simulation is close to 0.8, which is what we would expect:</span>
 <span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>The proportion of correctly rejected null hypotheses in the simulation is close to 0.8, which is what we would expect. </span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>Using simulations for power analysis is not really necessary for simple examples like a *t*-test, though it is useful to check your understanding. </span>
 <span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a></span>

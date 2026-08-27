@@ -133,6 +133,35 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </script>
 <!-- End Matomo Code -->
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
 <link rel="stylesheet" href="../footer/footer-style.css">
@@ -467,7 +496,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial-pages/check-alpha.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Simulate to check alpha</span></a>
+ <span class="menu-text">Simulate to check <span class="math inline">\(\alpha\)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -563,7 +592,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </ul></li>
 <li><strong>Prepare a pre-analysis plan.</strong>
 <ul>
-<li><em>To be confident about the (confirmatory) statistical analyses you may wish to commit to before data collection (e.g.&nbsp;through a preregistration or registered report), practising the analyses on a simulated dataset is very helpful! If you are still unsure about the most appropriate statistical test to apply to your data, providing a simulated dataset to a statistician or mentor will allow them to provide concrete suggestions! The code containing the analyses of simulated data can be submitted along with your preregistration or registered report for reviewers to exactly understand what analyses you intend to perform. Once you get your real data, you may simply plug them into this code and get the results of your confirmatory analyses immediately!</em></li>
+<li><em>To be confident about the (confirmatory) statistical analyses you may wish to commit to before data collection (e.g.&nbsp;through a preregistration or registered report), practising the analyses on a simulated dataset is very helpful! If you are still unsure about the most appropriate statistical test to apply to your data, providing a simulated dataset to a statistician or mentor will allow them to provide concrete suggestions. The code containing the analyses of simulated data can be submitted along with your preregistration or registered report for reviewers to exactly understand what analyses you intend to perform. Once you get your real data, you may simply plug them into this code and get the results of your confirmatory analyses immediately.</em></li>
 </ul></li>
 </ul>
 <hr>
@@ -1080,7 +1109,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>**Prepare a pre-analysis plan.** </span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>*To be confident about the (confirmatory) statistical analyses you may wish to commit to before data collection (e.g. through a preregistration or registered report), practising the analyses on a simulated dataset is very helpful! If you are still unsure about the most appropriate statistical test to apply to your data, providing a simulated dataset to a statistician or mentor will allow them to provide concrete suggestions! The code containing the analyses of simulated data can be submitted along with your preregistration or registered report for reviewers to exactly understand what analyses you intend to perform. Once you get your real data, you may simply plug them into this code and get the results of your confirmatory analyses immediately!*   </span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span>*To be confident about the (confirmatory) statistical analyses you may wish to commit to before data collection (e.g. through a preregistration or registered report), practising the analyses on a simulated dataset is very helpful! If you are still unsure about the most appropriate statistical test to apply to your data, providing a simulated dataset to a statistician or mentor will allow them to provide concrete suggestions. The code containing the analyses of simulated data can be submitted along with your preregistration or registered report for reviewers to exactly understand what analyses you intend to perform. Once you get your real data, you may simply plug them into this code and get the results of your confirmatory analyses immediately.*   </span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a> </span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a> ***</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>

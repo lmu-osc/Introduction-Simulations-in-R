@@ -122,7 +122,32 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 }
-</script><!-- End Matomo Code --><link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
+</script><!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
 <link rel="stylesheet" href="footer/footer-style.css">
 </head>
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -442,7 +467,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorial-pages/check-alpha.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Simulate to check alpha</span></a>
+ <span class="menu-text">Simulate to check <span class="math inline">\(\alpha\)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -556,7 +581,7 @@ It is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/"
 <li>
 <a href="./tutorial-pages/dry-rule.html">DRY rule</a> – How to write your own functions?</li>
 <li>
-<a href="./tutorial-pages/check-alpha.html">Simulate to check alpha</a> – Write your first simulation and check the rate of false-positive findings.<br>
+<a href="./tutorial-pages/check-alpha.html">Simulate to check <span class="math inline">\(\alpha\)</span></a> – Write your first simulation and check the rate of false-positive findings.<br>
 </li>
 <li>
 <a href="./tutorial-pages/check-power.html">Simulate to check power</a> – Simulate data to perform a power analysis.<br>
@@ -1132,7 +1157,7 @@ It is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/"
 <span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Sample size `n`</span><span class="co">](./tutorial-pages/sample-size-n.qmd)</span> – How many values should you generate within a simulation?</span>
 <span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Number of repetitions `nrep`</span><span class="co">](./tutorial-pages/number-of-simulations-nrep.qmd)</span> – How many repeats of a simulation should you run?</span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">DRY rule</span><span class="co">](./tutorial-pages/dry-rule.qmd)</span> – How to write your own functions?</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Simulate to check alpha</span><span class="co">](./tutorial-pages/check-alpha.qmd)</span> – Write your first simulation and check the rate of false-positive findings.  </span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Simulate to check $\alpha$</span><span class="co">](./tutorial-pages/check-alpha.qmd)</span> – Write your first simulation and check the rate of false-positive findings.  </span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Simulate to check power</span><span class="co">](./tutorial-pages/check-power.qmd)</span> – Simulate data to perform a power analysis.  </span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">Simulate to prepare a preregistration</span><span class="co">](./tutorial-pages/simulate-for-preregistration.qmd)</span> – Simulate data to test statistical analyses before preregistering them.  </span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="co">[</span><span class="ot">General structure</span><span class="co">](./tutorial-pages/general-structure.qmd)</span> – What is the general structure of a simulation?</span>

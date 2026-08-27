@@ -133,6 +133,35 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </script>
 <!-- End Matomo Code -->
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
 <link rel="stylesheet" href="../footer/footer-style.css">
@@ -467,7 +496,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../tutorial-pages/check-alpha.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Simulate to check alpha</span></a>
+ <span class="menu-text">Simulate to check <span class="math inline">\(\alpha\)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -545,11 +574,11 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 
 
 <p>Sampling theory applies to the number of repetitions <code>nrep</code> (also referred to as the number of <em>replications</em>) just as much as it does to the sample size <code>n</code> within a simulation.</p>
-<p><strong>Means and SDs from 24 repetitions simulating N(0,1) with n = 10:</strong><br>
+<p><strong>Means and SDs from 24 repetitions simulating <span class="math inline">\(N(0,1)\)</span> with n = 10:</strong><br>
 <br> <img src="../assets/musd-24-n10-n01.png" width="500"><br>
 <br></p>
 <p>Now, let’s do the same with a number of repetitions <code>nrep</code> of 1000.</p>
-<p><strong>Means and SDs from 1000 repetitions simulating N(0,1) with n = 10:</strong><br>
+<p><strong>Means and SDs from 1000 repetitions simulating <span class="math inline">\(N(0,1)\)</span> with n = 10:</strong><br>
 <br> <img src="../assets/1000-hists-n10-n01.png" width="500"><br>
 <br></p>
 <section id="conclusion" class="level2">
@@ -1056,14 +1085,14 @@ The code generating the data and plots presented above are included in your exer
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>Sampling theory applies to the number of repetitions <span class="in">`nrep`</span> (also referred to as the number of *replications*) just as much as it does to the sample size <span class="in">`n`</span> within a simulation.</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>**Means and SDs from 24 repetitions simulating N(0,1) with n = 10:**  </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>**Means and SDs from 24 repetitions simulating $N(0,1)$ with n = 10:**  </span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../assets/musd-24-n10-n01.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"500"</span><span class="dt">&gt;</span>  </span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Now, let's do the same with a number of repetitions <span class="in">`nrep`</span> of 1000.  </span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>**Means and SDs from 1000 repetitions simulating N(0,1) with n = 10:**   </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>**Means and SDs from 1000 repetitions simulating $N(0,1)$ with n = 10:**   </span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"../assets/1000-hists-n10-n01.png"</span><span class="ot"> width</span><span class="op">=</span><span class="st">"500"</span><span class="dt">&gt;</span>  </span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">br</span><span class="dt">/&gt;</span></span>
