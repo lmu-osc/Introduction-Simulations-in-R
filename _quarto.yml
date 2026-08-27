@@ -60,7 +60,7 @@ website:
           - href: tutorial-pages/dry-rule.qmd
             text: DRY rule
           - href: tutorial-pages/check-alpha.qmd
-            text: Simulate to check alpha
+            text: Simulate to check $\alpha$
           - href: tutorial-pages/check-power.qmd
             text: Simulate to check power
           - href: tutorial-pages/simulate-for-preregistration.qmd

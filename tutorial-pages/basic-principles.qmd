@@ -3,7 +3,7 @@ aliases: [tutorial_pages/basic-principles.html]
 title: "Basic principles"
 ---
 
-Basically, a simulation consists of:  
+Basically, a simulation in the context of this tutorial consists of:  
 **1) Generating `n` random numbers from a known distribution.**    
 **2) Repeating this `nrep` times.**  
 

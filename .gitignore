@@ -64,3 +64,5 @@ _site/
 
 # ignore posi assistant settings
 .posit/assistant
+
+*.code-workspace
