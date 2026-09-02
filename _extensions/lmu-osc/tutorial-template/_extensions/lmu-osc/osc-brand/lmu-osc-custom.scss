@@ -1,8 +1,25 @@
 /*-- scss:defaults --*/
 
-// Define custom brand SCSS variables
-// These can reference Bootstrap theme variables (which are derived from brand.yml)
-// but note that Bootstrap vars are only available in the /*-- scss:rules --*/ section.
+
+// Brand palette fallbacks (used when brand.yml isn't loaded, e.g., individual file preview)
+// When brand.yml IS loaded via project metadata, these !default values are overridden
+// Ideally, this code can be removed in the future when/if the brand.yml file extends to
+// previews of indidviudal files
+$brand-lmu-green: #00883A !default;
+$brand-lmu-black: #232323 !default;
+$brand-lmu-white: #FFF !default;
+$brand-lmu-darkgrey: #626468 !default;
+$brand-lmu-darkgray: #626468 !default;
+$brand-lmu-middlegrey: #C0C1C3 !default;
+$brand-lmu-middlegray: #C0C1C3 !default;
+$brand-lmu-lightgrey: #E6E6E7 !default;
+$brand-lmu-lightgray: #E6E6E7 !default;
+$brand-lmu-lichtgrau: #F5F5F5 !default;
+$brand-lmu-blue: #0F1987 !default;
+$brand-lmu-cyan: #009FE3 !default;
+$brand-lmu-violet: #8C4091 !default;
+$brand-lmu-red: #D71919 !default;
+$brand-lmu-orange: #F18700 !default;
 
 /*-- scss:rules --*/
 

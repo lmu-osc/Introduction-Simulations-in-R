@@ -88,17 +88,17 @@ typography:
     - family: Roboto
       source: google
     - family: Arial
-      source: google
+      source: system
     - family: Fira Code
       source: google
   base:
-    family: "Roboto, Arial"
+    family: "Roboto, Arial, sans-serif"
     # size: 1.1rem
     # line-height: 1.65
     # weight:
     # style:
   headings:
-    family: "Roboto, Arial"
+    family: "Roboto, Arial, sans-serif"
     color: secondary
   monospace:
     family: "Fira Code"
