@@ -1,21 +1,57 @@
+/* Footer color scheme
+   Colors come from the osc-brand palette (see brand.yml), which Quarto exposes
+   to CSS as custom properties (--brand-lmu-*) on :root:
+   - light scheme: lmu-black background, lmu-white foreground
+   - dark scheme:  lmu-lightgray background, lmu-black foreground
 
+   Quarto signals the active color scheme by toggling `quarto-light` / `quarto-dark`
+   on <body>, so the dark-mode overrides are scoped to body.quarto-dark. */
 .osc-footer-card {
-  --osc-primary-green: #00883A;
-  background-color: var(--osc-primary-green);
+  --osc-footer-bg: var(--brand-lmu-black);
+  --osc-footer-fg: var(--brand-lmu-white);
+  --osc-footer-fg-hover: color-mix(in srgb, var(--osc-footer-fg) 75%, transparent);
+  --osc-footer-rule: color-mix(in srgb, var(--osc-footer-fg) 30%, transparent);
+
+  background-color: var(--osc-footer-bg);
+  color: var(--osc-footer-fg);
+}
+
+body.quarto-dark .osc-footer-card {
+  --osc-footer-bg: var(--brand-lmu-lightgray);
+  --osc-footer-fg: var(--brand-lmu-black);
+}
+
+/* Headings, body text, and links all follow the footer foreground */
+.osc-footer-card h4,
+.osc-footer-card p,
+.osc-footer-card a {
+  color: var(--osc-footer-fg);
+}
+
+.osc-footer-card a:hover {
+  color: var(--osc-footer-fg-hover);
+}
+
+.osc-footer-card hr {
+  border-color: var(--osc-footer-rule);
+}
+
+/* Subtle lift for the social icons */
+.osc-footer-socials a {
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .osc-footer-socials a:hover {
   transform: scale(1.05);
-  filter: brightness(1.2);
-  transition: all 0.2s ease;
 }
 
+/* Keyboard focus ring in the footer foreground color, visible on both schemes */
 .osc-footer-card a:focus-visible {
-  outline: 2px solid #FFD700;
+  outline: 2px solid currentColor;
   outline-offset: 2px;
 }
 
-/* no external window thing for the icons */
+/* Quarto appends an external-link arrow to raw links; not wanted for the brand icons */
 .osc-footer-socials a::after {
   display: none !important;
 }

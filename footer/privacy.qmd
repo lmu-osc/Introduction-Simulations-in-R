@@ -1,33 +1,7 @@
 ---
 title: "Privacy Policy"
-format: 
-  html:
-    toc: false
-    page-layout: full
+page-layout: full
 ---
-<style>
-  /* css styles */
-:root {
-    --primary-color: #00883A;
-    --primary-light: rgba(43, 134, 75, 0.1);
-    --text-dark: #333333;
-    --text-light: #ffffff;
-    --osc-white: #ffffff;
-    --text-light: #5f5f5f;
-    --lmu-black: #232323;
-  }
-  
-#quarto-content.page-columns main.column-page{
-    margin:0 auto;
-    max-width: 1200px;
-    padding: 5rem;
-    width:100%;
-    background-color: #f9fcf9;
-    min-height: 800px;
-}
-
-</style>
-
 
 For data collected by the LMU Open Science Center, [LMU's general privacy policy](https://www.lmu.de/en/footer/privacy-policy/index.html){target="_blank"} <i class="fa-solid fa-arrow-up-right-from-square"></i> applies.
 
@@ -36,7 +10,7 @@ Additionally, this site is hosted on the webhosting service GitHub Pages ([https
 
 
 
-#### Matomo Tracking Opt-Out
+## Matomo Tracking Opt-Out
 
 This opt-out is only for the Matomo web analytics tool in use directly the LMU Open Science Center website. It does not affect any other tracking or analytics tools that may be in use on this site, including those used by GitHub Pages.
 
