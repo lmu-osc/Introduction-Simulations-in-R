@@ -160,14 +160,56 @@
     "href": "footer/privacy.html",
     "title": "Privacy Policy",
     "section": "",
-    "text": "For data collected by the LMU Open Science Center, LMU’s general privacy policy  applies.\nAdditionally, this site is hosted on the webhosting service GitHub Pages (https://docs.github.com/en/pages) with it’s own privacy policy available at https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement.\n\nMatomo Tracking Opt-Out\nThis opt-out is only for the Matomo web analytics tool in use directly the LMU Open Science Center website. It does not affect any other tracking or analytics tools that may be in use on this site, including those used by GitHub Pages.\n\n\n\n\n\n\n Back to top"
+    "text": "For data collected by the LMU Open Science Center, LMU’s general privacy policy  applies.\nAdditionally, this site is hosted on the webhosting service GitHub Pages (https://docs.github.com/en/pages) with it’s own privacy policy available at https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement."
+  },
+  {
+    "objectID": "footer/privacy.html#matomo-tracking-opt-out",
+    "href": "footer/privacy.html#matomo-tracking-opt-out",
+    "title": "Privacy Policy",
+    "section": "Matomo Tracking Opt-Out",
+    "text": "Matomo Tracking Opt-Out\nThis opt-out is only for the Matomo web analytics tool in use directly the LMU Open Science Center website. It does not affect any other tracking or analytics tools that may be in use on this site, including those used by GitHub Pages."
   },
   {
     "objectID": "footer/accessibilty.html",
     "href": "footer/accessibilty.html",
     "title": "Accessibility",
     "section": "",
-    "text": "The Ludwig-Maximilians-Universität München strives to make its offers accessible in accordance with § 9 Act on Digitalisation in the Free State of Bavaria (Bayerisches Digitalgesetz – BayDig).\nThis Accessibility Statement applies to applications available at https://www.lmu.de/de/index.html, https://www.lmu.de/de/index.html and all subdomain pages.\n\nStatus of Compliance\nPartially compliant: This application partially corresponds to § 1 BayEGovV.\n\nLegal Name\nLudwig-Maximilians-Universität München\n\n\nWebsite(s):\nhttps://www.lmu.de/de/index.html, https://www.lmu.de/de/index.html and all subdomain pages.\n\n\n\nKnown Accessibility Issues\nList and explanation of the problems encountered when implementing the accessibility of these websites\n\nContent Not Accessible to People With Disabilities\n\nApart from the main pages, alternative text-based content for images and tables may be missing. There may also be errors in content hierarchy and links may be unintelligible.\nPDF documents created before 09/23/2018 have not yet been converted to a fully accessible format.\nSome documents have been provided by institutions of the LMU, which are not yet all available in a fully accessible version.\nMany of our videos also lack subtitles and audio descriptions. We will be adding written directions for the maps used to give directions.\nQuotes are often not indicated as such using the appropriate HTML tag.\nResponsive design (for viewing on mobile devices) is only partially available for the websites, screen orientation is otherwise limited to landscape format. For non-responsive pages, texts do not wrap correctly in a small viewport.\nFields for inputting user data are not always sufficiently designated as such.\nWords or passages in other languages are not always indicated as such.\nBecause of the Google Search plugin, the criteria for “valid HTML text” is not being fulfilled.\n\n\n\n\nExplanation\nAll LMU websites are currently undergoing a complete relaunch. It therefore no longer makes sense to revise the existing websites.\nThe deficiencies of the old website have been listed above.\nCreation Date: 09/22/2019\nMethodology: Self-assessment\n\n\nFeedback Mechanism\nAs a user, you can inform us of any shortcomings in complying with accessibility requirements or request information in an accessible format that is not required to be displayed in an accessible format.\n\nContact Information\nUnit VI.5 Internet Services\nMartiusstraße 4\n80802 Munich\nMail: it.internet@verwaltung.uni-muenchen.de\nPhone: +49 (0) 89 / 2180-9832\n\n\n\nEnforcement Procedure\nIf a request for contact remains unanswered in whole or in part within six weeks, the Landesamt für Digitalisierung, Breitband und Vermessung (Agency for Digitisation, High-Speed Internet and Surveying) will, at the request of the user, examine whether measures are necessary with regard to the monitoring of the obligated party.\n\nContact information of the agency responsible for the enforcement procedure\nLandesamt für Digitalisierung, Breitband und Vermessung Alexandrastraße 4\n80538 Munich\nPhone: +49 89 2129-1111\nFax: +49 89 2129-1113\nEmail:service@geodaten.bayern.de\nhttps://www.ldbv.bayern.de/service/kontakt/\n\n\nOther Help Services\nStudents with disabilities are supported by the Beratungsstelle für Studierende mit Behinderung und chronischer Erkrankung (Counselling Center for Students with Disabilities and Chronic Illnesses).\nThe Schwerbehindertenvertretung (Representative for Disabled Persons) (access protected on the service portal) can support employees.\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "The Ludwig-Maximilians-Universität München strives to make its offers accessible in accordance with § 9 Act on Digitalisation in the Free State of Bavaria (Bayerisches Digitalgesetz – BayDig).\nThis Accessibility Statement applies to applications available at https://www.lmu.de/de/index.html, https://www.lmu.de/de/index.html and all subdomain pages."
+  },
+  {
+    "objectID": "footer/accessibilty.html#status-of-compliance",
+    "href": "footer/accessibilty.html#status-of-compliance",
+    "title": "Accessibility",
+    "section": "Status of Compliance",
+    "text": "Status of Compliance\nPartially compliant: This application partially corresponds to § 1 BayEGovV.\n\nLegal Name\nLudwig-Maximilians-Universität München\n\n\nWebsite(s):\nhttps://www.lmu.de/de/index.html, https://www.lmu.de/de/index.html and all subdomain pages."
+  },
+  {
+    "objectID": "footer/accessibilty.html#known-accessibility-issues",
+    "href": "footer/accessibilty.html#known-accessibility-issues",
+    "title": "Accessibility",
+    "section": "Known Accessibility Issues",
+    "text": "Known Accessibility Issues\nList and explanation of the problems encountered when implementing the accessibility of these websites\n\nContent Not Accessible to People With Disabilities\n\nApart from the main pages, alternative text-based content for images and tables may be missing. There may also be errors in content hierarchy and links may be unintelligible.\nPDF documents created before 09/23/2018 have not yet been converted to a fully accessible format.\nSome documents have been provided by institutions of the LMU, which are not yet all available in a fully accessible version.\nMany of our videos also lack subtitles and audio descriptions. We will be adding written directions for the maps used to give directions.\nQuotes are often not indicated as such using the appropriate HTML tag.\nResponsive design (for viewing on mobile devices) is only partially available for the websites, screen orientation is otherwise limited to landscape format. For non-responsive pages, texts do not wrap correctly in a small viewport.\nFields for inputting user data are not always sufficiently designated as such.\nWords or passages in other languages are not always indicated as such.\nBecause of the Google Search plugin, the criteria for “valid HTML text” is not being fulfilled."
+  },
+  {
+    "objectID": "footer/accessibilty.html#explanation",
+    "href": "footer/accessibilty.html#explanation",
+    "title": "Accessibility",
+    "section": "Explanation",
+    "text": "Explanation\nAll LMU websites are currently undergoing a complete relaunch. It therefore no longer makes sense to revise the existing websites.\nThe deficiencies of the old website have been listed above.\nCreation Date: 09/22/2019\nMethodology: Self-assessment"
+  },
+  {
+    "objectID": "footer/accessibilty.html#feedback-mechanism",
+    "href": "footer/accessibilty.html#feedback-mechanism",
+    "title": "Accessibility",
+    "section": "Feedback Mechanism",
+    "text": "Feedback Mechanism\nAs a user, you can inform us of any shortcomings in complying with accessibility requirements or request information in an accessible format that is not required to be displayed in an accessible format.\n\nContact Information\nUnit VI.5 Internet Services\nMartiusstraße 4\n80802 Munich\nMail: it.internet@verwaltung.uni-muenchen.de\nPhone: +49 (0) 89 / 2180-9832"
+  },
+  {
+    "objectID": "footer/accessibilty.html#enforcement-procedure",
+    "href": "footer/accessibilty.html#enforcement-procedure",
+    "title": "Accessibility",
+    "section": "Enforcement Procedure",
+    "text": "Enforcement Procedure\nIf a request for contact remains unanswered in whole or in part within six weeks, the Landesamt für Digitalisierung, Breitband und Vermessung (Agency for Digitisation, High-Speed Internet and Surveying) will, at the request of the user, examine whether measures are necessary with regard to the monitoring of the obligated party.\n\nContact information of the agency responsible for the enforcement procedure\nLandesamt für Digitalisierung, Breitband und Vermessung Alexandrastraße 4\n80538 Munich\nPhone: +49 89 2129-1111\nFax: +49 89 2129-1113\nEmail:service@geodaten.bayern.de\nhttps://www.ldbv.bayern.de/service/kontakt/\n\n\nOther Help Services\nStudents with disabilities are supported by the Beratungsstelle für Studierende mit Behinderung und chronischer Erkrankung (Counselling Center for Students with Disabilities and Chronic Illnesses).\nThe Schwerbehindertenvertretung (Representative for Disabled Persons) (access protected on the service portal) can support employees."
   },
   {
     "objectID": "about.html",
@@ -216,7 +258,63 @@
     "href": "footer/imprint.html",
     "title": "Imprint and Disclaimer",
     "section": "",
-    "text": "Information pursuant to § 5 Telemedia Law and § 18 Abs. 2 Medienstaatsvertrag (MStV)\nLudwig-Maximilians-Universität München is a state institution of the Free State of Bavaria and a legal entity under public law (Art. 4 (1) sentence 1 BayHIG). It is legally represented by its President, Professor Dr. med. Dr. h.c. Matthias H. Tschöp.\n\nAddress\nLudwig-Maximilians-Universität München\nGeschwister-Scholl-Platz 1\n80539 Munich\nPhone: +49 (0) 89 / 2180-0\nWeb presence: https://www.lmu.de/de/index.html\nContact: poststelle@verwaltung.uni-muenchen.de\nAddition contact information\n\n\nNotices for encrypted communication\nIn the event that you wish to send us an encrypted message, please use the following public X509-certificate for encryption of your message.\n\n\nAuthorized Oversight Agency\nBavarian State Ministry for Science and Art\nSalvatorstraße 2\n80333 Munich\nInternet: https://www.stmwk.bayern.de\n\n\nSales Tax ID Number of the LMU\nSales tax ID number pursuant to § 27 a Sales Tax Law:\nDE 811205325\n\n\nResponsible for content according to § 18 para. 2 MStV\nLudwig-Maximilians-Universität München\nFelix Schönbrodt\nEmail: felix.schoenbrodt@psy.lmu.de\n\n\nResponsible party for technical implementation\nThe webmaster of the facility is responsible for technical implementation. Technical implementation is handled by the Content Management System Fiona by Infopark AG.\n\n\nStatement of Release\nThe information herein is correct to the best of our knowledge, however, error cannot be avoided with absolute certainty. Solely the specifications in the pertinent legal bases (laws, orders, statutes) are legally binding.\nWe cannot assume any liability for the particular currency, accuracy, completeness and availability of the provided information.\nWe are not liable for damages caused by the use of this internet offer. This exclusion of liability shall not apply if the regulations of § 839 BGB (liability for violation of official duty) are involved. We are not liable for any damages caused by call-up or downloading of data by damaged software or by the installation or use of software.\nThis exclusion of liability does not apply to information that falls within the scope of the Order (EU) 2016/679 of the European Parliament and of the Council dated 27 April 2016 (General Data Protection Regulation). The accuracy and currency of this information is guaranteed.\n\n\nDisclaimer\nThe information offered by the LMU contains cross-references (“links”) to other internet offers by the LMU or by external, third-parties. Basically the internet pages will open automatically in a new window.\nThrough this cross-reference, the LMU handles access for use of this content (§ 5 Telemedia Law). We are not responsible for this “foreign” content since we do not initiate the transmission of the information, have not selected the addressee of the transmitted information and also have not selected or changed the transmitted information.\nAn automatic, short-term interim saving of this “foreign information” by the LMU does not occur due to the selected call-up and linking method, so that the LMU does not thereby assume any responsibility for this foreign content.\nHowever, upon initial linking with these internet offers, the LMU has checked the foreign content to determine whether it may trigger a potential responsibility under civil or penal law. But we do not receive any automatic information about changes to the foreign internet offers and thus cannot constantly monitor their content for any changes. Therefore we also cannot assume any responsibility for them. Solely the particular merchant of the foreign internet offer is liable for illegal, erroneous or incomplete content, and in particular for damages which arise from the use or non-use of information by third parties. However, we endeavor to check the included links regularly with regard to these named criteria.\n\n\n\n\n\n Back to top"
+    "text": "Information pursuant to § 5 Telemedia Law and § 18 Abs. 2 Medienstaatsvertrag (MStV)\nLudwig-Maximilians-Universität München is a state institution of the Free State of Bavaria and a legal entity under public law (Art. 4 (1) sentence 1 BayHIG). It is legally represented by its President, Professor Dr. med. Dr. h.c. Matthias H. Tschöp."
+  },
+  {
+    "objectID": "footer/imprint.html#address",
+    "href": "footer/imprint.html#address",
+    "title": "Imprint and Disclaimer",
+    "section": "Address",
+    "text": "Address\nLudwig-Maximilians-Universität München\nGeschwister-Scholl-Platz 1\n80539 Munich\nPhone: +49 (0) 89 / 2180-0\nWeb presence: https://www.lmu.de/de/index.html\nContact: poststelle@verwaltung.uni-muenchen.de\nAddition contact information"
+  },
+  {
+    "objectID": "footer/imprint.html#notices-for-encrypted-communication",
+    "href": "footer/imprint.html#notices-for-encrypted-communication",
+    "title": "Imprint and Disclaimer",
+    "section": "Notices for encrypted communication",
+    "text": "Notices for encrypted communication\nIn the event that you wish to send us an encrypted message, please use the following public X509-certificate for encryption of your message."
+  },
+  {
+    "objectID": "footer/imprint.html#authorized-oversight-agency",
+    "href": "footer/imprint.html#authorized-oversight-agency",
+    "title": "Imprint and Disclaimer",
+    "section": "Authorized Oversight Agency",
+    "text": "Authorized Oversight Agency\nBavarian State Ministry for Science and Art\nSalvatorstraße 2\n80333 Munich\nInternet: https://www.stmwk.bayern.de"
+  },
+  {
+    "objectID": "footer/imprint.html#sales-tax-id-number-of-the-lmu",
+    "href": "footer/imprint.html#sales-tax-id-number-of-the-lmu",
+    "title": "Imprint and Disclaimer",
+    "section": "Sales Tax ID Number of the LMU",
+    "text": "Sales Tax ID Number of the LMU\nSales tax ID number pursuant to § 27 a Sales Tax Law:\nDE 811205325"
+  },
+  {
+    "objectID": "footer/imprint.html#responsible-for-content-according-to-18-para.-2-mstv",
+    "href": "footer/imprint.html#responsible-for-content-according-to-18-para.-2-mstv",
+    "title": "Imprint and Disclaimer",
+    "section": "Responsible for content according to § 18 para. 2 MStV",
+    "text": "Responsible for content according to § 18 para. 2 MStV\nLudwig-Maximilians-Universität München\nFelix Schönbrodt\nEmail: felix.schoenbrodt@psy.lmu.de"
+  },
+  {
+    "objectID": "footer/imprint.html#responsible-party-for-technical-implementation",
+    "href": "footer/imprint.html#responsible-party-for-technical-implementation",
+    "title": "Imprint and Disclaimer",
+    "section": "Responsible party for technical implementation",
+    "text": "Responsible party for technical implementation\nThe webmaster of the facility is responsible for technical implementation. Technical implementation is handled by the Content Management System Fiona by Infopark AG."
+  },
+  {
+    "objectID": "footer/imprint.html#statement-of-release",
+    "href": "footer/imprint.html#statement-of-release",
+    "title": "Imprint and Disclaimer",
+    "section": "Statement of Release",
+    "text": "Statement of Release\nThe information herein is correct to the best of our knowledge, however, error cannot be avoided with absolute certainty. Solely the specifications in the pertinent legal bases (laws, orders, statutes) are legally binding.\nWe cannot assume any liability for the particular currency, accuracy, completeness and availability of the provided information.\nWe are not liable for damages caused by the use of this internet offer. This exclusion of liability shall not apply if the regulations of § 839 BGB (liability for violation of official duty) are involved. We are not liable for any damages caused by call-up or downloading of data by damaged software or by the installation or use of software.\nThis exclusion of liability does not apply to information that falls within the scope of the Order (EU) 2016/679 of the European Parliament and of the Council dated 27 April 2016 (General Data Protection Regulation). The accuracy and currency of this information is guaranteed."
+  },
+  {
+    "objectID": "footer/imprint.html#disclaimer",
+    "href": "footer/imprint.html#disclaimer",
+    "title": "Imprint and Disclaimer",
+    "section": "Disclaimer",
+    "text": "Disclaimer\nThe information offered by the LMU contains cross-references (“links”) to other internet offers by the LMU or by external, third-parties. Basically the internet pages will open automatically in a new window.\nThrough this cross-reference, the LMU handles access for use of this content (§ 5 Telemedia Law). We are not responsible for this “foreign” content since we do not initiate the transmission of the information, have not selected the addressee of the transmitted information and also have not selected or changed the transmitted information.\nAn automatic, short-term interim saving of this “foreign information” by the LMU does not occur due to the selected call-up and linking method, so that the LMU does not thereby assume any responsibility for this foreign content.\nHowever, upon initial linking with these internet offers, the LMU has checked the foreign content to determine whether it may trigger a potential responsibility under civil or penal law. But we do not receive any automatic information about changes to the foreign internet offers and thus cannot constantly monitor their content for any changes. Therefore we also cannot assume any responsibility for them. Solely the particular merchant of the foreign internet offer is liable for illegal, erroneous or incomplete content, and in particular for damages which arise from the use or non-use of information by third parties. However, we endeavor to check the included links regularly with regard to these named criteria."
   },
   {
     "objectID": "index.html",
