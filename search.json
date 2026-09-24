@@ -98,9 +98,9 @@
   {
     "objectID": "tutorial-pages/download-repo.html",
     "href": "tutorial-pages/download-repo.html",
-    "title": "Make this repository a local RStudio project",
+    "title": "Get the exercises material on your computer",
     "section": "",
-    "text": "You have two options to fetch this material:",
+    "text": "You have two options to fetch this material:\n\n\nFork and clone the exercises repository associated with this tutorial: https://github.com/lmu-osc/Introduction-Simulations-in-R-exercices (here is a reminder on how to do this).\n\n\n\nDownload the exercises repository associated with this tutorial: https://github.com/lmu-osc/Introduction-Simulations-in-R-exercices.\n \n\nOnce the .zip file downloaded, extract it and place the folder in the desired directory (e.g. Documents).",
     "crumbs": [
       "Home",
       "Tutorial",
@@ -108,11 +108,11 @@
     ]
   },
   {
-    "objectID": "tutorial-pages/download-repo.html#a.-you-know-version-control-with-git-and-github",
-    "href": "tutorial-pages/download-repo.html#a.-you-know-version-control-with-git-and-github",
-    "title": "Make this repository a local RStudio project",
-    "section": "A. You know version control with Git and GitHub",
-    "text": "A. You know version control with Git and GitHub\nFork and clone this repository (here is a reminder on how to do this).",
+    "objectID": "tutorial-pages/download-repo.html#fetch-the-exercises-material",
+    "href": "tutorial-pages/download-repo.html#fetch-the-exercises-material",
+    "title": "Get the exercises material on your computer",
+    "section": "",
+    "text": "You have two options to fetch this material:\n\n\nFork and clone the exercises repository associated with this tutorial: https://github.com/lmu-osc/Introduction-Simulations-in-R-exercices (here is a reminder on how to do this).\n\n\n\nDownload the exercises repository associated with this tutorial: https://github.com/lmu-osc/Introduction-Simulations-in-R-exercices.\n \n\nOnce the .zip file downloaded, extract it and place the folder in the desired directory (e.g. Documents).",
     "crumbs": [
       "Home",
       "Tutorial",
@@ -120,11 +120,11 @@
     ]
   },
   {
-    "objectID": "tutorial-pages/download-repo.html#b.-you-do-not-know-version-control-andor-simply-want-to-download-a-copy-of-this-material",
-    "href": "tutorial-pages/download-repo.html#b.-you-do-not-know-version-control-andor-simply-want-to-download-a-copy-of-this-material",
-    "title": "Make this repository a local RStudio project",
-    "section": "B. You do not know version control, and/or simply want to download a copy of this material",
-    "text": "B. You do not know version control, and/or simply want to download a copy of this material\n1) Download the repository\nPlease download the GitHub repository that we are using today: https://github.com/lmu-osc/Introduction-Simulations-in-R.\n \n\nOnce the .zip file downloaded, extract it and place the folder in the desired directory (e.g. Documents).\n2) Turn it into an RStudio project\nIf you do not have R or RStudio installed, please follow these instructions first.\nOpen RStudio, go to ‘File’, choose ‘New Project…’, and select ‘Existing Directory’.\n \n\nSelect the downloaded (and extracted) folder by clicking on ‘Browse’, then select ‘Create Project’.\n \n\nIn the panel containing the ‘Files’ tab, find the exercise sheet and open it by double clicking on it.",
+    "objectID": "tutorial-pages/download-repo.html#open-the-rstudio-project",
+    "href": "tutorial-pages/download-repo.html#open-the-rstudio-project",
+    "title": "Get the exercises material on your computer",
+    "section": "Open the RStudio project",
+    "text": "Open the RStudio project\nIf you do not have R or RStudio installed, please follow these instructions first.\nFind the downloaded (and extracted) folder and double click on the .Rproj file.\nIn the panel containing the ‘Files’ tab, find the exercise sheet of your choice (with or without solutions) and open it by clicking on it.",
     "crumbs": [
       "Home",
       "Tutorial",
