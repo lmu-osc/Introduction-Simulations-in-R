@@ -64,11 +64,12 @@ It is important to note that, although `alpha = 0.05` is commonly used, this is 
 
 Although it isn't necessary to check that a statistical analysis as simple as a *t*-test does not yield more than 5% false-positive results, in situations where the structure of the data is complex and analysed with more advanced models (e.g., when explanatory variables are mathematically linked to each other, are combined in a mixed-effect model, or your data deviates from assumptions of the statistical model), this may allow to compare different modelling approaches and select one that does not produce more than 5% false-positive results.  
 
-Such a complex example, where simulation is the only viable approach to construct a statistical model that does not lead to spurious effects, can be found in this paper:
+Such a complex example, where simulation is the only viable approach to construct a statistical model that does not lead to spurious effects, can be found in @ihle2019.
 
-* Ihle, M., Pick, J. L., Winney, I. S., Nakagawa, S., & Burke, T. (2019). Measuring Up to Reality: Null Models and Analysis Simulations to Study Parental Coordination Over Provisioning Offspring. *Frontiers in Ecology and Evolution*, *7*, 142. <a href="https://doi.org/10.3389/fevo.2019.00142" target="_blank">https://doi.org/10.3389/fevo.2019.00142</a>
 
 ***
 
+## References
 
-
+::: {#refs}
+:::

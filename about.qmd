@@ -27,7 +27,7 @@ google-scholar: true
 
 ## Contributors
 
-This site was authored by Malika Ihle, based on materials from Joel Pick, Hadley Wickham, and Kevin Hallgren, with contributions from James Smith.
+This site was authored by Malika Ihle, based on materials from Joel Pick, Hadley Wickham, and Kevin Hallgren [@hallgren2013], with contributions from James Smith.
 
 ## Licenses
 

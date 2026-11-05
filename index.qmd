@@ -11,7 +11,7 @@ library(xml2)
 ```
 
 ## About this work
-This tutorial was created by [Malika Ihle](https://www.osc.uni-muenchen.de/about_us/coordinator/index.html) based on materials from [Joel Pick](https://joelpick.github.io/), [Hadley Wickham](https://www.yumpu.com/en/document/view/19077330/simulation-hadley-wickham), and [Kevin Hallgren](https://doi.org/10.20982/tqmp.09.2.p043), with contributions from [James Smith](https://github.com/worcjamessmith).   
+This tutorial was created by [Malika Ihle](https://www.osc.uni-muenchen.de/about_us/coordinator/index.html) based on materials from [Joel Pick](https://joelpick.github.io/), [Hadley Wickham](https://www.yumpu.com/en/document/view/19077330/simulation-hadley-wickham), and Kevin Hallgren [@hallgren2013], with contributions from [James Smith](https://github.com/worcjamessmith).
 It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 ## Prerequisites
@@ -22,7 +22,7 @@ It is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Internationa
 ## Prior to the session: optional preparation to get familiarised with the subject
 1) Watch this [30-minute introduction to credible research](https://osf.io/xtmek/), which contextualises the importance of simulations for reliable research. 
 
-2) Read [Hallgren, A. K. (2013). Conducting simulation studies in the R programming environment. *Tutorials in Quantitative Methods for Psychology*, *9*(2), 43–60](https://doi.org/10.20982/tqmp.09.2.p043).
+2) Read *Conducting simulation studies in the R programming environment* [@hallgren2013].
 
 ## Self-paced workshop
 ### How it works
@@ -77,4 +77,7 @@ It is necessary that you work through the sections of the tutorial in order. Ple
 
 ::::
 
+## References
 
+::: {#refs}
+:::
